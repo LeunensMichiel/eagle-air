@@ -1,7 +1,8 @@
 import cn from 'classnames';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { VFC } from 'react';
 
+import LanguagePicker from '../LanguagePicker';
 import NavItem from './NavItem';
 import styles from './NavItems.module.scss';
 
@@ -13,24 +14,31 @@ type NavItemsProps = {
 const NavItems: VFC<NavItemsProps> = ({
   navDrawerOpen = false,
   isTransparent = false,
-}) => (
-  <motion.div
-    initial={false}
-    layout
-    className={cn(styles.navMenuContainer, {
-      [styles.navContainerOpen]: navDrawerOpen,
-      [styles.navigationTransparent]: isTransparent,
-    })}
-  >
-    <div className={cn(styles.navMenuList)}>
-      <NavItem label="Components" link={{ href: '/components' }} />
-      <NavItem label="Links">
-        <NavItem label="🆘 404" link={{ href: '/404' }} />
-        <NavItem label="🛑 500" link={{ href: '/500' }} />
-        <NavItem label="💬 Blog" link={{ href: '/blog' }} />
-      </NavItem>
-    </div>
-  </motion.div>
-);
+}) => {
+  return (
+    <AnimatePresence>
+      {navDrawerOpen && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.33, type: 'spring' }}
+          className={cn(styles.navMenuContainer, {
+            [styles.navigationTransparent]: isTransparent,
+          })}
+        >
+          <div className={cn(styles.navMenuList)}>
+            <NavItem label="Home" link={{ href: '/' }} />
+            <NavItem label="Import" link={{ href: '/import' }} />
+            <NavItem label="Export" link={{ href: '/export' }} />
+            <NavItem label="AVI" link={{ href: '/avi' }} />
+            <NavItem label="Contact" link={{ href: '/contact' }} />
+          </div>
+          <LanguagePicker className={styles.languagePicker} />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 export default NavItems;

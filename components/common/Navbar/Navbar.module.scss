@@ -7,9 +7,12 @@
   z-index: var(--z-high);
   width: 100%;
   background-color: var(--color-bg-primary);
+  color: var(--color-text-brand);
+  @include mixins.transition(background-color, color);
 
   &.headerTransparent {
     background-color: transparent;
+    color: var(--color-white);
   }
 
   &.navContainerOpen {
@@ -29,10 +32,6 @@
 .navigation {
   padding: 1rem 0;
 
-  &.navigationTransparent {
-    padding: 2.5rem 1rem 1rem;
-  }
-
   @include mixins.breakpoint-up(lg) {
     display: flex;
     align-items: center;
@@ -45,7 +44,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 56px;
   width: 100%;
 }
 
@@ -58,6 +56,11 @@
     margin-left: 0.5rem;
   }
 
+  svg {
+    width: 2.5rem;
+    height: auto;
+  }
+
   @include mixins.breakpoint-up(lg) {
     order: 2;
     .hamburger {
@@ -68,8 +71,8 @@
 
 .logo {
   cursor: pointer;
-  width: 5rem;
-  height: auto;
+  width: auto;
+  height: 2rem;
   @include mixins.breakpoint-up(lg) {
     width: 8rem;
   }

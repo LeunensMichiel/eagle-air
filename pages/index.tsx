@@ -18,7 +18,7 @@ const Home = () => {
           description: t('seo.description'),
         }}
       />
-      <div>
+      <div className={cn(styles.container)}>
         <h2>Test</h2>
       </div>
     </>

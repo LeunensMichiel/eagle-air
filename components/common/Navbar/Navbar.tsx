@@ -49,20 +49,16 @@ const Navbar: FC<NavbarProps> = ({ children, isTransparent = false }) => {
   return (
     <header
       className={cn(styles.header, {
-        [styles.headerTransparent]: isTransparent,
+        [styles.headerTransparent]: isTransparent && !navDrawerOpen,
         [styles.navContainerOpen]: navDrawerOpen,
       })}
       ref={ref}
     >
       {children}
       <div className={cn(styles.headerContainer, 'container')}>
-        <nav
-          className={cn(styles.navigation, {
-            [styles.navigationTransparent]: isTransparent,
-          })}
-        >
+        <nav className={cn(styles.navigation)}>
           <div className={cn(styles.toolbar)}>
-            <Logo className={styles.logo} />
+            <Logo className={styles.logo} variant="full" />
             <NavItems
               isTransparent={isTransparent}
               navDrawerOpen={navDrawerOpen}
@@ -70,6 +66,11 @@ const Navbar: FC<NavbarProps> = ({ children, isTransparent = false }) => {
             <div className={cn(styles.toolbarIcons)}>
               <MenuButton
                 className={cn(styles.hamburger)}
+                navBarOpen={navDrawerOpen}
+                {...(isTransparent &&
+                  !navDrawerOpen && {
+                    variant: 'minimal-bright',
+                  })}
                 onClick={() =>
                   setNavDrawerOpen((prevNavDrawerOpen) => !prevNavDrawerOpen)
                 }

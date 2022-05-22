@@ -13,11 +13,13 @@ export const LangCode: Record<string, string> = {
 type LanguagePickerProps = {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   outlined?: boolean;
+  className?: string;
 };
 
 const LanguagePicker: VFC<LanguagePickerProps> = ({
   outlined = true,
   size = 'sm',
+  ...props
 }) => {
   const { t, lang } = useTranslation('common');
   const { openModal, setModalView } = useUI();
@@ -35,6 +37,7 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
       variant="outlined"
       size={size}
       outlined={outlined}
+      {...props}
     >
       {LangCode[lang]}
     </Button>

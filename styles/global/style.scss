@@ -72,7 +72,7 @@
   --z-extreme: 9999999999;
 
   --transition-timing: cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-duration: 500ms;
+  --transition-duration: 330ms;
 
   @include mixins.breakpoint-up(md) {
     --font-size: 105%;

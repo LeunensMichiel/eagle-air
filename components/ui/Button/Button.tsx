@@ -48,6 +48,7 @@ const Button = <C extends React.ElementType = 'button'>({
   stretched = false,
   variant = 'default',
   onClick,
+  squared,
   ...props
 }: ButtonProps<C>) => {
   const Component = as || 'button';
@@ -56,6 +57,7 @@ const Button = <C extends React.ElementType = 'button'>({
     [styles.disabled]: disabled,
     [styles[`button-${size}`]]: true,
     [styles.stretched]: stretched,
+    [styles['button-squared']]: squared && !children,
     [`${className}`]: className,
   });
 

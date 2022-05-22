@@ -15,7 +15,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
   const { displayModal, closeModal, modalView, modalTitle } = useUI();
   return (
     <>
-      <Navbar />
+      <Navbar isTransparent />
       <main className={cn(styles.mainContainer)}>{children}</main>
       <Footer />
 
