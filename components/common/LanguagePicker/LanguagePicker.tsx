@@ -18,7 +18,7 @@ type LanguagePickerProps = {
 
 const LanguagePicker: VFC<LanguagePickerProps> = ({
   outlined = true,
-  size = 'sm',
+  size = 'md',
   ...props
 }) => {
   const { t, lang } = useTranslation('common');
