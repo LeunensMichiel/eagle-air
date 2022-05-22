@@ -30,7 +30,7 @@ const Head: VFC = () => {
           type: 'website',
           url,
           locale: lang,
-          site_name: 'My Website',
+          site_name: 'Eagle Air',
           images: [
             {
               url: '/card.jpg',
@@ -48,11 +48,6 @@ const Head: VFC = () => {
       />
       <NextHead>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="manifest"
-          href="/meta/site.webmanifest"
-          key="site-manifest"
-        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -74,22 +69,47 @@ const Head: VFC = () => {
         <link
           rel="mask-icon"
           href="/meta/safari-pinned-tab.svg"
-          color="#a989f7"
+          color="#3f4367"
         />
         <link rel="shortcut icon" href="/meta/favicon.ico" />
-        <meta name="apple-mobile-web-app-title" content="Next.js Template" />
-        <meta name="application-name" content="Next.js Template" />
-        <meta name="msapplication-TileColor" content="#603cba" />
+        <meta name="msapplication-TileColor" content="#f8f8f8" />
         <meta name="msapplication-config" content="/meta/browserconfig.xml" />
-        <meta name="theme-color" content="#1a1a1a" />
-        {/* ENABLE THIS IF SELF-HOSTING FONTS
-      <link
-        rel="preload"
-        href="/fonts/myFont.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin="anonymous"
-      /> */}
+        <meta name="theme-color" content="#f8f8f8" />
+        <link
+          rel="preload"
+          href="/fonts/cooper-black.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/fira-sans-v16-latin-500.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/fira-sans-v16-latin-600.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/fira-sans-v16-latin-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/fira-sans-v16-latin-regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </NextHead>
     </>
   );

@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Mijn website | Next.js Starterssjabloon",
-    "titleTemplate": "%s | Next.js Starterssjabloon",
-    "defaultTitle": "Mijn website | Next.js Starterssjabloon",
-    "description": "Dit is een opiniërende starter template in Next.js 10 die alle best practices vanaf 2021 gebruikt.",
+    "title": "Eagle Air",
+    "titleTemplate": "%s | Eagle Air",
+    "defaultTitle": "Eagle Air",
+    "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
     "og": {
-      "title": "Mijn website | Next.js Starterssjabloon",
-      "description": "Dit is een opiniërende starter template in Next.js 10 die alle best practices vanaf 2021 gebruikt.",
-      "imgAlt": "Mijn Website"
+      "title": "Eagle Air",
+      "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
+      "imgAlt": "My Website"
     }
   },
   "links": {

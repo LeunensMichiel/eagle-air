@@ -42,7 +42,7 @@ Download your `.woff2` font(s) from eg: [Google webfont helper](https://google-w
 
 `.woff2` [will suffice for support](https://caniuse.com/woff2). If you want to support older browsers, _like IE11_, you can download the `.woff` variant as well as a fallback.
 
-1. Put your fonts in the `global/fonts` folder. Create one if it does not exist yet.
+1. Put your fonts in the `public/fonts` folder. Create one if it does not exist yet.
 2. Navigate to `styles/common/_typography.scss` and uncomment the `@font-face` code-block.
    1. :warning: Duplicate the @font-face for each font-style your're serving (eg 400, 400i, 700,...)
    2. Add your font to the scss variables of choice. eg: `$font-family-base: 'My Font', $font-family-system;`. You can add it to your `_theme.scss` file as well instead, if you want a different font per theme.

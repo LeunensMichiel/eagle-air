@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "My website | Next.js Starter Template",
-    "titleTemplate": "%s | Next.js Starter Template",
-    "defaultTitle": "My website | Next.js Starter Template",
-    "description": "An opinionated starter project for your Next.js projects",
+    "title": "Eagle Air",
+    "titleTemplate": "%s | Eagle Air",
+    "defaultTitle": "Eagle Air",
+    "description": "Your freightage specialist in Belgium. Discover what we do.",
     "og": {
-      "title": "My website | Next.js Starter Template",
-      "description": "An opinionated starter project for your Next.js projects",
+      "title": "Eagle Air",
+      "description": "Your freightage specialist in Belgium. Discover what we do.",
       "imgAlt": "My Website"
     }
   },

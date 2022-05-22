@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Mon site web | Exemple Next.js",
-    "titleTemplate": "%s | Exemple Next.js",
-    "defaultTitle": "Mon site web | Exemple Next.js",
-    "description": "Un projet de démarrage pour vos projets Next.js.",
+    "title": "Eagle Air",
+    "titleTemplate": "%s | Eagle Air",
+    "defaultTitle": "Eagle Air",
+    "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
     "og": {
-      "title": "Mon site web | Exemple Next.js",
-      "description": "Un projet de démarrage pour vos projets Next.js.",
-      "imgAlt": "Mon site web"
+      "title": "Eagle Air",
+      "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
+      "imgAlt": "My Website"
     }
   },
   "links": {
