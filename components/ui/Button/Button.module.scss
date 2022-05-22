@@ -30,8 +30,8 @@
 }
 
 // Different variants
-$variants: default, primary, secondary, success, danger, warning, info,
-  'transparent', minimal, minimal-bright, minimal-dark;
+$variants: default, outlined, light, 'transparent', minimal, minimal-bright,
+  minimal-dark;
 @each $variant in $variants {
   .button-#{$variant} {
     border: 0.125rem solid var(--color-btn-#{$variant}-border);
@@ -39,21 +39,18 @@ $variants: default, primary, secondary, success, danger, warning, info,
     color: var(--color-btn-#{$variant}-text);
     @include mixins.transition(background, border, color);
 
-    &:hover,
-    &.outlined:hover {
+    &:hover {
       border: 0.125rem solid var(--color-btn-#{$variant}-hover-border);
       background: var(--color-btn-#{$variant}-hover-bg);
       color: var(--color-btn-#{$variant}-hover-text);
     }
-    &:focus,
-    &.outlined:focus {
+    &:focus {
       border: 0.125rem solid var(--color-btn-#{$variant}-focus-border);
       background: var(--color-btn-#{$variant}-focus-bg);
       color: var(--color-btn-#{$variant}-focus-text);
       outline: var(--color-btn-#{$variant}-focus-border);
     }
-    &:active,
-    &.outlined:active {
+    &:active {
       border: 0.125rem solid var(--color-btn-#{$variant}-active-border);
       background: var(--color-btn-#{$variant}-active-bg);
       color: var(--color-btn-#{$variant}-active-text);
@@ -65,13 +62,6 @@ $variants: default, primary, secondary, success, danger, warning, info,
       color: var(--color-btn-#{$variant}-active-text);
       pointer-events: none;
       user-select: none;
-    }
-
-    &.outlined {
-      border: 0.125rem solid var(--color-btn-#{$variant}-outlined-border);
-      background: transparent;
-      color: var(--color-btn-#{$variant}-outlined-text);
-      @include mixins.transition(background, border, color);
     }
 
     &.disabled {
@@ -110,19 +100,6 @@ $variants: default, primary, secondary, success, danger, warning, info,
 
 .button-xl {
   font-size: 1.25rem;
-}
-
-.button-circular {
-  border-radius: 50%;
-}
-
-.button-rounded {
-  border-radius: var(--border-radius-lg);
-}
-
-.button-circular,
-.button-squared {
-  padding: 0.75em;
 }
 
 .button-icon-left {

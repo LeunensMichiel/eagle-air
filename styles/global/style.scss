@@ -18,10 +18,11 @@
 
   --font-size: 100%;
   --font-size-x-small: 0.75rem;
-  --font-size-small: calc(var(--font-size) / var(--type-scale-ratio));
-  --font-size-title: 1.125rem;
-  --font-size-h5: 1.125rem;
-  --font-size-h4: calc(var(--font-size) * var(--type-scale-ratio));
+  --font-size-small: 0.875rem;
+  --font-size-title: 1rem;
+  --font-size-h6: calc(var(--font-size) * var(--type-scale-ratio));
+  --font-size-h5: calc(var(--font-size-h6) * var(--type-scale-ratio));
+  --font-size-h4: calc(var(--font-size-h5) * var(--type-scale-ratio));
   --font-size-h3: calc(var(--font-size-h4) * var(--type-scale-ratio));
   --font-size-h2: calc(var(--font-size-h3) * var(--type-scale-ratio));
   --font-size-h1: calc(var(--font-size-h2) * var(--type-scale-ratio));
@@ -30,21 +31,20 @@
   --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  --font-family-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-serif: Georgia, 'Times New Roman', Times, serif;
   --font-family-mono: Menlo, Monaco, Cascadia Code, Segoe UI Mono, 'Courier New',
     monospace;
 
-  --font-family-base: var(--font-family-system);
-  --font-family-alt: var(--font-family-system);
+  --font-family-base: 'Fira Sans', var(--font-family-system);
+  --font-family-alt: 'Cooper Black', Georgia, 'Times New Roman', Times,
+    var(--font-family-system);
 
   --line-height-header: 1.125;
-  --line-height-paragraph: 1.75;
+  --line-height-paragraph: 1.6;
   --line-height-small: 1.5;
 
   // Spacing and Radii
-  --border-radius: 0.25rem;
-  --border-radius-lg: 4rem;
+  --border-radius: 2px;
+  --border-radius-lg: 2px;
 
   // Widths
   --reading-width: clamp(45ch, 50%, 80ch);
@@ -74,13 +74,13 @@
   --transition-timing: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-duration: 500ms;
 
-  @include mixins.breakpoint-up(lg) {
+  @include mixins.breakpoint-up(md) {
     --font-size: 105%;
     --type-scale-ratio: 1.25;
   }
   @include mixins.breakpoint-up(xxl) {
     --font-size: 110%;
-    --type-scale-ratio: 1.333;
+    --type-scale-ratio: 1.309;
   }
 }
 
@@ -144,7 +144,6 @@ h4,
 h5,
 h6 {
   font-style: normal;
-  font-weight: bold;
   line-height: var(--line-height-header);
 }
 
@@ -162,37 +161,48 @@ sup,
 sub,
 i,
 b {
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-base);
+  font-weight: 400;
   line-height: var(--line-height-paragraph);
 }
 
 h1 {
   font-size: var(--font-size-h1);
+  font-family: var(--font-family-alt);
+  font-weight: 400;
 }
 
 h2 {
   font-size: var(--font-size-h2);
+  font-weight: 900;
 }
 
 h3 {
   font-size: var(--font-size-h3);
+  font-weight: 900;
 }
 
 h4 {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-h4);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 h5 {
   font-size: var(--font-size-h5);
+  font-weight: 600;
 }
 
 h6 {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-h6);
+  font-weight: 600;
 }
 
 small {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+  font-weight: 400;
 }
 
 a {

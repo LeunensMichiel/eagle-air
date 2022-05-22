@@ -18,20 +18,8 @@ const Home = () => {
           description: t('seo.description'),
         }}
       />
-      <div className={cn(styles.intro, 'container')}>
-        <h1 className={styles.title}>
-          {t('welcome')}{' '}
-          <a
-            href="https://nextjs.org"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            Next.js!
-          </a>
-        </h1>
-        <p className={styles.description}>
-          {t('intro')} <code className={styles.code}>Michiel Leunens</code>
-        </p>
+      <div>
+        <h2>Test</h2>
       </div>
     </>
   );

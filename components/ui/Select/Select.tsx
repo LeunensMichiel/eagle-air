@@ -11,9 +11,8 @@ const customStyles: StylesConfig = {
     ...base,
     background: 'var(--color-input-bg)',
     color: 'var(--color-text-secondary)',
-    borderWidth: '0.125rem',
+    borderWidth: '1px',
     borderRadius: 'var(--border-radius)',
-    boxShadow: isFocused ? `var(--box-shadow-sm)` : undefined,
     borderColor: isDisabled
       ? 'var(--color-input-disabled-border)'
       : isFocused

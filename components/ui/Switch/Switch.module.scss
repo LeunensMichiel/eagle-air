@@ -21,10 +21,6 @@
     margin: 0;
     cursor: pointer;
 
-    &:focus + .switchToggle {
-      box-shadow: var(--box-shadow-sm);
-    }
-
     &:checked + .switchToggle {
       background: var(--color-input-checkbox-bg);
 

@@ -16,12 +16,8 @@ interface ButtonCustomProps<C extends React.ElementType> {
   children?: ReactNode;
   variant?:
     | 'default'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'danger'
-    | 'warning'
-    | 'info'
+    | 'light'
+    | 'outlined'
     | 'minimal'
     | 'minimal-bright'
     | 'minimal-dark'
@@ -44,13 +40,10 @@ const Button = <C extends React.ElementType = 'button'>({
   as,
   className,
   children,
-  circular = false,
-  squared = false,
   disabled = false,
   iconLeft,
   iconRight,
   loading = false,
-  outlined = false,
   size = 'md',
   stretched = false,
   variant = 'default',
@@ -59,13 +52,9 @@ const Button = <C extends React.ElementType = 'button'>({
 }: ButtonProps<C>) => {
   const Component = as || 'button';
   const rootClassName = cn(styles.buttonBase, styles[`button-${variant}`], {
-    [styles.outlined]: outlined,
     [styles.loading]: loading,
     [styles.disabled]: disabled,
     [styles[`button-${size}`]]: true,
-    [styles['button-circular']]: circular && !children,
-    [styles['button-squared']]: squared && !children,
-    [styles['button-rounded']]: circular && children,
     [styles.stretched]: stretched,
     [`${className}`]: className,
   });

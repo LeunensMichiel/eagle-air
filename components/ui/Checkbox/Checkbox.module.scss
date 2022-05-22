@@ -29,7 +29,6 @@
     }
 
     &:focus + .checkboxControl {
-      box-shadow: var(--box-shadow-sm);
       border: 0.125rem solid var(--color-input-focus-border);
     }
 

@@ -32,7 +32,7 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
       type="button"
       iconLeft={<Globe />}
       onClick={handleLanguageBtnClick}
-      variant="secondary"
+      variant="outlined"
       size={size}
       outlined={outlined}
     >

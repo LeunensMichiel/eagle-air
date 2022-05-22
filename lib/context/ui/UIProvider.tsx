@@ -75,11 +75,10 @@ const UIProvider: FC = (props) => {
 export const ManagedUIProvider: FC = ({ children }) => (
   <UIProvider>
     <ThemeProvider
-      enableSystem
-      enableColorScheme
       disableTransitionOnChange={true}
-      defaultTheme="system"
-      themes={['light', 'dark']}
+      defaultTheme="light"
+      themes={['light']}
+      forcedTheme="light"
     >
       <ToastContainer
         position="top-right"
