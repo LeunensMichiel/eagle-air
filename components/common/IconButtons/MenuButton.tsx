@@ -1,4 +1,4 @@
-import { Hamburger } from '@components/icons';
+import { Bars } from '@components/icons';
 import { Button } from '@components/ui';
 import { ButtonProps } from '@components/ui/Button/Button';
 import { MouseEventHandler, VFC } from 'react';
@@ -27,7 +27,7 @@ const MenuButton: VFC<MenuButtonProps> = ({
   <Button
     aria-haspopup="true"
     aria-label="Navigation menu button"
-    iconLeft={<Hamburger />}
+    iconLeft={<Bars />}
     onClick={onClick}
     type="button"
     variant={variant}

@@ -1,4 +1,4 @@
-import { Cross } from '@components/icons';
+import { Close } from '@components/icons';
 import { ThemeProvider } from 'next-themes';
 import { FC, useMemo, useReducer } from 'react';
 import { ToastContainer } from 'react-toastify';
@@ -90,7 +90,7 @@ export const ManagedUIProvider: FC = ({ children }) => (
         pauseOnFocusLoss
         draggable
         pauseOnHover={false}
-        closeButton={Cross}
+        closeButton={Close}
       />
       {children}
     </ThemeProvider>

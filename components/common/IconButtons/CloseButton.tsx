@@ -1,4 +1,4 @@
-import { Cross } from '@components/icons';
+import { Close } from '@components/icons';
 import { Button } from '@components/ui';
 import { ButtonProps } from '@components/ui/Button/Button';
 import { MouseEventHandler, VFC } from 'react';
@@ -28,7 +28,7 @@ const CloseButton: VFC<CloseButtonProps> = ({
     <Button
       aria-label="Close"
       data-dismiss="modal"
-      iconLeft={<Cross />}
+      iconLeft={<Close />}
       onClick={onClick}
       type="button"
       variant={variant}

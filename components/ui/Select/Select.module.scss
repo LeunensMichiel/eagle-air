@@ -15,17 +15,6 @@
   color: var(--color-label-danger-text);
 }
 
-.fieldAlertIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.25rem;
-  svg {
-    width: 0.75rem;
-    height: auto;
-  }
-}
-
 .fieldAlertText {
   font-size: 0.75rem;
   line-height: 1;

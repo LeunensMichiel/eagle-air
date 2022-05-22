@@ -1,4 +1,4 @@
-import { Globe } from '@components/icons';
+import { Direction } from '@components/icons';
 import { Button } from '@components/ui';
 import { useUI } from '@lib/hooks';
 import useTranslation from 'next-translate/useTranslation';
@@ -30,7 +30,7 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
   return (
     <Button
       type="button"
-      iconLeft={<Globe />}
+      iconLeft={<Direction />}
       onClick={handleLanguageBtnClick}
       variant="outlined"
       size={size}

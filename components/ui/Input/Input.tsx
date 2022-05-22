@@ -1,4 +1,3 @@
-import { Alert } from '@components/icons';
 import cn from 'classnames';
 import {
   ComponentPropsWithoutRef,
@@ -103,14 +102,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
       {withFeedback && (
         <div className={cn(styles.fieldAlert)} role="alert">
           {error && (
-            <>
-              <div className={cn(styles.fieldAlertIcon)}>
-                <Alert />
-              </div>
-              <small className={cn(styles.fieldAlertText)}>
-                {error.message}
-              </small>
-            </>
+            <small className={cn(styles.fieldAlertText)}>{error.message}</small>
           )}
         </div>
       )}
