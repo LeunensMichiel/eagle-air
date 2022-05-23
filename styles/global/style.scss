@@ -26,6 +26,7 @@
   --font-size-h3: calc(var(--font-size-h4) * var(--type-scale-ratio));
   --font-size-h2: calc(var(--font-size-h3) * var(--type-scale-ratio));
   --font-size-h1: calc(var(--font-size-h2) * var(--type-scale-ratio));
+  --font-size-jumbo: 3rem;
 
   // Don't forget to add your self-hosted font
   --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -334,4 +335,12 @@ sup {
 
 sub {
   vertical-align: sub;
+}
+
+.highlight {
+  color: var(--color-copper-100);
+
+  &--light {
+    color: var(--color-copper-90);
+  }
 }

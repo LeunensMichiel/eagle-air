@@ -9,21 +9,21 @@
   cursor: pointer;
   display: inline-flex;
   font-weight: 600;
-  justify-content: center;
+  justify-content: space-between;
   line-height: 1;
   margin: 0;
   padding: 0.75em 1.25em;
   @include mixins.transition(background, border, color);
 
-  svg {
-    height: 1.1em;
-    width: 1.1em;
-  }
-
   span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  svg {
+    height: 1.1em;
+    width: 1.1em;
   }
 }
 

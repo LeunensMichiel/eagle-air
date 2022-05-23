@@ -74,25 +74,27 @@ const Button = <C extends React.ElementType = 'button'>({
       }}
       {...props}
     >
-      {(loading || iconLeft) && (
-        <span
-          className={cn({
-            [styles[`button-icon-left`]]: (!!iconLeft || loading) && children,
-          })}
-        >
-          {loading ? <Spinner /> : iconLeft}
-        </span>
-      )}
-      {children}
-      {iconRight && (
-        <span
-          className={cn({
-            [styles[`button-icon-right`]]: !!iconRight && children,
-          })}
-        >
-          {iconRight}
-        </span>
-      )}
+      <>
+        {(loading || iconLeft) && (
+          <span
+            className={cn({
+              [styles[`button-icon-left`]]: (!!iconLeft || loading) && children,
+            })}
+          >
+            {loading ? <Spinner /> : iconLeft}
+          </span>
+        )}
+        {children}
+        {iconRight && (
+          <span
+            className={cn({
+              [styles[`button-icon-right`]]: !!iconRight && children,
+            })}
+          >
+            {iconRight}
+          </span>
+        )}
+      </>
     </Component>
   );
 };
