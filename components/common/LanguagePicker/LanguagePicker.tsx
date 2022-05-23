@@ -34,9 +34,8 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
       type="button"
       iconLeft={<Direction />}
       onClick={handleLanguageBtnClick}
-      variant="outlined"
+      variant={outlined ? 'outlined' : 'default'}
       size={size}
-      outlined={outlined}
       {...props}
     >
       {LangCode[lang]}

@@ -1,10 +1,59 @@
+@use '@styles/mixins';
+
 .footer {
-  width: 100%;
-  height: 100px;
   margin-top: auto;
-  gap: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.linkBlock {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  font-size: var(--font-size-small);
+
+  a {
+    color: var(--color-text-primary);
+    font-weight: 400;
+    @include mixins.transition(color);
+    &:hover {
+      color: var(--color-link-hover);
+    }
+    &:focus {
+      color: var(--color-link-focus);
+    }
+    &:active {
+      color: var(--color-link-active);
+    }
+  }
+}
+
+.title {
+  font-weight: 600;
+}
+
+.footerBottom {
+  padding: 1.5rem 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerCopy {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: var(--font-size-x-small);
+
+  svg {
+    height: 2rem;
+  }
 }
