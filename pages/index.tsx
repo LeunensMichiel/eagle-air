@@ -57,8 +57,11 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <ChevronDoubleDown className={styles.chevronDoubleDown} />
+          <Link href="/#intro">
+            <ChevronDoubleDown className={styles.chevronDoubleDown} />
+          </Link>
         </div>
+        <div className={styles.tiltedBar} />
       </div>
     </>
   );
