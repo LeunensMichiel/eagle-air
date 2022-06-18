@@ -17,6 +17,7 @@ interface ButtonCustomProps<C extends React.ElementType> {
   variant?:
     | 'default'
     | 'light'
+    | 'lighter'
     | 'outlined'
     | 'minimal'
     | 'minimal-bright'

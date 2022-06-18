@@ -50,7 +50,7 @@ const Carousel: FC<CarouselProps> = ({ slides }) => {
     },
   };
   return (
-    <div className={cn(styles.root)}>
+    <div className={cn(styles.root)} id="services">
       <nav className={cn(styles.slide__nav, 'container')}>
         {slides.map((slide, index) => (
           <button

@@ -1,0 +1,27 @@
+.card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card__body {
+  padding: 1.5rem 1rem;
+  background: var(--color-eagleair-50);
+  display: grid;
+  gap: 1.5rem;
+}
+.card__title {
+  color: var(--color-text-brand);
+}
+.card__text {
+  color: var(--color-eagleair-80);
+}
+
+.bar {
+  width: 4.5rem;
+  height: 0.5rem;
+  display: block;
+  content: '';
+  background-color: var(--color-text-brand);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.75rem;
+}

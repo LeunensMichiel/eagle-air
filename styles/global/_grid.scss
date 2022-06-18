@@ -24,6 +24,11 @@
 .py-container {
   padding-top: 5rem;
   padding-bottom: 5rem;
+
+  &--sm {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 .container-page {

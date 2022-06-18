@@ -22,14 +22,14 @@
   }
 
   svg {
-    height: 1.1em;
-    width: 1.1em;
+    height: 1.5em;
+    width: 1.5em;
   }
 }
 
 // Different variants
-$variants: default, outlined, light, 'transparent', minimal, minimal-bright,
-  minimal-dark;
+$variants: default, outlined, light, lighter, 'transparent', minimal,
+  minimal-bright, minimal-dark;
 @each $variant in $variants {
   .button-#{$variant} {
     border: 0.125rem solid var(--color-btn-#{$variant}-border);
