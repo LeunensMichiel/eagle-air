@@ -41,10 +41,12 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 4rem;
+}
 
-  h1 {
-    font-size: var(--font-size-jumbo);
-  }
+.slogan {
+  font-size: var(--font-size-jumbo);
+  font-family: var(--font-family-alt);
+  line-height: var(--line-height-header);
 }
 
 .superTitle {
@@ -117,12 +119,31 @@
   display: block;
   width: 200px;
   height: 40px;
-  background-image: url('/assets/tiltedBar.svg');
-  background-size: 20px 3rem;
+  background-image: url('/assets/tilted_bars.svg');
   background-position: left;
-  background-repeat: repeat-x;
+  mix-blend-mode: multiply;
   position: absolute;
-  z-index: 10;
-  bottom: 20px;
+  z-index: 1;
+  bottom: -20px;
   right: 0;
+}
+
+.title {
+  color: var(--color-text-brand);
+}
+
+.title--emphasize {
+  color: var(--color-copper-100);
+}
+
+.smallLogo {
+  color: var(--color-text-brand);
+  width: 4rem;
+  height: auto;
+  margin-bottom: 0.25rem;
+}
+
+.intro {
+  color: var(--color-text-tertiary);
+  margin-top: 1.5rem;
 }

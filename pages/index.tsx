@@ -1,6 +1,6 @@
 import { Layout } from '@components/common';
 import { Chevron, ChevronDoubleDown } from '@components/icons';
-import { Button } from '@components/ui';
+import { Button, Carousel, Logo } from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
@@ -21,7 +21,7 @@ const Home = () => {
           description: t('seo.description'),
         }}
       />
-      <div className={cn(styles.videoContainer)}>
+      <section className={cn(styles.videoContainer)}>
         <video playsInline autoPlay muted poster="/assets/poster.jpg" loop>
           <source src="/assets/landing.mp4" type="video/mp4" />
         </video>
@@ -31,9 +31,9 @@ const Home = () => {
               <strong>Eagle Air</strong> Agencies
             </span>
           </span>
-          <h1>
+          <span className={styles.slogan}>
             We do <span className="highlight--light">transport</span> right.
-          </h1>
+          </span>
           <div className={styles.buttonContainer}>
             <Link href="/contact" passHref>
               <Button
@@ -62,7 +62,38 @@ const Home = () => {
           </Link>
         </div>
         <div className={styles.tiltedBar} />
-      </div>
+      </section>
+      <section className="py-container">
+        <div className="container">
+          <Logo className={styles.smallLogo} />
+          <h1 className={styles.title}>
+            Your goods, delivered with{' '}
+            <span className={styles['title--emphasize']}>expertise.</span>
+          </h1>
+          <p className={styles.intro}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+            optio soluta, nulla vel sint aut dolor alias praesentium blanditiis,
+            et id neque dignissimos autem molestiae molestias suscipit
+            reiciendis, quisquam nesciunt.
+          </p>
+        </div>
+        <Carousel
+          slides={[
+            {
+              image: '/assets/web-08962.jpg',
+              title: 'Import',
+            },
+            {
+              image: '/assets/web-08898.jpg',
+              title: 'Export',
+            },
+            {
+              image: '/assets/struisvogel.jpg',
+              title: 'AVI',
+            },
+          ]}
+        />
+      </section>
     </>
   );
 };

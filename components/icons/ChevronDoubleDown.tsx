@@ -28,10 +28,11 @@ export const ChevronDoubleDown = ({ ...props }) => {
         variants={pathVariants}
         transition={{
           type: 'spring',
-          duration: 1,
+          duration: 2,
+          repeatDelay: 2,
+          delay: 1,
           repeat: Infinity,
           repeatType: 'mirror',
-          delay: 0.2,
         }}
       />
       <motion.path
@@ -42,7 +43,9 @@ export const ChevronDoubleDown = ({ ...props }) => {
         animate={'to'}
         transition={{
           type: 'spring',
-          duration: 1,
+          duration: 2,
+          repeatDelay: 2,
+          delay: 1,
           repeat: Infinity,
           repeatType: 'mirror',
         }}
