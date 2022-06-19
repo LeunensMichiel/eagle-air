@@ -1,24 +1,68 @@
-import { Layout } from '@components/common';
+import { Form, Layout } from '@components/common';
 import {
   Availability,
   Bolt,
+  Building,
   Chevron,
   ChevronDoubleDown,
   Heart,
+  Mail,
+  Mobile,
   Plane,
+  Send,
+  Stamp,
+  Subject,
+  User,
 } from '@components/icons';
 import { Asb, BrusselsAirport, IATA, PPL, WCA } from '@components/partners';
-import { Button, Card, Carousel, Logo } from '@components/ui';
+import {
+  Button,
+  Card,
+  Carousel,
+  Input,
+  Logo,
+  Select,
+  TextArea,
+} from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import useTranslation from 'next-translate/useTranslation';
 
+import countries from '../data/countries.json';
+import countriesEn from '../data/countriesLocalized/en/countries.json';
+import countriesFr from '../data/countriesLocalized/fr/countries.json';
+import countriesNl from '../data/countriesLocalized/nl/countries.json';
 import styles from './styles/index.module.scss';
 
 const Home = () => {
-  const { t } = useTranslation('home');
-
+  const { t, lang } = useTranslation('home');
+  const countryOptions = countries
+    .map(({ name, code }) => {
+      let localisedCountry;
+      switch (lang) {
+        case 'nl':
+          localisedCountry = countriesNl.find(
+            (country) => country.alpha2.toUpperCase() === code
+          )?.name;
+          break;
+        case 'fr':
+          localisedCountry = countriesFr.find(
+            (country) => country.alpha2.toUpperCase() === code
+          )?.name;
+          break;
+        default:
+          localisedCountry = countriesEn.find(
+            (country) => country.alpha2.toUpperCase() === code
+          )?.name;
+          break;
+      }
+      return {
+        value: code,
+        label: localisedCountry ?? name,
+      };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
   return (
     <>
       <NextSeo
@@ -71,8 +115,7 @@ const Home = () => {
         </div>
         <div className={styles.tiltedBar} />
       </section>
-
-      <section className="py-container">
+      <section className="py-container" id="intro">
         <div className="container">
           <Logo className={styles.smallLogo} />
           <h1 className={styles.title}>
@@ -214,6 +257,64 @@ const Home = () => {
             <WCA isWhite />
           </div>
         </div>
+      </section>
+      <section className="container py-container">
+        <h1 className={cn(styles.title, styles.contact__title)}>
+          Interested? <br />
+          Let&apos;s discuss{' '}
+          <span className={styles['title--emphasized']}>opportunities.</span>
+        </h1>
+        <Form className={styles.form}>
+          <Input
+            label="Full Name"
+            type="text"
+            iconLeft={<User />}
+            placeholder="Firstname Lastname"
+          />
+          <Input
+            label="Company"
+            type="text"
+            iconLeft={<Building />}
+            placeholder="Your company"
+          />
+          <Input
+            label="Email"
+            type="email"
+            iconLeft={<Stamp />}
+            placeholder="address@provider.com"
+          />
+          <Input
+            label="Phone"
+            type="tel"
+            iconLeft={<Mobile />}
+            placeholder="+00 000 00 00 00"
+          />
+          <Select
+            label="Country"
+            instanceId="1"
+            placeholder="Belgium"
+            options={countryOptions}
+            getOptionLabel={(option) =>
+              `${countries.find((opt) => opt.code === option.value)?.emoji} ${
+                option.label
+              }`
+            }
+          />
+          <Input
+            label="Subject"
+            type="text"
+            iconLeft={<Subject />}
+            placeholder="Subject of email"
+          />
+          <TextArea
+            label="Message"
+            iconLeft={<Mail />}
+            placeholder="How can we be of service?"
+          />
+          <Button type="submit" iconRight={<Send />}>
+            Send message
+          </Button>
+        </Form>
       </section>
     </>
   );

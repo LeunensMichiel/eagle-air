@@ -296,3 +296,22 @@
   justify-content: center;
   opacity: 0.5;
 }
+
+.contact__title {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 140px;
+    height: 100px;
+    background-image: url('/assets/planes.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.form {
+  margin-top: 3.5rem;
+  justify-items: stretch;
+}

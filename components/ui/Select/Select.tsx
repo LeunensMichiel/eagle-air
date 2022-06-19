@@ -26,6 +26,7 @@ const customStyles: StylesConfig = {
   valueContainer: (base) => ({
     ...base,
     padding: '0.25rem 0.75rem',
+    lineHeight: 'var(--line-height-paragraph)',
   }),
   singleValue: (base, { isDisabled }) => ({
     ...base,

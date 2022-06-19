@@ -4,14 +4,14 @@ import { ComponentPropsWithRef, FC, forwardRef } from 'react';
 import styles from './Form.module.scss';
 
 type FormProps = {
-  wrapperClassName?: string;
+  className?: string;
 };
 
 const Form: FC<ComponentPropsWithRef<'form'> & FormProps> = forwardRef<
   HTMLFormElement,
   FormProps
->(({ children, wrapperClassName, ...rest }, ref) => (
-  <form ref={ref} className={cn(styles.form, wrapperClassName)} {...rest}>
+>(({ children, className, ...rest }, ref) => (
+  <form ref={ref} className={cn(styles.form, className)} {...rest}>
     {children}
   </form>
 ));

@@ -9,11 +9,11 @@
   line-height: var(--line-height-paragraph);
 
   &.has-icon-left {
-    padding-left: 2.25rem;
+    padding-left: 2.75rem;
   }
 
   &.has-icon-right {
-    padding-right: 2.25rem;
+    padding-right: 2.75rem;
   }
 
   &.has-error {
@@ -35,7 +35,7 @@
 
 .textAreaIconContainer {
   composes: inputIconContainer from '../../ui/Input/Input.module.scss';
-  top: 0.25rem;
+  top: -3px;
 }
 
 .textAreaIconLeft {
