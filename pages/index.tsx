@@ -1,5 +1,13 @@
 import { Layout } from '@components/common';
-import { Chevron, ChevronDoubleDown } from '@components/icons';
+import {
+  Availability,
+  Bolt,
+  Chevron,
+  ChevronDoubleDown,
+  Heart,
+  Plane,
+} from '@components/icons';
+import { Asb, BrusselsAirport, IATA, PPL, WCA } from '@components/partners';
 import { Button, Card, Carousel, Logo } from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -118,35 +126,92 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className={cn(styles.stats, 'container py-container')}>
-        <h1 className={styles.title}>
-          <span className={styles['title--emphasized']}>Dock and load. </span>
-          <br /> From animals to cars and everything in between.
-        </h1>
-        <div className={styles.stats__grid}>
-          <div className={styles.stats__stat}>
-            <span className={styles.stats__title}>1746 m²</span>
-            <span className={styles.stats__body}>
-              The total surface of our warehouse.
-            </span>
+      <section className={cn(styles.stats, 'py-container')}>
+        <div className="container">
+          <h1 className={styles.title}>
+            <span className={styles['title--emphasized']}>Dock and load. </span>
+            <br /> From animals to cars and everything in between.
+          </h1>
+          <div className={styles.stats__grid}>
+            <div className={styles.stats__stat}>
+              <span className={styles.stats__title}>1746 m²</span>
+              <span className={styles.stats__body}>
+                The total surface of our warehouse.
+              </span>
+            </div>
+            <div className={styles.stats__stat}>
+              <span className={styles.stats__title}>135 countries</span>
+              <span className={styles.stats__body}>
+                We export to more than 135 countries worldwide
+              </span>
+            </div>
+            <div className={styles.stats__stat}>
+              <span className={styles.stats__title}>30 years</span>
+              <span className={styles.stats__body}>
+                The amount of experience in our sector
+              </span>
+            </div>
+            <div className={styles.stats__stat}>
+              <span className={styles.stats__title}>55.000 tonnes</span>
+              <span className={styles.stats__body}>
+                That’s a lot of freightage we ship each year!
+              </span>
+            </div>
           </div>
-          <div className={styles.stats__stat}>
-            <span className={styles.stats__title}>135 countries</span>
-            <span className={styles.stats__body}>
-              We export to more than 135 countries worldwide
-            </span>
+        </div>
+      </section>
+      <section className={cn(styles.about, 'py-container')}>
+        <div className="container">
+          <div className={cn(styles.circle, styles['circle--big'])} />
+          <div className={cn(styles.circle, styles['circle--small'])} />
+          <span className={styles.about__subtitle}>Why Eagle Air?</span>
+          <h1 className={styles.about__title}>
+            We’re no generic freightage company.
+          </h1>
+          <div className={styles.about__items}>
+            <div className={styles.about__item}>
+              <Availability />
+              <span className={styles.about__item__title}>Available 24/7</span>
+              <span className={styles.about__item__text}>
+                As a family business, we are available to customers 24/7.
+              </span>
+            </div>
+            <div className={styles.about__item}>
+              <Bolt />
+              <span className={styles.about__item__title}>Flexible</span>
+              <span className={styles.about__item__text}>
+                Urgent shipment? We are ready for you immediately.{' '}
+              </span>
+            </div>
+            <div className={styles.about__item}>
+              <Heart />
+              <span className={styles.about__item__title}>
+                Personal service
+              </span>
+              <span className={styles.about__item__text}>
+                Our staff will take care of your cargo with the best knowledge
+                and care.
+              </span>
+            </div>
+            <div className={styles.about__item}>
+              <Plane />
+              <span className={styles.about__item__title}>Expertise</span>
+              <span className={styles.about__item__text}>
+                Years of expertise in air freight since 1992.{' '}
+              </span>
+            </div>
           </div>
-          <div className={styles.stats__stat}>
-            <span className={styles.stats__title}>30 years</span>
-            <span className={styles.stats__body}>
-              The amount of experience in our sector
-            </span>
-          </div>
-          <div className={styles.stats__stat}>
-            <span className={styles.stats__title}>55.000 tonnes</span>
-            <span className={styles.stats__body}>
-              That’s a lot of freightage we ship each year!
-            </span>
+          <h3 className={styles.about__title}>
+            Trusted by our{' '}
+            <span className={styles['title--emphasized--light']}>valued</span>{' '}
+            partners.
+          </h3>
+          <div className={styles.partners}>
+            <Asb isWhite />
+            <BrusselsAirport isWhite />
+            <IATA isWhite />
+            <PPL isWhite />
+            <WCA isWhite />
           </div>
         </div>
       </section>

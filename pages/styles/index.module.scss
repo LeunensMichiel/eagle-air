@@ -133,6 +133,9 @@
   &--emphasized {
     color: var(--color-copper-100);
   }
+  &--emphasized--light {
+    color: var(--color-copper-90);
+  }
 }
 
 .smallLogo {
@@ -186,4 +189,110 @@
   font-weight: 400;
   color: var(--color-text-tertiary);
   font-size: var(--font-size-x-small);
+  line-height: var(--line-height-paragraph);
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+  background-color: var(--color-bg-brand);
+  background-image: url('/assets/grungy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.about__title {
+  z-index: 1;
+  position: relative;
+  color: var(--color-eagleair-50);
+}
+
+.about__subtitle {
+  display: block;
+  font-size: var(--font-size-title);
+  font-weight: 600;
+  color: var(--color-copper-90);
+  margin-bottom: 0.5rem;
+}
+
+.circle {
+  content: '';
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-eagleair-120);
+  position: absolute;
+  right: -20%;
+  top: 5rem;
+  z-index: -1;
+  overflow: hidden;
+  mix-blend-mode: color-dodge;
+  &--big {
+    width: 300px;
+    height: 300px;
+    top: 3rem;
+    right: -30%;
+  }
+  &--small {
+    width: 200px;
+    height: 200px;
+    top: 12rem;
+    right: -35%;
+  }
+}
+
+.about__items {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-copper-90);
+  position: relative;
+  padding: 0.5rem 1rem;
+
+  svg {
+    margin-bottom: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--color-copper-90);
+    border-radius: var(--border-radius);
+  }
+}
+
+.about__item__title {
+  font-size: var(--font-size-title);
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about__item__text {
+  color: var(--color-neutrals-80);
+  line-height: var(--line-height-paragraph);
+}
+
+.partners {
+  z-index: 4;
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0.5;
 }
