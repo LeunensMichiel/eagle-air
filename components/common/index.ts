@@ -1,3 +1,4 @@
+export * from './Bar/Bar';
 export { default as CookieBanner } from './Cookies';
 export { default as Footer } from './Footer';
 export { default as Form } from './Form';

@@ -1,0 +1,9 @@
+.bar {
+  width: 4.5rem;
+  height: 0.5rem;
+  display: block;
+  content: '';
+  background-color: var(--color-text-brand);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.75rem;
+}

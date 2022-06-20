@@ -1,4 +1,4 @@
-import { Form, Layout } from '@components/common';
+import { Bar, Form, Layout } from '@components/common';
 import {
   Availability,
   Bolt,
@@ -113,7 +113,7 @@ const Home = () => {
             <ChevronDoubleDown className={styles.chevronDoubleDown} />
           </Link>
         </div>
-        <div className={styles.tiltedBar} />
+        <div className={styles['titled-bar']} />
       </section>
       <section className="py-container" id="intro">
         <div className="container">
@@ -264,57 +264,106 @@ const Home = () => {
           Let&apos;s discuss{' '}
           <span className={styles['title--emphasized']}>opportunities.</span>
         </h1>
-        <Form className={styles.form}>
-          <Input
-            label="Full Name"
-            type="text"
-            iconLeft={<User />}
-            placeholder="Firstname Lastname"
-          />
-          <Input
-            label="Company"
-            type="text"
-            iconLeft={<Building />}
-            placeholder="Your company"
-          />
-          <Input
-            label="Email"
-            type="email"
-            iconLeft={<Stamp />}
-            placeholder="address@provider.com"
-          />
-          <Input
-            label="Phone"
-            type="tel"
-            iconLeft={<Mobile />}
-            placeholder="+00 000 00 00 00"
-          />
-          <Select
-            label="Country"
-            instanceId="1"
-            placeholder="Belgium"
-            options={countryOptions}
-            getOptionLabel={(option) =>
-              `${countries.find((opt) => opt.code === option.value)?.emoji} ${
-                option.label
-              }`
-            }
-          />
-          <Input
-            label="Subject"
-            type="text"
-            iconLeft={<Subject />}
-            placeholder="Subject of email"
-          />
-          <TextArea
-            label="Message"
-            iconLeft={<Mail />}
-            placeholder="How can we be of service?"
-          />
-          <Button type="submit" iconRight={<Send />}>
-            Send message
-          </Button>
-        </Form>
+        <div className={styles.contact}>
+          <Form className={styles.form}>
+            <Input
+              label="Full Name"
+              type="text"
+              iconLeft={<User />}
+              placeholder="Firstname Lastname"
+            />
+            <Input
+              label="Company"
+              type="text"
+              iconLeft={<Building />}
+              placeholder="Your company"
+            />
+            <Input
+              label="Email"
+              type="email"
+              iconLeft={<Stamp />}
+              placeholder="address@provider.com"
+            />
+            <Input
+              label="Phone"
+              type="tel"
+              iconLeft={<Mobile />}
+              placeholder="+00 000 00 00 00"
+            />
+            <Select
+              label="Country"
+              instanceId="1"
+              placeholder="Belgium"
+              options={countryOptions}
+              getOptionLabel={(option) =>
+                `${countries.find((opt) => opt.code === option.value)?.emoji} ${
+                  option.label
+                }`
+              }
+            />
+            <Input
+              label="Subject"
+              type="text"
+              iconLeft={<Subject />}
+              placeholder="Subject of email"
+            />
+            <TextArea
+              label="Message"
+              iconLeft={<Mail />}
+              placeholder="How can we be of service?"
+            />
+            <Button type="submit" iconRight={<Send />}>
+              Send message
+            </Button>
+          </Form>
+          <div className={styles.contact__info}>
+            <div>
+              <Bar />
+              <h3 className={cn(styles.title, styles.contact__info__title)}>
+                Our headquarters.
+              </h3>
+            </div>
+            <div className={styles.contact__info__item}>
+              <span className={styles.contact__info__item__title}>
+                Zaventem office
+              </span>
+              <span className={styles.contact__info__item__line}>
+                Brucargo 752,
+              </span>
+              <span className={styles.contact__info__item__line}>
+                1820 Steenokkerzeel,
+              </span>
+              <span className={styles.contact__info__item__line}>Belgium</span>
+            </div>
+            <div className={styles.contact__info__item}>
+              <span className={styles.contact__info__item__title}>Phone</span>
+              <span className={styles.contact__info__item__line}>
+                +32 02 751 50 45
+              </span>
+            </div>
+            <div className={styles.contact__info__item}>
+              <span className={styles.contact__info__item__title}>Email</span>
+              <span className={styles.contact__info__item__line}>
+                info@eagleair.be
+              </span>
+            </div>
+            <div className={styles.contact__info__item}>
+              <span className={styles.contact__info__item__title}>Fax</span>
+              <span className={styles.contact__info__item__line}>
+                +32 02 751 50 45
+              </span>
+            </div>
+            <div className={styles.contact__info__item}>
+              <span className={styles.contact__info__item__title}>
+                Company number
+              </span>
+              <span className={styles.contact__info__item__line}>
+                0712 23 45 24
+              </span>
+            </div>
+            <div className={styles['titled-bar']} />
+          </div>
+        </div>
       </section>
     </>
   );

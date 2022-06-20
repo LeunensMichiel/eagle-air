@@ -1,3 +1,4 @@
+import { Bar } from '@components/common';
 import { Chevron } from '@components/icons';
 import { Button } from '@components/ui';
 import Link from 'next/link';
@@ -23,7 +24,7 @@ const Card: FC<CardProps> = ({ imgSrc, text, title, url }) => {
       />
       <div className={styles.card__body}>
         <div>
-          <div className={styles.bar} />
+          <Bar />
           <h2 className={styles.card__title}>{title}</h2>
         </div>
         <p className={styles.card__text}>{text}</p>
