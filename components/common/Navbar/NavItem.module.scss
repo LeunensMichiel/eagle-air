@@ -11,6 +11,10 @@
   line-height: 1;
   outline: none;
 
+  @include mixins.breakpoint-up(md) {
+    font-size: var(--font-size-h5);
+  }
+
   @include mixins.breakpoint-up(lg) {
     font-size: 1rem;
   }

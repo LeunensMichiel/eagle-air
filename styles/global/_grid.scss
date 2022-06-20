@@ -29,6 +29,11 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  @include mixins.breakpoint-up(md) {
+    padding-top: 9.5rem;
+    padding-bottom: 9.5rem;
+  }
 }
 
 .container-page {

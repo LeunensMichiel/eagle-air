@@ -27,6 +27,7 @@
   --font-size-h2: calc(var(--font-size-h3) * var(--type-scale-ratio));
   --font-size-h1: calc(var(--font-size-h2) * var(--type-scale-ratio));
   --font-size-jumbo: 3rem;
+  --font-size-subtitle: 0.875rem;
 
   // Don't forget to add your self-hosted font
   --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -76,10 +77,11 @@
   --transition-duration: 330ms;
 
   @include mixins.breakpoint-up(md) {
-    --font-size: 105%;
-    --type-scale-ratio: 1.25;
+    --font-size: 125%;
+    --font-size-jumbo: 4.5rem;
+    --font-size-subtitle: 1.5rem;
   }
-  @include mixins.breakpoint-up(xxl) {
+  @include mixins.breakpoint-up(xl) {
     --font-size: 110%;
     --type-scale-ratio: 1.309;
   }

@@ -116,8 +116,8 @@ const Home = () => {
         <div className={styles['titled-bar']} />
       </section>
       <section className="py-container" id="intro">
-        <div className="container">
-          <Logo className={styles.smallLogo} />
+        <div className={cn(styles.intro__container, 'container')}>
+          <Logo className={styles['logo--small']} />
           <h1 className={styles.title}>
             Your goods, delivered with{' '}
             <span className={styles['title--emphasized']}>expertise.</span>
