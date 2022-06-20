@@ -26,7 +26,7 @@
   --font-size-h3: calc(var(--font-size-h4) * var(--type-scale-ratio));
   --font-size-h2: calc(var(--font-size-h3) * var(--type-scale-ratio));
   --font-size-h1: calc(var(--font-size-h2) * var(--type-scale-ratio));
-  --font-size-jumbo: 3rem;
+  --font-size-jumbo: 2rem;
   --font-size-subtitle: 0.875rem;
 
   // Don't forget to add your self-hosted font
@@ -75,6 +75,10 @@
 
   --transition-timing: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-duration: 330ms;
+
+  @include mixins.breakpoint-up(xs) {
+    --font-size-jumbo: 3rem;
+  }
 
   @include mixins.breakpoint-up(md) {
     --font-size: 125%;

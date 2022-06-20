@@ -73,23 +73,23 @@ const Home = () => {
           description: t('seo.description'),
         }}
       />
-      <section className={cn(styles.videoContainer)}>
+      <section className={cn(styles.landing)}>
         <video playsInline autoPlay muted poster="/assets/poster.jpg" loop>
           <source src="/assets/landing.mp4" type="video/mp4" />
         </video>
-        <div className={cn(styles.videoBody, 'container')}>
-          <span className={styles.superTitle}>
+        <div className={cn(styles.landing__inner, 'container')}>
+          <span className={styles.landing__title__super}>
             <span>
               <strong>Eagle Air</strong> Agencies
             </span>
           </span>
-          <span className={styles.slogan}>
+          <span className={styles.landing__headline}>
             We do <span className="highlight--light">transport</span> right.
           </span>
-          <div className={styles.buttonContainer}>
+          <div className={styles.landing__buttons}>
             <Link href="/contact" passHref>
               <Button
-                className={styles.whiteButton}
+                className={styles.landing__button}
                 size="lg"
                 as="a"
                 iconRight={<Chevron />}
@@ -99,7 +99,7 @@ const Home = () => {
             </Link>
             <Link href="/#services" passHref>
               <Button
-                className={styles.whiteButtonOutlined}
+                className={styles['landing__button--outlined']}
                 size="lg"
                 as="a"
                 variant="outlined"
@@ -110,7 +110,7 @@ const Home = () => {
             </Link>
           </div>
           <Link href="/#intro">
-            <ChevronDoubleDown className={styles.chevronDoubleDown} />
+            <ChevronDoubleDown className={styles.landing__chevron} />
           </Link>
         </div>
         <div className={styles['titled-bar']} />
@@ -166,6 +166,7 @@ const Home = () => {
           pharetra adipiscing."
             title="Animals should be transported with care."
             url="/avi"
+            isAlternative
           />
         </div>
       </section>
@@ -178,25 +179,25 @@ const Home = () => {
           <div className={styles.stats__grid}>
             <div className={styles.stats__stat}>
               <span className={styles.stats__title}>1746 m²</span>
-              <span className={styles.stats__body}>
+              <span className={styles.stats__text}>
                 The total surface of our warehouse.
               </span>
             </div>
             <div className={styles.stats__stat}>
               <span className={styles.stats__title}>135 countries</span>
-              <span className={styles.stats__body}>
+              <span className={styles.stats__text}>
                 We export to more than 135 countries worldwide
               </span>
             </div>
             <div className={styles.stats__stat}>
               <span className={styles.stats__title}>30 years</span>
-              <span className={styles.stats__body}>
+              <span className={styles.stats__text}>
                 The amount of experience in our sector
               </span>
             </div>
             <div className={styles.stats__stat}>
               <span className={styles.stats__title}>55.000 tonnes</span>
-              <span className={styles.stats__body}>
+              <span className={styles.stats__text}>
                 That’s a lot of freightage we ship each year!
               </span>
             </div>
@@ -311,8 +312,13 @@ const Home = () => {
               label="Message"
               iconLeft={<Mail />}
               placeholder="How can we be of service?"
+              wrapperClassName={styles.form__textarea}
             />
-            <Button type="submit" iconRight={<Send />}>
+            <Button
+              type="submit"
+              className={styles.form__button}
+              iconRight={<Send />}
+            >
               Send message
             </Button>
           </Form>

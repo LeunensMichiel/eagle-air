@@ -11,29 +11,31 @@ const Footer: VFC = () => {
   const { t } = useTranslation();
   return (
     <footer className={cn(styles.footer, 'container')}>
-      <div className={styles.linkGrid}>
-        <div className={cn(styles.linkBlock)}>
-          <span className={styles.title}>Services</span>
-          <Link href="/import">Import</Link>
-          <Link href="/export">Export</Link>
-          <Link href="/avi">AVI</Link>
+      <nav className={styles.footerNavigation}>
+        <div className={styles.linkGrid}>
+          <div className={cn(styles.linkBlock)}>
+            <span className={styles.title}>Services</span>
+            <Link href="/import">Import</Link>
+            <Link href="/export">Export</Link>
+            <Link href="/avi">AVI</Link>
+          </div>
+          <div className={cn(styles.linkBlock)}>
+            <span className={styles.title}>Contact</span>
+            <Link href="/contact">Contact</Link>
+          </div>
         </div>
-        <div className={cn(styles.linkBlock)}>
-          <span className={styles.title}>Contact</span>
-          <Link href="/contact">Contact</Link>
+        <div className={styles.linkGrid}>
+          <div className={cn(styles.linkBlock)}>
+            <span className={styles.title}>Legal</span>
+            <Link href="/terms-and-conditions">Terms and conditions</Link>
+            <Link href="/privacy-policy">Privacy policy</Link>
+          </div>
+          <div className={cn(styles.linkBlock)}>
+            <span className={styles.title}>Resources</span>
+            <Link href="/sitemap">Sitemap</Link>
+          </div>
         </div>
-      </div>
-      <div className={styles.linkGrid}>
-        <div className={cn(styles.linkBlock)}>
-          <span className={styles.title}>Legal</span>
-          <Link href="/terms-and-conditions">Terms and conditions</Link>
-          <Link href="/privacy-policy">Privacy policy</Link>
-        </div>
-        <div className={cn(styles.linkBlock)}>
-          <span className={styles.title}>Resources</span>
-          <Link href="/sitemap">Sitemap</Link>
-        </div>
-      </div>
+      </nav>
       <div className={styles.footerBottom}>
         <LanguagePicker />
         <div className={styles.footerCopy}>
