@@ -5,6 +5,22 @@
   padding-bottom: 5rem;
   width: 100%;
   overflow: hidden;
+
+  & :global {
+    .embla {
+      overflow: hidden;
+    }
+    .embla__container {
+      display: flex;
+    }
+    .embla__slide {
+      position: relative;
+      flex: 0 0 87.5%;
+      @include mixins.breakpoint-up(md) {
+        flex: 0 0 75%;
+      }
+    }
+  }
 }
 
 .slide {
@@ -17,6 +33,11 @@
   overflow: hidden;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .slide__nav {
@@ -68,47 +89,29 @@
 
 .dots {
   margin-top: 1rem;
-  display: flex !important;
+  display: flex;
   justify-content: center;
 
-  & :global {
-    .slick-active {
-      button:before {
-        background-color: var(--color-charcoal-100);
-      }
-    }
+  button {
   }
+}
 
-  li {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+.dot {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0;
+  line-height: 0;
+  width: 1.5rem;
+  height: 0.5rem;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background-color: var(--color-neutrals-100);
+  border-radius: var(--border-radius);
+  @include mixins.transition(background-color);
 
-    button {
-      font-size: 0;
-      line-height: 0;
-      display: block;
-      width: 1.5rem;
-      height: 0.5rem;
-      padding: 5px;
-      cursor: pointer;
-      color: transparent;
-      border: 0;
-      outline: none;
-      background: transparent;
-      position: relative;
-
-      &:before {
-        display: block;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1.5rem;
-        height: 0.5rem;
-        background-color: var(--color-neutrals-100);
-        border-radius: var(--border-radius);
-        @include mixins.transition(background-color);
-      }
-    }
+  &--active {
+    background-color: var(--color-charcoal-100);
   }
 }

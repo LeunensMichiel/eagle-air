@@ -1,9 +1,6 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import cn from 'classnames';
-import { FC, useRef, useState } from 'react';
-import Slider, { Settings } from 'react-slick';
+import useEmblaCarousel from 'embla-carousel-react';
+import { FC, useCallback, useEffect, useState } from 'react';
 
 import ImageWithAspectRatio from '../ImageWithAspectRatio';
 import styles from './Carousel.module.scss';
@@ -18,14 +15,16 @@ type CustomSlideProps = {
 };
 const CustomSlide: FC<CustomSlideProps> = ({ slide }) => {
   return (
-    <div className={styles.slide}>
-      <h2 className={styles.slide__title}>{slide.title}</h2>
-      <ImageWithAspectRatio
-        aspectRatio="3/2"
-        wrapperClassName={styles.slide__image}
-        alt={slide.title}
-        src={slide.image}
-      />
+    <div className={cn('embla__slide')}>
+      <div className={cn('embla__slide__inner', styles.slide)}>
+        <h2 className={styles.slide__title}>{slide.title}</h2>
+        <ImageWithAspectRatio
+          aspectRatio="3/2"
+          wrapperClassName={styles.slide__image}
+          alt={slide.title}
+          src={slide.image}
+        />
+      </div>
     </div>
   );
 };
@@ -35,20 +34,35 @@ type CarouselProps = {
 };
 const Carousel: FC<CarouselProps> = ({ slides }) => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const sliderRef = useRef<Slider>(null);
-  const settings: Settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    lazyLoad: 'ondemand',
-    centerMode: true,
-    centerPadding: '32px',
-    dotsClass: styles.dots,
-    beforeChange(_, nextSlide) {
-      setActiveSlide(nextSlide);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [emblaRef, embla] = useEmblaCarousel({
+    align: 'center',
+    skipSnaps: false,
+    loop: true,
+    axis: 'x',
+  });
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (!embla) return;
+      setActiveSlide(index);
+      embla.scrollTo(index);
     },
-  };
+    [embla]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setActiveSlide(embla.selectedScrollSnap());
+  }, [embla]);
+
+  useEffect(() => {
+    if (!embla) return;
+    onSelect();
+    setScrollSnaps(embla.scrollSnapList());
+    embla.on('select', onSelect);
+  }, [embla, onSelect, setScrollSnaps]);
+
   return (
     <div className={cn(styles.root)} id="services">
       <nav className={cn(styles.slide__nav, 'container')}>
@@ -58,17 +72,33 @@ const Carousel: FC<CarouselProps> = ({ slides }) => {
             className={cn(styles.slide__nav__item, {
               [styles['slide__nav__item--active']]: index === activeSlide,
             })}
-            onClick={() => sliderRef?.current?.slickGoTo(index)}
+            onClick={() => scrollTo(index)}
           >
             {slide.title}
           </button>
         ))}
       </nav>
-      <Slider {...settings} ref={sliderRef}>
-        {slides.map((slide) => (
-          <CustomSlide slide={slide} key={slide.title} />
+      <div className="embla">
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {slides.map((slide) => (
+              <CustomSlide slide={slide} key={slide.title} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles.dots}>
+        {scrollSnaps.map((_, index) => (
+          <button
+            className={cn(styles.dot, {
+              [styles['dot--active']]: index === activeSlide,
+            })}
+            type="button"
+            key={index}
+            onClick={() => scrollTo(index)}
+          />
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };
