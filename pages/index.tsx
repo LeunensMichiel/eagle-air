@@ -174,7 +174,8 @@ const Home = () => {
         <div className="container">
           <h1 className={styles.title}>
             <span className={styles['title--emphasized']}>Dock and load. </span>
-            <br /> From animals to cars and everything in between.
+            <br />
+            From animals to cars and everything in between.
           </h1>
           <div className={styles.stats__grid}>
             <div className={styles.stats__stat}>

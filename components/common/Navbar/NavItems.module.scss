@@ -3,7 +3,7 @@
 .navMenuContainer {
   position: fixed;
   top: 4.5rem;
-  left: 0;
+  right: -100%;
   bottom: 0;
   width: 100%;
   z-index: var(--z-ultra);
@@ -14,6 +14,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  &.navContainerOpen {
+    right: 0;
+  }
 
   &.navigationTransparent {
     top: 4.5rem;
@@ -27,6 +31,11 @@
     background-color: transparent;
     order: 1;
     overflow-y: visible;
+    &.navigationTransparent {
+      [class~='navItemContainer'] {
+        color: var(--color-white);
+      }
+    }
   }
 }
 
@@ -46,18 +55,19 @@
   }
 
   @include mixins.breakpoint-up(lg) {
-    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: unset;
     padding: 0;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 0.5rem;
+    margin-right: unset;
     & > a,
     & > div > [class~='parentSubMenuButton'] {
-      padding: 0.75rem 1.25rem;
+      padding: 0.5rem;
     }
   }
 }
 
 .languagePicker {
   margin-top: auto;
+  display: none;
 }

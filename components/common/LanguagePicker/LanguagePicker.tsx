@@ -25,7 +25,7 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
   const { openModal, setModalView } = useUI();
 
   const handleLanguageBtnClick = () => {
-    setModalView('LANGUAGE_VIEW', t('i18n.select'));
+    setModalView('LANGUAGE_VIEW');
     openModal();
   };
 

@@ -25,7 +25,7 @@ const Card: FC<CardProps> = ({ imgSrc, text, title, url, isAlternative }) => {
     >
       <ImageWithAspectRatio
         alt="Picture of an eagleair truck"
-        aspectRatio="3/2"
+        aspectRatio="148/81"
         src={imgSrc}
         wrapperClassName={styles.card__image}
       />

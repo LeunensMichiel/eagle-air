@@ -19,7 +19,12 @@ const Layout: FC<Props> = ({ children }: Props) => {
       <main className={cn(styles.mainContainer)}>{children}</main>
       <Footer />
 
-      <Modal open={displayModal} onClose={closeModal} title={modalTitle}>
+      <Modal
+        open={displayModal}
+        onClose={closeModal}
+        title={modalTitle}
+        container="small"
+      >
         {modalView === 'LANGUAGE_VIEW' && <LanguageModalView />}
       </Modal>
       <CookieBanner />

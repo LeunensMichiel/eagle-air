@@ -18,7 +18,7 @@ type ModalProps = {
   className?: string;
   open?: boolean;
   title?: string;
-  container?: 'container' | 'page';
+  container?: 'container' | 'page' | 'small';
   onClose(): void;
 };
 
@@ -99,6 +99,7 @@ const Modal: FC<ModalProps> = ({
                 {
                   container: container === 'container',
                   'container-page': container === 'page',
+                  [styles.container__small]: container === 'small',
                 },
                 className
               )}

@@ -64,3 +64,11 @@
     margin-left: auto;
   }
 }
+
+.container__small {
+  max-width: 50rem;
+  padding: 1rem 1.5rem;
+  .modalBody {
+    padding: 0rem;
+  }
+}

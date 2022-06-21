@@ -75,6 +75,9 @@
   @include mixins.breakpoint-up(md) {
     padding: 1.5rem;
   }
+  @include mixins.breakpoint-up(lg) {
+    padding: 3rem 2rem;
+  }
 }
 .card__title {
   color: var(--color-text-brand);

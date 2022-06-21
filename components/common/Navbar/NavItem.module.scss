@@ -3,32 +3,45 @@
 .navItemContainer {
   border-radius: var(--border-radius);
   border: none;
-  color: var(--color-text-primary);
   display: inline-flex;
   align-items: center;
   font-size: var(--font-size-h2);
   font-weight: 900;
   line-height: 1;
   outline: none;
-
+  @include mixins.transition(color, background);
   @include mixins.breakpoint-up(md) {
-    font-size: var(--font-size-h5);
+    font-size: 1.25rem;
   }
-
   @include mixins.breakpoint-up(lg) {
+    margin-left: 1rem;
     font-size: 1rem;
   }
 }
 
-.linkContainer {
+.link {
+  color: var(--color-text-primary);
   &:hover,
   &:focus {
     color: var(--color-link-primary);
     background: var(--color-bg-secondary);
   }
-}
 
-.subMenuContainer {
+  &--active {
+    color: var(--color-link-primary);
+    background: var(--color-bg-secondary);
+  }
+
+  @include mixins.breakpoint-up(lg) {
+    &--transparent-background:not(&--active) {
+      color: var(--color-white);
+      &:hover,
+      &:focus {
+        color: var(--color-link-primary);
+        background: var(--color-bg-secondary);
+      }
+    }
+  }
 }
 
 .subMenuOpen {
@@ -68,9 +81,4 @@
   @include mixins.breakpoint-up(lg) {
     padding: 1rem 1rem 0rem 1rem;
   }
-}
-
-.activeLink {
-  color: var(--color-link-primary);
-  background: var(--color-bg-secondary);
 }

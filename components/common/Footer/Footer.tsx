@@ -32,7 +32,9 @@ const Footer: VFC = () => {
           </div>
           <div className={cn(styles.linkBlock)}>
             <span className={styles.title}>Resources</span>
-            <Link href="/sitemap">Sitemap</Link>
+            <Link locale={false} href="/sitemap-0.xml">
+              Sitemap
+            </Link>
           </div>
         </div>
       </nav>

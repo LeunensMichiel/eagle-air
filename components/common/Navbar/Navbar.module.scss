@@ -18,10 +18,6 @@
   &.navContainerOpen {
     position: fixed;
   }
-
-  @include mixins.breakpoint-up(lg) {
-    position: relative;
-  }
 }
 
 .headerContainer {

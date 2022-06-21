@@ -19,7 +19,7 @@ const CustomSlide: FC<CustomSlideProps> = ({ slide }) => {
       <div className={cn('embla__slide__inner', styles.slide)}>
         <h2 className={styles.slide__title}>{slide.title}</h2>
         <ImageWithAspectRatio
-          aspectRatio="3/2"
+          aspectRatio="148/81"
           wrapperClassName={styles.slide__image}
           alt={slide.title}
           src={slide.image}

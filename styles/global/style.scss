@@ -81,13 +81,17 @@
   }
 
   @include mixins.breakpoint-up(md) {
-    --font-size: 125%;
+    --font-size: 105%;
     --font-size-jumbo: 4.5rem;
+    --font-size-title: 1.125rem;
     --font-size-subtitle: 1.5rem;
+    --type-scale-ratio: 1.2;
   }
   @include mixins.breakpoint-up(xl) {
-    --font-size: 110%;
-    --type-scale-ratio: 1.309;
+    --font-size: 112.5%;
+    --type-scale-ratio: 1.25;
+    --font-size-jumbo: 5.675rem;
+    --font-size-title: 1.25rem;
   }
 }
 

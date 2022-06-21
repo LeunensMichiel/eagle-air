@@ -19,7 +19,14 @@
       @include mixins.breakpoint-up(md) {
         flex: 0 0 75%;
       }
+      @include mixins.breakpoint-up(lg) {
+        flex: 0 0 62.5%;
+      }
     }
+  }
+  @include mixins.breakpoint-up(lg) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 
@@ -47,6 +54,11 @@
   @include mixins.breakpoint-up(md) {
     padding-left: 12.5%;
     padding-right: 12.5%;
+  }
+
+  @include mixins.breakpoint-up(lg) {
+    padding-left: calc(5rem + 2rem);
+    padding-right: calc(5rem + 2rem);
   }
 }
 

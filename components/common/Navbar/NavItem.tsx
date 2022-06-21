@@ -9,9 +9,17 @@ import styles from './NavItem.module.scss';
 type NavItemProps = {
   label: string;
   link?: LinkProps;
+  className?: string;
+  hasTransparentBackground?: boolean;
 } & LiHTMLAttributes<HTMLLIElement>;
 
-const NavItem: FC<NavItemProps> = ({ children, label, link }) => {
+const NavItem: FC<NavItemProps> = ({
+  children,
+  label,
+  link,
+  className,
+  hasTransparentBackground,
+}) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
@@ -27,8 +35,10 @@ const NavItem: FC<NavItemProps> = ({ children, label, link }) => {
         <Link {...link}>
           <a
             role="menuitem"
-            className={cn(styles.navItemContainer, styles.linkContainer, {
-              [styles.activeLink]: router.pathname === link?.href,
+            className={cn(styles.navItemContainer, styles.link, className, {
+              [styles['link--active']]: router.pathname === link?.href,
+              [styles['link--transparent-background']]:
+                hasTransparentBackground,
             })}
           >
             {label}
@@ -44,10 +54,7 @@ const NavItem: FC<NavItemProps> = ({ children, label, link }) => {
           buttonClassName={cn(styles.subMenuButton, 'parentSubMenuButton')}
           listClassName={styles.subMenuList}
           containerOpenClassName={styles.subMenuOpen}
-          containerClassName={cn(
-            styles.navItemContainer,
-            styles.subMenuContainer
-          )}
+          containerClassName={cn(styles.navItemContainer, className)}
         >
           {children}
         </Dropdown>

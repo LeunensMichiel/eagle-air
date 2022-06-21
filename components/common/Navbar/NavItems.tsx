@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { VFC } from 'react';
 
 import LanguagePicker from '../LanguagePicker';
@@ -16,28 +16,43 @@ const NavItems: VFC<NavItemsProps> = ({
   isTransparent = false,
 }) => {
   return (
-    <AnimatePresence>
-      {navDrawerOpen && (
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.33, type: 'spring' }}
-          className={cn(styles.navMenuContainer, {
-            [styles.navigationTransparent]: isTransparent,
-          })}
-        >
-          <div className={cn(styles.navMenuList)}>
-            <NavItem label="Home" link={{ href: '/' }} />
-            <NavItem label="Import" link={{ href: '/import' }} />
-            <NavItem label="Export" link={{ href: '/export' }} />
-            <NavItem label="AVI" link={{ href: '/avi' }} />
-            <NavItem label="Contact" link={{ href: '/contact' }} />
-          </div>
-          <LanguagePicker className={styles.languagePicker} />
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <motion.div
+      initial={false}
+      layout
+      className={cn(styles.navMenuContainer, {
+        [styles.navContainerOpen]: navDrawerOpen,
+        [styles.navigationTransparent]: isTransparent,
+      })}
+    >
+      <div className={cn(styles.navMenuList)}>
+        <NavItem
+          hasTransparentBackground={isTransparent}
+          label="Home"
+          link={{ href: '/' }}
+        />
+        <NavItem
+          hasTransparentBackground={isTransparent}
+          label="Import"
+          link={{ href: '/import' }}
+        />
+        <NavItem
+          hasTransparentBackground={isTransparent}
+          label="Export"
+          link={{ href: '/export' }}
+        />
+        <NavItem
+          hasTransparentBackground={isTransparent}
+          label="AVI"
+          link={{ href: '/avi' }}
+        />
+        <NavItem
+          hasTransparentBackground={isTransparent}
+          label="Contact"
+          link={{ href: '/contact' }}
+        />
+      </div>
+      <LanguagePicker className={styles.languagePicker} />
+    </motion.div>
   );
 };
 
