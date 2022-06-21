@@ -28,7 +28,7 @@ const Footer: VFC = () => {
           <div className={cn(styles.linkBlock)}>
             <span className={styles.title}>Legal</span>
             <Link href="/terms-and-conditions">Terms and conditions</Link>
-            <Link href="/privacy-policy">Privacy policy</Link>
+            <Link href="/privacy">Privacy policy</Link>
           </div>
           <div className={cn(styles.linkBlock)}>
             <span className={styles.title}>Resources</span>

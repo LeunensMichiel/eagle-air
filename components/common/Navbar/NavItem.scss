@@ -1,0 +1,20 @@
+@use '@styles/mixins';
+
+.navItemContainer {
+  border-radius: var(--border-radius);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  line-height: 1;
+  outline: none;
+  @include mixins.transition(color, background);
+  @include mixins.breakpoint-up(md) {
+    font-size: var(--font-size-h5);
+  }
+  @include mixins.breakpoint-up(lg) {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+}
