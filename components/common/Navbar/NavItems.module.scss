@@ -69,5 +69,8 @@
 
 .languagePicker {
   margin-top: auto;
-  display: none;
+
+  @include mixins.breakpoint-up(lg) {
+    display: none;
+  }
 }

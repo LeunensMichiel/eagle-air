@@ -10,18 +10,13 @@
       "imgAlt": "My Website"
     }
   },
-  "links": {
-    "privacy": "Privacy"
-  },
-  "footer": {
-    "footnote": "Gemaakt met een jat ☕ door Michiel Leunens"
-  },
   "notFound": {
     "title": "Pagina niet gevonden",
     "description": "Ga naar de homepagina"
   },
   "errorPage": {
-    "title": "👾 Er ging iets mis langs onze kant",
+    "oops": "Uh-oh.",
+    "title": "Er ging iets mis langs onze kant",
     "description": "Probeer later opnieuw."
   },
   "i18n": {

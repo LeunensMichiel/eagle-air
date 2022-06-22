@@ -1,15 +1,36 @@
+@use '@styles/mixins';
+
 .custom500 {
-  margin-top: 7.5rem;
-  text-align: center;
+  margin-top: 1.5rem;
   text-align: center;
   height: 100%;
 
-  h4 {
-    font-weight: 500;
+  h1 {
     margin-bottom: 1.5rem;
+    font-size: var(--font-size-title);
   }
 
   p {
     font-size: var(--font-size-title);
   }
+
+  @include mixins.breakpoint-up(xs) {
+    margin-top: 2rem;
+  }
+  @include mixins.breakpoint-up(md) {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+  @include mixins.breakpoint-up(lg) {
+    padding-left: calc(5rem + 2rem);
+    padding-right: calc(5rem + 2rem);
+  }
+}
+
+.oops {
+  font-size: calc(var(--font-size-jumbo) * 1.5);
+  font-family: var(--font-family-alt);
+  display: block;
+  margin-bottom: 3rem;
+  color: var(--color-error);
 }

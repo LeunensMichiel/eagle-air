@@ -1,18 +1,48 @@
+@use '@styles/mixins';
+
 .custom404 {
-  margin-top: 7.5rem;
+  margin-top: 1.5rem;
   text-align: center;
   height: 100%;
 
-  h4 {
-    font-weight: 500;
+  h1 {
     margin-bottom: 1.5rem;
+    font-size: var(--font-size-title);
   }
 
   p {
     font-size: var(--font-size-title);
   }
+
+  @include mixins.breakpoint-up(xs) {
+    margin-top: 2rem;
+  }
+  @include mixins.breakpoint-up(md) {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+  @include mixins.breakpoint-up(lg) {
+    padding-left: calc(5rem + 2rem);
+    padding-right: calc(5rem + 2rem);
+    display: grid;
+    gap: 5rem;
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) auto;
+    text-align: left;
+  }
 }
 
 .errCode {
-  font-weight: 700;
+  font-size: var(--font-size-h1);
+  margin-right: 0.1em;
+}
+
+.image__404 {
+  width: 100%;
+  max-height: 40vh;
+  margin-bottom: 1rem;
+  @include mixins.breakpoint-up(lg) {
+    margin-bottom: 0;
+    max-height: 50vh;
+  }
 }

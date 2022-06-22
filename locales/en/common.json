@@ -10,18 +10,13 @@
       "imgAlt": "My Website"
     }
   },
-  "links": {
-    "privacy": "Privacy"
-  },
-  "footer": {
-    "footnote": "Made with ☕ by Michiel Leunens."
-  },
   "notFound": {
     "title": "Page not found",
     "description": "Go the homepage"
   },
   "errorPage": {
-    "title": "👾 Something went wrong on our end",
+    "oops": "Oops.",
+    "title": "Something went wrong on our end",
     "description": "Please try again later."
   },
   "i18n": {
