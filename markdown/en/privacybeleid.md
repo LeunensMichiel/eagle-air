@@ -1,7 +1,7 @@
 ---
 date: '2022-06-21'
 title: Privacy Statement
-description: Privacy policy of site
+description: Privacy policy of Eagle Air.
 ---
 
 Eagleair.be is a website of Eagle Air Agencies nv.

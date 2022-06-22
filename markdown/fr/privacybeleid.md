@@ -1,7 +1,7 @@
 ---
 date: '2022-06-21'
 title: Déclaration de confidentialité
-description: Politique de confidentialité de ce site.
+description: Politique de confidentialité d'Eagle Air.
 ---
 
 Eagleair.be est un site web d'Eagle Air Agencies nv.
