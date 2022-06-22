@@ -1,0 +1,25 @@
+@use '@styles/mixins';
+
+.tilted-bar {
+  display: block;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  right: 16px;
+  mix-blend-mode: multiply;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-copper-70),
+    var(--color-copper-70) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+
+  @include mixins.breakpoint-up(md) {
+    width: 300px;
+    height: 48px;
+    bottom: -24px;
+  }
+}

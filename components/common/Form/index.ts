@@ -1,2 +1,3 @@
+export * from './ContactForm';
 export { default as Fieldset } from './Fieldset';
 export { default } from './Form';

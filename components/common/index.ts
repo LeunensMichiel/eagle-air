@@ -9,3 +9,4 @@ export { default as LanguagePicker } from './LanguagePicker';
 export { default as Layout } from './Layout';
 export { default as Navbar } from './Navbar';
 export { MarkdownPage } from './Page';
+export * from './TiltedBar/TiltedBar';

@@ -1,0 +1,70 @@
+@use '@styles/mixins';
+
+.contact {
+  display: grid;
+  gap: 5rem;
+  @include mixins.breakpoint-up(md) {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+  @include mixins.breakpoint-up(lg) {
+    padding-left: unset;
+    padding-right: unset;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form {
+  justify-items: stretch;
+}
+
+.form__textarea {
+  @include mixins.breakpoint-up(md) {
+    grid-column: span 2;
+  }
+}
+.form__button {
+  @include mixins.breakpoint-up(md) {
+    justify-self: start;
+  }
+}
+
+.contact__info {
+  position: relative;
+  border-radius: var(--border-radius);
+  background-color: var(--color-eagleair-50);
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  background-image: url('/assets/grungy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  @include mixins.breakpoint-up(lg) {
+    order: -1;
+  }
+}
+
+.contact__info__title {
+  margin-bottom: 0.5rem;
+  color: var(--color-eagleair-100);
+}
+
+.contact__info__item {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact__info__item__title {
+  font-weight: 600;
+  color: var(--color-text-brand);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-header);
+}
+
+.contact__info__item__line {
+  line-height: var(--line-height-header);
+  color: var(--color-text-brand);
+}

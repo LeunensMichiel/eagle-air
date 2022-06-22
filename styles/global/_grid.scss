@@ -35,9 +35,14 @@
     padding-bottom: 9.5rem;
   }
 
-  @include mixins.breakpoint-up(md) {
+  @include mixins.breakpoint-up(lg) {
     padding-top: 9.625rem;
     padding-bottom: 9.625rem;
+
+    &--sm {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
   }
 }
 

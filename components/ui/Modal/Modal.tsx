@@ -104,7 +104,11 @@ const Modal: FC<ModalProps> = ({
                 className
               )}
             >
-              <header className={cn(styles.modalHeader)}>
+              <header
+                className={cn(styles.modalHeader, {
+                  [styles.noTitle]: !title,
+                })}
+              >
                 {title && (
                   <span className={cn(styles.modalTitle)}>{title}</span>
                 )}
