@@ -10,9 +10,7 @@
   line-height: 1;
   outline: none;
   @include mixins.transition(color, background);
-  @include mixins.breakpoint-up(md) {
-    font-size: 1.25rem;
-  }
+
   @include mixins.breakpoint-up(lg) {
     margin-left: 1rem;
     font-size: 1rem;

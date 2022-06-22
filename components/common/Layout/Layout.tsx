@@ -4,7 +4,7 @@ import { Modal } from '@components/ui';
 import { useUI } from '@lib/hooks';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
-import { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, ReactNode } from 'react';
 
 import styles from './Layout.module.scss';
 
@@ -14,19 +14,18 @@ type Props = {
 
 const Layout: FC<Props> = ({ children }: Props) => {
   const { displayModal, closeModal, modalView, modalTitle } = useUI();
-  const [isTransparentNavbar, setIsTransparentNavbar] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    if (router?.pathname === '/') {
-      setIsTransparentNavbar(true);
-    }
-  }, [router?.pathname]);
 
   return (
     <>
-      <Navbar isTransparent={isTransparentNavbar} />
-      <main className={cn(styles.mainContainer)}>{children}</main>
+      <Navbar isTransparent={router?.pathname === '/'} />
+      <main
+        className={cn(styles.mainContainer, {
+          [styles['has-transparent-navbar']]: router?.pathname === '/',
+        })}
+      >
+        {children}
+      </main>
       <Footer />
 
       <Modal

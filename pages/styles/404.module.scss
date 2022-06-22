@@ -1,7 +1,6 @@
 @use '@styles/mixins';
 
 .custom404 {
-  margin-top: 1.5rem;
   text-align: center;
   height: 100%;
 
@@ -14,9 +13,6 @@
     font-size: var(--font-size-title);
   }
 
-  @include mixins.breakpoint-up(xs) {
-    margin-top: 2rem;
-  }
   @include mixins.breakpoint-up(md) {
     padding-left: 12.5%;
     padding-right: 12.5%;
