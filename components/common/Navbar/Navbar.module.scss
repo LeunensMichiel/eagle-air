@@ -31,6 +31,7 @@
   @include mixins.breakpoint-up(lg) {
     display: flex;
     align-items: center;
+    padding: 1.5rem 0;
   }
 }
 

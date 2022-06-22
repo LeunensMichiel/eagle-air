@@ -50,7 +50,7 @@ const MarkdownPage: VFC<MarkdownPageProps> = ({
         }}
       />
       {mdxSource && (
-        <article className={cn(styles.article)}>
+        <article className={cn(styles.article, 'py-container--sm')}>
           <header className={cn(styles.header, 'container')}>
             <h1>{frontmatter.title}</h1>
             <small>{`${t(
