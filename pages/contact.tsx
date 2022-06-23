@@ -1,12 +1,13 @@
 import { Layout } from '@components/common';
 import { ContactForm } from '@components/common/Form';
+import cn from 'classnames';
 
 import styles from './styles/contact.module.scss';
 
 const ContactPage = () => {
   return (
     <section className="py-container--sm">
-      <div className="container">
+      <div className={cn(styles.form, 'container')}>
         <ContactForm />
       </div>
       <div className={styles.map}>

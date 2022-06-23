@@ -1,0 +1,237 @@
+@use '@styles/mixins';
+
+.import {
+  overflow: hidden;
+}
+
+.import__intro {
+  @include mixins.breakpoint-up(md) {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+  @include mixins.breakpoint-up(lg) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.import__intro__inner {
+  img {
+    display: none;
+  }
+  @include mixins.breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 2rem;
+    align-items: center;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.import__title {
+  position: relative;
+  z-index: 1;
+}
+
+.import__title__image {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 4rem;
+  z-index: -1;
+  width: 320px;
+  height: auto;
+
+  @include mixins.breakpoint-up(md) {
+    width: 490px;
+    bottom: -2.5rem;
+  }
+
+  @include mixins.breakpoint-up(xl) {
+    width: 620px;
+    left: 10rem;
+    bottom: -1.5rem;
+  }
+}
+
+.import__list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  background-image: url('/assets/geometric_2.svg');
+  background-repeat: no-repeat;
+  background-size: 240px;
+  background-position: center right;
+
+  li {
+    font-size: var(--font-size-h5);
+    font-weight: 900;
+    color: var(--color-text-brand);
+    margin-bottom: 1rem;
+  }
+
+  @include mixins.breakpoint-up(lg) {
+    background-size: 480px;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    li {
+      font-size: var(--font-size-h3);
+    }
+  }
+}
+
+.stats {
+  display: grid;
+  gap: 1.5rem;
+
+  @include mixins.breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mixins.breakpoint-up(lg) {
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+.stats__list {
+  display: grid;
+  gap: 2rem;
+}
+
+.import__image {
+  border-radius: var(--border-radius);
+}
+
+.stats__description {
+  color: var(--color-neutrals-130);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1.5rem;
+  @include mixins.breakpoint-up(md) {
+    gap: 1rem;
+  }
+}
+
+.stats__stat {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.125rem;
+  padding-left: 0.5rem;
+  border-left: 0.25rem solid var(--color-charcoal-100);
+  @include mixins.breakpoint-up(lg) {
+    padding-left: 1rem;
+  }
+}
+
+.stats__title {
+  font-weight: 900;
+  font-size: var(--font-size-title);
+  @include mixins.breakpoint-up(lg) {
+    font-size: var(--font-size-h5);
+  }
+}
+
+.stats__text {
+  font-weight: 400;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-x-small);
+  line-height: var(--line-height-paragraph);
+
+  @include mixins.breakpoint-up(md) {
+    font-size: var(--font-size-small);
+  }
+
+  @include mixins.breakpoint-up(lg) {
+    font-size: var(--font-size);
+  }
+}
+
+.team__title {
+  position: relative;
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+
+  img {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    z-index: -1;
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  @include mixins.breakpoint-up(md) {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 5rem;
+  }
+  @include mixins.breakpoint-up(lg) {
+    margin-left: unset;
+    margin-right: auto;
+    img {
+      width: 15rem;
+      height: 15rem;
+      bottom: -3.5rem;
+      left: -3.5rem;
+    }
+  }
+}
+
+.team {
+  gap: 1.5rem;
+  display: grid;
+
+  @include mixins.breakpoint-up(md) {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    position: relative;
+  }
+  @include mixins.breakpoint-up(lg) {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  @include mixins.breakpoint-up(xl) {
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+.team__card {
+  background-color: var(--color-bg-primary);
+  gap: 1.5rem;
+  display: grid;
+  justify-items: start;
+  align-items: start;
+  align-content: start;
+  border-radius: var(--border-radius);
+
+  p {
+    color: var(--color-neutrals-130);
+  }
+
+  @include mixins.breakpoint-up(md) {
+    background-color: var(--color-eagleair-50);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    bottom: -33%;
+    right: -5%;
+    justify-items: stretch;
+  }
+
+  @include mixins.breakpoint-up(lg) {
+    max-width: unset;
+    position: static;
+    gap: 2rem;
+  }
+}

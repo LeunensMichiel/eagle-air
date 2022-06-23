@@ -39,7 +39,7 @@ const Footer: VFC = () => {
         </div>
       </nav>
       <div className={styles.footerBottom}>
-        <LanguagePicker />
+        <LanguagePicker size="sm" />
         <div className={styles.footerCopy}>
           <Logo variant="full" />
           <small>©Eagle Air Agencies 2022. All rights preserved.</small>

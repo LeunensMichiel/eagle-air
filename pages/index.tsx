@@ -75,11 +75,11 @@ const Home = () => {
       <section className="py-container" id="intro">
         <div className={cn(styles.intro__container, 'container')}>
           <Logo className={styles['logo--small']} />
-          <h1 className={styles.title}>
+          <h1 className={'title'}>
             Your goods, delivered with{' '}
-            <span className={styles['title--emphasized']}>expertise.</span>
+            <span className={'title--emphasized'}>expertise.</span>
           </h1>
-          <p className={styles.intro}>
+          <p className={'paragraph'}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
             optio soluta, nulla vel sint aut dolor alias praesentium blanditiis,
             et id neque dignissimos autem molestiae molestias suscipit
@@ -129,8 +129,8 @@ const Home = () => {
       </section>
       <section className={cn(styles.stats, 'py-container')}>
         <div className="container">
-          <h1 className={styles.title}>
-            <span className={styles['title--emphasized']}>Dock and load. </span>
+          <h1 className={'title'}>
+            <span className={'title--emphasized'}>Dock and load. </span>
             <br />
             From animals to cars and everything in between.
           </h1>
@@ -218,10 +218,10 @@ const Home = () => {
         </div>
       </section>
       <section className="container py-container">
-        <h1 className={cn(styles.title, styles.contact__title)}>
+        <h1 className={cn('title', styles.contact__title)}>
           Interested? <br />
           Let&apos;s discuss{' '}
-          <span className={styles['title--emphasized']}>opportunities.</span>
+          <span className={'title--emphasized'}>opportunities.</span>
         </h1>
         <ContactForm />
       </section>

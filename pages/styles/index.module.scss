@@ -148,17 +148,6 @@
   }
 }
 
-.title {
-  max-width: 800px;
-  color: var(--color-text-brand);
-  &--emphasized {
-    color: var(--color-copper-100);
-  }
-  &--emphasized--light {
-    color: var(--color-copper-90);
-  }
-}
-
 .logo--small {
   color: var(--color-text-brand);
   width: 100%;
@@ -178,20 +167,6 @@
     right: 5%;
     bottom: 60%;
     max-width: 488px;
-  }
-}
-
-.intro {
-  color: var(--color-text-tertiary);
-  margin-top: 1.5rem;
-  max-width: 800px;
-
-  @include mixins.breakpoint-up(md) {
-    font-weight: 600;
-  }
-
-  @include mixins.breakpoint-up(lg) {
-    font-size: var(--font-size-subtitle);
   }
 }
 

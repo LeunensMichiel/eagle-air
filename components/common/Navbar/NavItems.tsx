@@ -27,11 +27,6 @@ const NavItems: VFC<NavItemsProps> = ({
       <div className={cn(styles.navMenuList)}>
         <NavItem
           hasTransparentBackground={isTransparent}
-          label="Home"
-          link={{ href: '/' }}
-        />
-        <NavItem
-          hasTransparentBackground={isTransparent}
           label="Import"
           link={{ href: '/import' }}
         />
@@ -51,7 +46,7 @@ const NavItems: VFC<NavItemsProps> = ({
           link={{ href: '/contact' }}
         />
       </div>
-      <LanguagePicker className={styles.languagePicker} />
+      <LanguagePicker className={styles.languagePicker} size="sm" />
     </motion.div>
   );
 };
