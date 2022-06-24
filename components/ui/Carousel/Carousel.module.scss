@@ -40,6 +40,7 @@
   overflow: hidden;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  cursor: grab;
 
   @include mixins.breakpoint-up(lg) {
     padding-left: 1rem;

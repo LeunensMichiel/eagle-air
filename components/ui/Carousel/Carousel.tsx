@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
 import { FC, useCallback, useEffect, useState } from 'react';
 
 import ImageWithAspectRatio from '../ImageWithAspectRatio';
@@ -8,6 +9,7 @@ import styles from './Carousel.module.scss';
 type SlideType = {
   image: string;
   title: string;
+  href: string;
 };
 
 type CustomSlideProps = {
@@ -16,14 +18,18 @@ type CustomSlideProps = {
 const CustomSlide: FC<CustomSlideProps> = ({ slide }) => {
   return (
     <div className={cn('embla__slide')}>
-      <div className={cn('embla__slide__inner', styles.slide)}>
-        <h2 className={styles.slide__title}>{slide.title}</h2>
-        <ImageWithAspectRatio
-          aspectRatio="148/81"
-          wrapperClassName={styles.slide__image}
-          alt={slide.title}
-          src={slide.image}
-        />
+      <div className={cn('embla__slide__inner')}>
+        <Link href={slide.href}>
+          <div className={styles.slide}>
+            <h2 className={styles.slide__title}>{slide.title}</h2>
+            <ImageWithAspectRatio
+              aspectRatio="148/81"
+              wrapperClassName={styles.slide__image}
+              alt={slide.title}
+              src={slide.image}
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

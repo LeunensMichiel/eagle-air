@@ -91,14 +91,17 @@ const Home = () => {
             {
               image: '/assets/web-08962.jpg',
               title: 'Import',
+              href: '/import',
             },
             {
               image: '/assets/web-08898.jpg',
               title: 'Export',
+              href: '/export',
             },
             {
               image: '/assets/struisvogel.jpg',
               title: 'AVI',
+              href: '/avi',
             },
           ]}
         />
