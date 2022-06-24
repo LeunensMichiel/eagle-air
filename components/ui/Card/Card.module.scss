@@ -89,14 +89,11 @@
 .card__text {
   margin-bottom: 1.5rem;
   color: var(--color-eagleair-80);
-
-  @include mixins.breakpoint-up(md) {
-    margin-top: auto;
-  }
 }
 
 .card__button {
   @include mixins.breakpoint-up(md) {
     align-self: start;
+    margin-top: auto;
   }
 }

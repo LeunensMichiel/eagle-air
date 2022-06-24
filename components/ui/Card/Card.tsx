@@ -12,11 +12,19 @@ type CardProps = {
   imgSrc: string;
   title: string;
   text: string;
+  buttonText: string;
   url: string;
   isAlternative?: boolean;
 };
 
-const Card: FC<CardProps> = ({ imgSrc, text, title, url, isAlternative }) => {
+const Card: FC<CardProps> = ({
+  imgSrc,
+  text,
+  title,
+  url,
+  isAlternative,
+  buttonText,
+}) => {
   return (
     <div
       className={cn(styles.card, {
@@ -43,7 +51,7 @@ const Card: FC<CardProps> = ({ imgSrc, text, title, url, isAlternative }) => {
             iconRight={<Chevron />}
             variant="light"
           >
-            More info
+            {buttonText}
           </Button>
         </Link>
       </div>

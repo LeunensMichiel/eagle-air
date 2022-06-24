@@ -10,7 +10,7 @@ import styles from './styles/import.module.scss';
 const ImportPage = () => {
   return (
     <>
-      <section className={cn('py-container--sm', styles.import)}>
+      <section className={cn('py-container', styles.import)}>
         <div className={cn('container')}>
           <div className={styles.import__intro}>
             <h1 className={cn('title', styles.import__title)}>
@@ -86,8 +86,7 @@ const ImportPage = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className={cn('py-container')}>
+
         <div className={cn('container')}>
           <h2 className={styles.team__title}>
             Met hun jarenlange ervaring in de sector, biedt ons import team jou

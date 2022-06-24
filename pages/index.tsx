@@ -109,6 +109,7 @@ const Home = () => {
           pharetra adipiscing."
             title="Import that helps your business grow."
             url="/import"
+            buttonText="More info"
           />
           <Card
             imgSrc="/assets/web-08964.jpg"
@@ -116,6 +117,7 @@ const Home = () => {
           pharetra adipiscing."
             title="Professionals in air freight export."
             url="/export"
+            buttonText="More info"
           />
           <Card
             imgSrc="/assets/chicks-in-transport.jpg"
@@ -123,6 +125,7 @@ const Home = () => {
           pharetra adipiscing."
             title="Animals should be transported with care."
             url="/avi"
+            buttonText="More info"
             isAlternative
           />
         </div>
