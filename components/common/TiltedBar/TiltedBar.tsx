@@ -1,7 +1,12 @@
-import React from 'react';
+import cn from 'classnames';
+import React, { FC } from 'react';
 
 import styles from './TiltedBar.module.scss';
 
-export const TiltedBar = () => {
-  return <div className={styles['tilted-bar']} />;
+type Props = {
+  className?: string;
+};
+
+export const TiltedBar: FC<Props> = ({ className }) => {
+  return <div className={cn(styles['tilted-bar'], className)} />;
 };

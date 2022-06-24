@@ -232,6 +232,10 @@
     bottom: -33%;
     right: -5%;
     justify-items: stretch;
+
+    p {
+      color: var(--color-eagleair-100);
+    }
   }
 
   @include mixins.breakpoint-up(lg) {

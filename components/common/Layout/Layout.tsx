@@ -12,16 +12,20 @@ type Props = {
   children: ReactNode;
 };
 
+const transparentRoutes = ['/', '/export'];
+
 const Layout: FC<Props> = ({ children }: Props) => {
   const { displayModal, closeModal, modalView, modalTitle } = useUI();
   const router = useRouter();
 
+  const isTransparentRoute = transparentRoutes.includes(router?.pathname);
+
   return (
     <>
-      <Navbar isTransparent={router?.pathname === '/'} />
+      <Navbar isTransparent={isTransparentRoute} />
       <main
         className={cn(styles.mainContainer, {
-          [styles['has-transparent-navbar']]: router?.pathname === '/',
+          [styles['has-transparent-navbar']]: isTransparentRoute,
         })}
       >
         {children}

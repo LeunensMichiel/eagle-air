@@ -49,7 +49,10 @@ const AVIPage = () => {
           preload="metadata"
           controls
         >
-          <source src="/assets/avi.mp4" type="video/mp4" />
+          <source
+            src="https://drive.google.com/uc?export=download&id=1Pe2wM_O0ABdQyoKusZ9ktV9yU_8-Mavi"
+            type="video/mp4"
+          />
         </video>
       </div>
       <div className={cn('container')} id="info">
@@ -93,7 +96,7 @@ const AVIPage = () => {
               width="1080"
               height="560"
               objectFit="cover"
-              objectPosition="50% 60%"
+              objectPosition="50% 50%"
               src="/assets/tarmac_2.jpg"
               alt="Chicks at the tarmac"
               className={styles.article__image}
