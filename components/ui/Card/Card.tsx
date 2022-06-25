@@ -32,7 +32,7 @@ const Card: FC<CardProps> = ({
       })}
     >
       <ImageWithAspectRatio
-        alt="Picture of an eagleair truck"
+        alt={`A picture describing the following title: ${title}`}
         aspectRatio="148/81"
         src={imgSrc}
         wrapperClassName={styles.card__image}

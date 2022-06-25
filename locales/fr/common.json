@@ -24,5 +24,44 @@
   },
   "date": {
     "published": "Publié le"
+  },
+  "links": {
+    "import": "Import",
+    "export": "Export",
+    "avi": "AVI",
+    "contact": "Contact",
+    "terms-and-conditions": "Terms and conditions",
+    "privacy-policy": "Privacy policy",
+    "services": "Services",
+    "legal": "Legal",
+    "resources": "Resources",
+    "sitemap": "Sitemap",
+    "copyright": "Eagle Air Agencies {{ date }}. All rights preserved."
+  },
+  "form": {
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Eagle Air",
+    "emailLabel": "Email",
+    "emailPlaceholder": "address@provider.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+00 000 00 00 00",
+    "countryLabel": "Country",
+    "countryPlaceholder": "🇧🇪 Belgium",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Subject",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we be of service?",
+    "button": "Send message"
+  },
+  "contact": {
+    "title": "Our headquarters.",
+    "office": "Zaventem office",
+    "country": "Belgium",
+    "phone": "Phone",
+    "email": "Email",
+    "fax": "Fax",
+    "vat": "VAT number"
   }
 }

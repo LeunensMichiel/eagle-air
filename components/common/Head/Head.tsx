@@ -40,11 +40,6 @@ const Head: VFC = () => {
             },
           ],
         }}
-        twitter={{
-          handle: '@michielleunens',
-          site: '@michielleunens',
-          cardType: 'summary_large_image',
-        }}
       />
       <NextHead>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

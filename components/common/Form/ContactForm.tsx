@@ -20,7 +20,7 @@ import styles from './ContactForm.module.scss';
 import Form from './Form';
 
 export const ContactForm = () => {
-  const { t, lang } = useTranslation();
+  const { t, lang } = useTranslation('common');
 
   const countryOptions = countries
     .map(({ name, code }) => {
@@ -52,33 +52,33 @@ export const ContactForm = () => {
     <div className={styles.contact}>
       <Form className={styles.form}>
         <Input
-          label="Full Name"
+          label={t('form.fullNameLabel')}
           type="text"
           iconLeft={<User />}
-          placeholder="Firstname Lastname"
+          placeholder={t('form.fullNameLabel')}
         />
         <Input
-          label="Company"
+          label={t('form.companyLabel')}
           type="text"
           iconLeft={<Building />}
-          placeholder="Your company"
+          placeholder={t('form.companyPlaceholder')}
         />
         <Input
-          label="Email"
+          label={t('form.emailLabel')}
           type="email"
           iconLeft={<Stamp />}
-          placeholder="address@provider.com"
+          placeholder={t('form.emailPlaceholder')}
         />
         <Input
-          label="Phone"
+          label={t('form.phoneLabel')}
           type="tel"
           iconLeft={<Mobile />}
-          placeholder="+00 000 00 00 00"
+          placeholder={t('form.phonePlaceholder')}
         />
         <Select
-          label="Country"
+          label={t('form.countryLabel')}
           instanceId="1"
-          placeholder="Belgium"
+          placeholder={t('form.countryPlaceholder')}
           options={countryOptions}
           getOptionLabel={(option) =>
             `${countries.find((opt) => opt.code === option.value)?.emoji} ${
@@ -87,15 +87,15 @@ export const ContactForm = () => {
           }
         />
         <Input
-          label="Subject"
+          label={t('form.subjectLabel')}
           type="text"
           iconLeft={<Subject />}
-          placeholder="Subject of email"
+          placeholder={t('form.subjectPlaceholder')}
         />
         <TextArea
-          label="Message"
+          label={t('form.messageLabel')}
           iconLeft={<Mail />}
-          placeholder="How can we be of service?"
+          placeholder={t('form.messagePlaceholder')}
           wrapperClassName={styles.form__textarea}
         />
         <Button
@@ -103,19 +103,19 @@ export const ContactForm = () => {
           className={styles.form__button}
           iconRight={<Send />}
         >
-          Send message
+          {t('form.button')}
         </Button>
       </Form>
       <div className={styles.contact__info}>
         <div>
           <Bar />
           <h3 className={cn(styles.title, styles.contact__info__title)}>
-            Our headquarters.
+            {t('contact.title')}
           </h3>
         </div>
         <div className={styles.contact__info__item}>
           <span className={styles.contact__info__item__title}>
-            Zaventem office
+            {t('contact.office')}
           </span>
           <span className={styles.contact__info__item__line}>
             Brucargo 752,
@@ -123,29 +123,37 @@ export const ContactForm = () => {
           <span className={styles.contact__info__item__line}>
             1820 Steenokkerzeel,
           </span>
-          <span className={styles.contact__info__item__line}>Belgium</span>
-        </div>
-        <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Phone</span>
           <span className={styles.contact__info__item__line}>
-            +32 02 751 50 45
+            {t('contact.country')}
           </span>
         </div>
         <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Email</span>
-          <span className={styles.contact__info__item__line}>
-            info@eagleair.be
+          <span className={styles.contact__info__item__title}>
+            {t('contact.phone')}
           </span>
-        </div>
-        <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Fax</span>
           <span className={styles.contact__info__item__line}>
             +32 02 751 50 45
           </span>
         </div>
         <div className={styles.contact__info__item}>
           <span className={styles.contact__info__item__title}>
-            Company number
+            {t('contact.email')}
+          </span>
+          <span className={styles.contact__info__item__line}>
+            info@eagleair.be
+          </span>
+        </div>
+        <div className={styles.contact__info__item}>
+          <span className={styles.contact__info__item__title}>
+            {t('contact.fax')}
+          </span>
+          <span className={styles.contact__info__item__line}>
+            +32 02 751 50 45
+          </span>
+        </div>
+        <div className={styles.contact__info__item}>
+          <span className={styles.contact__info__item__title}>
+            {t('contact.vat')}
           </span>
           <span className={styles.contact__info__item__line}>
             0712 23 45 24

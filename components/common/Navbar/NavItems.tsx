@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { motion } from 'framer-motion';
+import useTranslation from 'next-translate/useTranslation';
 import { VFC } from 'react';
 
 import LanguagePicker from '../LanguagePicker';
@@ -15,6 +16,7 @@ const NavItems: VFC<NavItemsProps> = ({
   navDrawerOpen = false,
   isTransparent = false,
 }) => {
+  const { t } = useTranslation('common');
   return (
     <motion.div
       initial={false}
@@ -27,22 +29,22 @@ const NavItems: VFC<NavItemsProps> = ({
       <div className={cn(styles.navMenuList)}>
         <NavItem
           hasTransparentBackground={isTransparent}
-          label="Import"
+          label={t('links.import')}
           link={{ href: '/import' }}
         />
         <NavItem
           hasTransparentBackground={isTransparent}
-          label="Export"
+          label={t('links.export')}
           link={{ href: '/export' }}
         />
         <NavItem
           hasTransparentBackground={isTransparent}
-          label="AVI"
+          label={t('links.avi')}
           link={{ href: '/avi' }}
         />
         <NavItem
           hasTransparentBackground={isTransparent}
-          label="Contact"
+          label={t('links.contact')}
           link={{ href: '/contact' }}
         />
       </div>
