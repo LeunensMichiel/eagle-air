@@ -15,6 +15,8 @@
 }
 
 .export__intro {
+  position: relative;
+  z-index: 0;
   @include mixins.breakpoint-up(md) {
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -22,6 +24,29 @@
   @include mixins.breakpoint-up(lg) {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+.geometric-shape {
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+
+  @include mixins.breakpoint-up(md) {
+    width: 750px;
+    height: 750px;
+    top: -100px;
+    right: -375px;
+    opacity: 0.5;
+  }
+  @include mixins.breakpoint-up(lg) {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.75;
   }
 }
 
@@ -33,6 +58,7 @@
 
 .export__paragraph {
   color: var(--color-eagleair-50);
+  font-weight: 500;
 }
 
 .export__image__container {
@@ -69,7 +95,7 @@
   li {
     font-size: var(--font-size-h5);
     font-weight: 900;
-    color: var(--color-eagleair-70);
+    color: var(--color-eagleair-60);
     margin-bottom: 1rem;
   }
 

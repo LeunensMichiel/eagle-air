@@ -14,6 +14,11 @@ const ExportPage = () => {
       <section className={cn('py-container', styles.export)}>
         <div className={cn('container')}>
           <div className={styles.export__intro}>
+            <img
+              src="/assets/cccircular.svg"
+              alt="geometric shape"
+              className={styles['geometric-shape']}
+            />
             <h1 className={cn('title', styles.export__title)}>
               Our <span className="title--emphasized--light">export</span> is
               going places.
