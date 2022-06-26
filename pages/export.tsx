@@ -5,12 +5,24 @@ import { Button } from '@components/ui';
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
+import Trans from 'next-translate/Trans';
+import useTranslation from 'next-translate/useTranslation';
 
 import styles from './styles/export.module.scss';
 
 const ExportPage = () => {
+  const { t } = useTranslation('export');
   return (
     <>
+      <NextSeo
+        title={t('seo.title')}
+        description={t('seo.description')}
+        openGraph={{
+          title: t('seo.title'),
+          description: t('seo.description'),
+        }}
+      />
       <section className={cn('py-container', styles.export)}>
         <div className={cn('container')}>
           <div className={styles.export__intro}>
@@ -20,22 +32,21 @@ const ExportPage = () => {
               className={styles['geometric-shape']}
             />
             <h1 className={cn('title', styles.export__title)}>
-              Our <span className="title--emphasized--light">export</span> is
-              going places.
+              <Trans
+                i18nKey="intro.title"
+                ns="export"
+                components={[<span className="title--emphasized--light" />]}
+              />
             </h1>
             <p className={cn('paragraph', styles.export__paragraph)}>
-              Ons export team zorgt steeds voor de snelle afhandeling van jouw
-              vracht. Wij snappen als geen ander de tijdsgevoeligheid van
-              luchtvracht. Daarom dat wij alles regelen van pick-up tot
-              eindbestemming. Wat je wensen ook zijn, ons team staat steeds voor
-              je klaar!
+              {t('intro.paragraph')}
             </p>
             <ul className={styles.export__list}>
-              <li>Pick-up in België en Europa</li>
-              <li>Verzenden over de hele wereld</li>
-              <li>Wekelijkse consols</li>
-              <li>Tijdelijke uitvoer</li>
-              <li>In-house screening</li>
+              <li>{t('list.item1')}</li>
+              <li>{t('list.item2')}</li>
+              <li>{t('list.item3')}</li>
+              <li>{t('list.item4')}</li>
+              <li>{t('list.item5')}</li>
             </ul>
           </div>
         </div>
@@ -57,15 +68,16 @@ const ExportPage = () => {
           <div className={styles.article}>
             <div>
               <Bar className={styles.article__bar} />
-              <h2>Our paw partners in crime.</h2>
+              <h2>{t('article.title')}</h2>
             </div>
           </div>
           <div className={styles.article__body}>
             <p className={styles.article__paragraph}>
-              Samen met onze partner ASB security zorgen wij voor de gepaste
-              screeningmethode voor al jouw vracht. ASB security verzorgt al
-              onze screening en dit in ons eigen magazijn –{' '}
-              <strong>24/7.</strong>
+              <Trans
+                i18nKey="article.paragraph"
+                ns="export"
+                components={[<strong />]}
+              />
             </p>
             <Image
               layout="responsive"
@@ -80,13 +92,11 @@ const ExportPage = () => {
           </div>
         </div>
         <div className={cn('container', styles.contact)}>
-          <h3>Wanna team-up?</h3>
-          <p>
-            Send us a message for more information about our partner initiative.
-          </p>
+          <h3>{t('contact.title')}</h3>
+          <p>{t('contact.paragraph')} </p>
           <Link href="/contact" passHref>
             <Button size="sm" iconRight={<Chevron />} as="a">
-              Contact us
+              {t('contact.button')}
             </Button>
           </Link>
           <div className={styles.partners}>
