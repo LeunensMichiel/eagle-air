@@ -67,8 +67,8 @@ const ImportPage = () => {
             <Image
               src="/assets/web-08923.jpg"
               layout="responsive"
-              width="1080"
-              height="560"
+              width="540"
+              height="280"
               objectFit="cover"
               alt="truck loading"
               className={styles.import__image}
@@ -106,8 +106,8 @@ const ImportPage = () => {
           <div className={styles.team}>
             <Image
               layout="responsive"
-              width="1080"
-              height="560"
+              width="540"
+              height="280"
               objectFit="cover"
               objectPosition="50% 60%"
               src="/assets/web-08914.jpg"

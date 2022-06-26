@@ -107,8 +107,8 @@ const AVIPage = () => {
               </p>
               <Image
                 layout="responsive"
-                width="1080"
-                height="560"
+                width="540"
+                height="280"
                 objectFit="cover"
                 objectPosition="50% 50%"
                 src="/assets/tarmac_2.jpg"
