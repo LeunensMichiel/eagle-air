@@ -1,0 +1,32 @@
+{
+  "seo": {
+    "title": "Import services",
+    "description": "Eagle Air offers customs clearance services all over the world. We use the AEO standard and have our own customs warehouse."
+  },
+  "intro": {
+    "title": "Import.<0/>The <1>easy</1> way.",
+    "paragraph1": "We can offer customs clearance anywhere in the world. This by our own staff or by reliable agents who are carefully selected. We work according to the <0>AEO standard</0>. This ensures fewer errors and additional checks.",
+    "paragraph2": "We have our own customs warehouse. This allows us to store your goods while waiting for the necessary documents for customs formalities."
+  },
+  "list": {
+    "item1": "Customs clearance",
+    "item2": "Door to door",
+    "item3": "Delivery throughout Belgium and Europe",
+    "item4": "NCTS",
+    "item5": "Own customs warehouse",
+    "item6": "AEO standard",
+    "item7": "Temporary import"
+  },
+  "stats": {
+    "description": "We also have the necessary sureties for the preparation of transit documents. We can also take care of the transport ourselves. This is done by our own vehicles or by reliable transporters.",
+    "title1": "250 customs",
+    "text1": "Over 250 clearances per month.",
+    "title2": "200 documents",
+    "text2": "More than 200 documents per month."
+  },
+  "team": {
+    "title": "Years of experience in the industry. Our import team offers you the <0>best</0> service.",
+    "card": "Our staff continues to educate themselves to always provide you with the latest information.",
+    "button": "Join the team"
+  }
+}

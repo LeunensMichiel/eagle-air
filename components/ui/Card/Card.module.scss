@@ -83,7 +83,7 @@
   color: var(--color-text-brand);
   margin-bottom: 1.5rem;
   @include mixins.breakpoint-up(md) {
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h4);
   }
 }
 .card__text {

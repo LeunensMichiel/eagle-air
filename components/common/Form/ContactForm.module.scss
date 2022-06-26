@@ -68,3 +68,12 @@
   line-height: var(--line-height-header);
   color: var(--color-text-brand);
 }
+
+.message-received {
+  min-height: 2rem;
+  font-weight: 600;
+  color: var(--color-copper-100);
+  @include mixins.breakpoint-up(md) {
+    grid-column: span 2;
+  }
+}

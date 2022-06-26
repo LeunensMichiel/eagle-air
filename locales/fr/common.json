@@ -7,7 +7,7 @@
     "og": {
       "title": "Eagle Air",
       "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
-      "imgAlt": "My Website"
+      "imgAlt": "Un camion Eagle Air sur la route"
     }
   },
   "notFound": {
@@ -24,5 +24,44 @@
   },
   "date": {
     "published": "Publié le"
+  },
+  "links": {
+    "import": "Importation",
+    "export": "Exportation",
+    "avi": "AVI",
+    "contact": "Contact",
+    "terms-and-conditions": "Conditions générales",
+    "privacy-policy": "Politique de confidentialité",
+    "services": "Services",
+    "legal": "Juridique",
+    "resources": "Ressources",
+    "sitemap": "Plan du site",
+    "copyright": "Eagle Air Agencies {{ date }}. Tous droits préservés."
+  },
+  "form": {
+    "fullNameLabel": "Nom et prénom",
+    "fullNamePlaceholder": "John Doe",
+    "companyLabel": "Entreprise",
+    "companyPlaceholder": "Eagle Air",
+    "emailLabel": "Courriel",
+    "emailPlaceholder": "address@provider.com",
+    "phoneLabel": "Téléphone",
+    "phonePlaceholder": "+00 000 00 00 00",
+    "countryLabel": "Pays",
+    "countryPlaceholder": "🇧🇪 Belgique",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Sujet",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+    "button": "Envoyez-le"
+  },
+  "contact": {
+    "title": "Notre quartier général.",
+    "office": "Bureau de Zaventem",
+    "country": "Belgique",
+    "phone": "Téléphone",
+    "email": "Courriel",
+    "fax": "Fax",
+    "vat": "Numéro de TVA"
   }
 }

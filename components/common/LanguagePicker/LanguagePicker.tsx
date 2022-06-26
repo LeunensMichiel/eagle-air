@@ -21,7 +21,7 @@ const LanguagePicker: VFC<LanguagePickerProps> = ({
   size = 'md',
   ...props
 }) => {
-  const { t, lang } = useTranslation('common');
+  const { lang } = useTranslation('common');
   const { openModal, setModalView } = useUI();
 
   const handleLanguageBtnClick = () => {

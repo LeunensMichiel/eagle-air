@@ -3,14 +3,14 @@ import { Chevron } from '@components/icons';
 import { Button } from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import ImageWithAspectRatio from '../ImageWithAspectRatio';
 import styles from './Card.module.scss';
 
 type CardProps = {
   imgSrc: string;
-  title: string;
+  title: string | ReactNode | ReactNode[];
   text: string;
   buttonText: string;
   url: string;
@@ -32,7 +32,7 @@ const Card: FC<CardProps> = ({
       })}
     >
       <ImageWithAspectRatio
-        alt="Picture of an eagleair truck"
+        alt={`A picture describing the following title: ${title}`}
         aspectRatio="148/81"
         src={imgSrc}
         wrapperClassName={styles.card__image}

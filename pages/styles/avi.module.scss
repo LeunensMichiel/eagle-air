@@ -103,6 +103,12 @@
   display: grid;
   gap: 1.5rem;
   position: relative;
+  @include mixins.breakpoint-up(md) {
+    gap: 2rem;
+  }
+  @include mixins.breakpoint-up(lg) {
+    gap: 3rem;
+  }
 }
 
 .article__bar {

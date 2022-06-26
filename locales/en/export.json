@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "title": "Export services",
+    "description": "Eagle Air's export team always ensures the fast handling of your cargo. We understand like no other the time sensitivity of air freight. That is why we arrange everything from pick-up to final destination. Whatever your wishes, our team is always ready to assist you!"
+  },
+  "intro": {
+    "title": "Our <0>export</0> is going places.",
+    "paragraph": "Our export team always ensures the fast handling of your cargo. We understand like no other the time sensitivity of air freight. That is why we arrange everything from pick-up to final destination. Whatever your wishes, our team is always ready to assist you!"
+  },
+  "list": {
+    "item1": "Pick-up in Belgium and Europe",
+    "item2": "Shipments all over the world",
+    "item3": "Weekly consols",
+    "item4": "Temporary export",
+    "item5": "In-house screening"
+  },
+  "article": {
+    "title": "Our paw partners in crime.",
+    "paragraph": "Together with our partner ASB security we provide the appropriate screening method for all your cargo. ASB security takes care of all our screening and this in our own warehouse - <0>24/7.</0>"
+  },
+  "contact": {
+    "title": "Wanna team-up?",
+    "paragraph": "Send us a message for more information about our partner initiative.",
+    "button": "Contact us"
+  }
+}

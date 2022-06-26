@@ -8,32 +8,34 @@ import LanguagePicker from '../LanguagePicker';
 import styles from './Footer.module.scss';
 
 const Footer: VFC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <footer className={cn(styles.footer, 'container')}>
       <nav className={styles.footerNavigation}>
         <div className={styles.linkGrid}>
           <div className={cn(styles.linkBlock)}>
-            <span className={styles.title}>Services</span>
-            <Link href="/import">Import</Link>
-            <Link href="/export">Export</Link>
-            <Link href="/avi">AVI</Link>
+            <span className={styles.title}>{t('links.services')}</span>
+            <Link href="/import">{t('links.import')}</Link>
+            <Link href="/export">{t('links.export')}</Link>
+            <Link href="/avi">{t('links.avi')}</Link>
           </div>
           <div className={cn(styles.linkBlock)}>
-            <span className={styles.title}>Contact</span>
-            <Link href="/contact">Contact</Link>
+            <span className={styles.title}>{t('links.contact')}</span>
+            <Link href="/contact">{t('links.contact')}</Link>
           </div>
         </div>
         <div className={styles.linkGrid}>
           <div className={cn(styles.linkBlock)}>
-            <span className={styles.title}>Legal</span>
-            <Link href="/terms-and-conditions">Terms and conditions</Link>
-            <Link href="/privacy-policy">Privacy policy</Link>
+            <span className={styles.title}>{t('links.legal')}</span>
+            <Link href="/terms-and-conditions">
+              {t('links.terms-and-conditions')}
+            </Link>
+            <Link href="/privacy-policy">{t('links.privacy-policy')}</Link>
           </div>
           <div className={cn(styles.linkBlock)}>
-            <span className={styles.title}>Resources</span>
+            <span className={styles.title}>{t('links.resources')}</span>
             <Link locale={false} href="/sitemap-0.xml">
-              Sitemap
+              {t('links.sitemap')}
             </Link>
           </div>
         </div>
@@ -42,7 +44,9 @@ const Footer: VFC = () => {
         <LanguagePicker size="sm" />
         <div className={styles.footerCopy}>
           <Logo variant="full" />
-          <small>©Eagle Air Agencies 2022. All rights preserved.</small>
+          <small>
+            {t('links.copyright', { date: new Date().getFullYear() })}
+          </small>
         </div>
       </div>
     </footer>

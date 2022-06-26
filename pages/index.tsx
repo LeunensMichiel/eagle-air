@@ -13,6 +13,7 @@ import { Button, Card, Carousel, Logo } from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
+import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 
 import styles from './styles/index.module.scss';
@@ -41,7 +42,11 @@ const Home = () => {
             </span>
           </span>
           <span className={styles.landing__headline}>
-            We do <span className="highlight--light">transport</span> right.
+            <Trans
+              i18nKey="landing.slogan"
+              ns="home"
+              components={[<span className="highlight--light" />]}
+            />
           </span>
           <div className={styles.landing__buttons}>
             <Link href="/contact" passHref>
@@ -51,7 +56,7 @@ const Home = () => {
                 as="a"
                 iconRight={<Chevron />}
               >
-                Contact us
+                {t('landing.button1')}
               </Button>
             </Link>
             <Link href="/#services" passHref>
@@ -62,7 +67,7 @@ const Home = () => {
                 variant="outlined"
                 iconRight={<Chevron />}
               >
-                What we do
+                {t('landing.button2')}
               </Button>
             </Link>
           </div>
@@ -76,31 +81,29 @@ const Home = () => {
         <div className={cn(styles.intro__container, 'container')}>
           <Logo className={styles['logo--small']} />
           <h1 className={'title'}>
-            Your goods, delivered with{' '}
-            <span className={'title--emphasized'}>expertise.</span>
+            <Trans
+              i18nKey="intro.title"
+              ns="home"
+              components={[<span className="title--emphasized" />]}
+            />
           </h1>
-          <p className={'paragraph'}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-            optio soluta, nulla vel sint aut dolor alias praesentium blanditiis,
-            et id neque dignissimos autem molestiae molestias suscipit
-            reiciendis, quisquam nesciunt.
-          </p>
+          <p className={'paragraph'}>{t('intro.paragraph')}</p>
         </div>
         <Carousel
           slides={[
             {
               image: '/assets/web-08962.jpg',
-              title: 'Import',
+              title: t('common:links.import'),
               href: '/import',
             },
             {
               image: '/assets/web-08898.jpg',
-              title: 'Export',
+              title: t('common:links.export'),
               href: '/export',
             },
             {
               image: '/assets/struisvogel.jpg',
-              title: 'AVI',
+              title: t('common:links.avi'),
               href: '/avi',
             },
           ]}
@@ -108,27 +111,42 @@ const Home = () => {
         <div className={cn(styles.cards, 'container')}>
           <Card
             imgSrc="/assets/web-08875.jpg"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim
-          pharetra adipiscing."
-            title="Import that helps your business grow."
+            text={t('card.text1')}
+            title={
+              <Trans
+                i18nKey="card.title1"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/import"
-            buttonText="More info"
+            buttonText={t('card.button')}
           />
           <Card
             imgSrc="/assets/web-08964.jpg"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim
-          pharetra adipiscing."
-            title="Professionals in air freight export."
+            text={t('card.text2')}
+            title={
+              <Trans
+                i18nKey="card.title2"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/export"
-            buttonText="More info"
+            buttonText={t('card.button')}
           />
           <Card
             imgSrc="/assets/chicks-in-transport.jpg"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim
-          pharetra adipiscing."
-            title="Animals should be transported with care."
+            text={t('card.text3')}
+            title={
+              <Trans
+                i18nKey="card.title3"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/avi"
-            buttonText="More info"
+            buttonText={t('card.button')}
             isAlternative
           />
         </div>
@@ -136,34 +154,28 @@ const Home = () => {
       <section className={cn(styles.stats, 'py-container')}>
         <div className="container">
           <h1 className={'title'}>
-            <span className={'title--emphasized'}>Dock and load. </span>
-            <br />
-            From animals to cars and everything in between.
+            <Trans
+              i18nKey="stats.header"
+              ns="home"
+              components={[<span className="title--emphasized" />, <br />]}
+            />
           </h1>
           <div className={styles.stats__grid}>
             <div className={styles.stats__stat}>
-              <span className={styles.stats__title}>1746 m²</span>
-              <span className={styles.stats__text}>
-                The total surface of our warehouse.
-              </span>
+              <span className={styles.stats__title}>{t('stats.title1')}</span>
+              <span className={styles.stats__text}>{t('stats.text1')}</span>
             </div>
             <div className={styles.stats__stat}>
-              <span className={styles.stats__title}>135 countries</span>
-              <span className={styles.stats__text}>
-                We export to more than 135 countries worldwide
-              </span>
+              <span className={styles.stats__title}>{t('stats.title2')}</span>
+              <span className={styles.stats__text}>{t('stats.text2')}</span>
             </div>
             <div className={styles.stats__stat}>
-              <span className={styles.stats__title}>30 years</span>
-              <span className={styles.stats__text}>
-                The amount of experience in our sector
-              </span>
+              <span className={styles.stats__title}>{t('stats.title3')}</span>
+              <span className={styles.stats__text}>{t('stats.text3')}</span>
             </div>
             <div className={styles.stats__stat}>
-              <span className={styles.stats__title}>55.000 tonnes</span>
-              <span className={styles.stats__text}>
-                That’s a lot of freightage we ship each year!
-              </span>
+              <span className={styles.stats__title}>{t('stats.title4')}</span>
+              <span className={styles.stats__text}>{t('stats.text4')}</span>
             </div>
           </div>
         </div>
@@ -172,47 +184,52 @@ const Home = () => {
         <div className="container">
           <div className={cn(styles.circle, styles['circle--big'])} />
           <div className={cn(styles.circle, styles['circle--small'])} />
-          <span className={styles.about__subtitle}>Why Eagle Air?</span>
-          <h1 className={styles.about__title}>
-            We’re no generic freightage company.
-          </h1>
+          <span className={styles.about__subtitle}>{t('about.subTitle')}</span>
+          <h1 className={styles.about__title}>{t('about.title')}</h1>
           <div className={styles.about__items}>
             <div className={styles.about__item}>
               <Availability />
-              <span className={styles.about__item__title}>Available 24/7</span>
+              <span className={styles.about__item__title}>
+                {t('about.itemTitle1')}
+              </span>
               <span className={styles.about__item__text}>
-                As a family business, we are available to customers 24/7.
+                {t('about.itemText1')}
               </span>
             </div>
             <div className={styles.about__item}>
               <Bolt />
-              <span className={styles.about__item__title}>Flexible</span>
+              <span className={styles.about__item__title}>
+                {t('about.itemTitle2')}
+              </span>
               <span className={styles.about__item__text}>
-                Urgent shipment? We are ready for you immediately.{' '}
+                {t('about.itemText2')}
               </span>
             </div>
             <div className={styles.about__item}>
               <Heart />
               <span className={styles.about__item__title}>
-                Personal service
+                {t('about.itemTitle3')}
               </span>
               <span className={styles.about__item__text}>
-                Our staff will take care of your cargo with the best knowledge
-                and care.
+                {t('about.itemText3')}
               </span>
             </div>
             <div className={styles.about__item}>
               <Plane />
-              <span className={styles.about__item__title}>Expertise</span>
+              <span className={styles.about__item__title}>
+                {t('about.itemTitle4')}
+              </span>
               <span className={styles.about__item__text}>
-                Years of expertise in air freight since 1992.{' '}
+                {t('about.itemText4')}
               </span>
             </div>
           </div>
           <h3 className={styles.about__title}>
-            Trusted by our{' '}
-            <span className={styles['title--emphasized--light']}>valued</span>{' '}
-            partners.
+            <Trans
+              i18nKey="about.partners"
+              ns="home"
+              components={[<span className="title--emphasized--light" />]}
+            />
           </h3>
           <div className={styles.partners}>
             <Asb isWhite />
@@ -225,9 +242,11 @@ const Home = () => {
       </section>
       <section className="container py-container">
         <h1 className={cn('title', styles.contact__title)}>
-          Interested? <br />
-          Let&apos;s discuss{' '}
-          <span className={'title--emphasized'}>opportunities.</span>
+          <Trans
+            i18nKey="contact.title"
+            ns="home"
+            components={[<br />, <span className="title--emphasized" />]}
+          />
         </h1>
         <ContactForm />
       </section>

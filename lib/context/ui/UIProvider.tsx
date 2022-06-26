@@ -1,7 +1,5 @@
-import { Close } from '@components/icons';
 import { ThemeProvider } from 'next-themes';
 import { FC, useMemo, useReducer } from 'react';
-import { ToastContainer } from 'react-toastify';
 
 import { INITIAL_UI_STATE, ModalViews, UIContext, UIState } from './UIContext';
 
@@ -80,18 +78,6 @@ export const ManagedUIProvider: FC = ({ children }) => (
       themes={['light']}
       forcedTheme="light"
     >
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        closeButton={Close}
-      />
       {children}
     </ThemeProvider>
   </UIProvider>

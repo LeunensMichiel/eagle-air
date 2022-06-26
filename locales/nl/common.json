@@ -3,26 +3,65 @@
     "title": "Eagle Air",
     "titleTemplate": "%s | Eagle Air",
     "defaultTitle": "Eagle Air",
-    "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
+    "description": "Uw specialist voor goederentransport in België. Ontdek wat we doen.",
     "og": {
       "title": "Eagle Air",
-      "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
-      "imgAlt": "My Website"
+      "description": "Uw specialist voor goederentransport in België. Ontdek wat we doen.",
+      "imgAlt": "Een Eagle Air vrachtwagen op de weg"
     }
   },
   "notFound": {
     "title": "Pagina niet gevonden",
-    "description": "Ga naar de homepagina"
+    "description": "Ga terug naar de homepagina"
   },
   "errorPage": {
-    "oops": "Uh-oh.",
-    "title": "Er ging iets mis langs onze kant",
-    "description": "Probeer later opnieuw."
+    "oops": "Ai-ai.",
+    "title": "Er is iets stuk langs onze kant",
+    "description": "Gelieve op een ander moment opnieuw te proberen."
   },
   "i18n": {
-    "select": "Taalvoorkeur selecteren"
+    "select": "Selecteer uw taal"
   },
   "date": {
-    "published": "Gepupliceerd om"
+    "published": "Gepubliceerd op"
+  },
+  "links": {
+    "import": "Import",
+    "export": "Export",
+    "avi": "AVI",
+    "contact": "Contact",
+    "terms-and-conditions": "Algemene voorwaarden",
+    "privacy-policy": "Privacyverklaring",
+    "services": "Diensten",
+    "legal": "Juridisch",
+    "resources": "Overige",
+    "sitemap": "Sitemap",
+    "copyright": "Eagle Air Agencies {{ date }}. Alle rechten voorbehouden."
+  },
+  "form": {
+    "fullNameLabel": "Volledige naam",
+    "fullNamePlaceholder": "John Doe",
+    "companyLabel": "Bedrijf",
+    "companyPlaceholder": "Eagle Air",
+    "emailLabel": "Email",
+    "emailPlaceholder": "address@provider.com",
+    "phoneLabel": "Telefoon",
+    "phonePlaceholder": "+00 000 00 00 00",
+    "countryLabel": "Land",
+    "countryPlaceholder": "🇧🇪 België",
+    "subjectLabel": "Onderwerp",
+    "subjectPlaceholder": "Onderwerp",
+    "messageLabel": "Bericht",
+    "messagePlaceholder": "Waarmee kunnen wij jou helpen?",
+    "button": "Verstuur bericht"
+  },
+  "contact": {
+    "title": "Ons hoofdkantoor.",
+    "office": "Zaventem office",
+    "country": "België",
+    "phone": "Telefoon",
+    "email": "Email",
+    "fax": "Fax",
+    "vat": "BTW-nummer"
   }
 }

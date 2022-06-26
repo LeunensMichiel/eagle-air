@@ -11,6 +11,8 @@ import {
 import { Button, Input, Select, TextArea } from '@components/ui';
 import cn from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
+import { useCallback, useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 
 import countries from '../../../data/countries.json';
 import countriesEn from '../../../data/countriesLocalized/en/countries.json';
@@ -19,8 +21,42 @@ import countriesNl from '../../../data/countriesLocalized/nl/countries.json';
 import styles from './ContactForm.module.scss';
 import Form from './Form';
 
+type FormValues = {
+  naam: string;
+  email: string;
+  bedrijf?: string;
+  countryOption: { value: string; label: string };
+  onderwerp: string;
+  bericht: string;
+  telefoon: string;
+};
+
+type Submit = {
+  'form-name': string;
+  land: string;
+} & Omit<FormValues, 'countryOption'>;
+
+function encode(values: Submit) {
+  return Object.keys(values)
+    .map(
+      (key) =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        encodeURIComponent(key) + '=' + encodeURIComponent(values[key as any])
+    )
+    .join('&');
+}
+
 export const ContactForm = () => {
-  const { t, lang } = useTranslation();
+  const { t, lang } = useTranslation('common');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<FormValues>();
 
   const countryOptions = countries
     .map(({ name, code }) => {
@@ -48,74 +84,141 @@ export const ContactForm = () => {
       };
     })
     .sort((a, b) => a.label.localeCompare(b.label));
+
+  const onSubmit = useCallback((values: FormValues) => {
+    const { countryOption, ...data } = values;
+    try {
+      setIsSubmitted(false);
+      setIsSubmitting(true);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          ...data,
+          land: `${countryOption.value} - ${countryOption.label}`,
+        }),
+      }).catch((error) => console.error(error));
+      setIsSubmitted(true);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, []);
+
   return (
     <div className={styles.contact}>
-      <Form className={styles.form}>
+      <Form
+        className={styles.form}
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit(onSubmit)}
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <label style={{ display: 'none' }}>
+          Don’t fill this out if you’re human:
+          <input name="bot-field" />
+        </label>
         <Input
-          label="Full Name"
+          label={t('form.fullNameLabel')}
           type="text"
           iconLeft={<User />}
-          placeholder="Firstname Lastname"
+          placeholder={t('form.fullNameLabel')}
+          required
+          error={errors?.naam}
+          {...register('naam', { required: true })}
         />
         <Input
-          label="Company"
+          label={t('form.companyLabel')}
           type="text"
           iconLeft={<Building />}
-          placeholder="Your company"
+          placeholder={t('form.companyPlaceholder')}
+          {...register('bedrijf')}
         />
         <Input
-          label="Email"
+          label={t('form.emailLabel')}
           type="email"
           iconLeft={<Stamp />}
-          placeholder="address@provider.com"
+          placeholder={t('form.emailPlaceholder')}
+          error={errors?.email}
+          required
+          {...register('email', { required: true })}
         />
         <Input
-          label="Phone"
+          label={t('form.phoneLabel')}
           type="tel"
           iconLeft={<Mobile />}
-          placeholder="+00 000 00 00 00"
+          placeholder={t('form.phonePlaceholder')}
+          required
+          error={errors?.telefoon}
+          {...register('telefoon', { required: true })}
         />
-        <Select
-          label="Country"
-          instanceId="1"
-          placeholder="Belgium"
-          options={countryOptions}
-          getOptionLabel={(option) =>
-            `${countries.find((opt) => opt.code === option.value)?.emoji} ${
-              option.label
-            }`
-          }
+        <Controller
+          name="countryOption"
+          control={control}
+          rules={{ required: true }}
+          render={({ field: { onChange, name, value } }) => (
+            <Select
+              label={t('form.countryLabel')}
+              instanceId="1"
+              placeholder={t('form.countryPlaceholder')}
+              options={countryOptions}
+              getOptionLabel={(option) =>
+                `${countries.find((opt) => opt.code === option.value)?.emoji} ${
+                  option.label
+                }`
+              }
+              error={errors?.countryOption?.label}
+              onChange={onChange}
+              name={name}
+              value={value}
+              required
+            />
+          )}
         />
         <Input
-          label="Subject"
+          label={t('form.subjectLabel')}
           type="text"
           iconLeft={<Subject />}
-          placeholder="Subject of email"
+          error={errors?.onderwerp}
+          placeholder={t('form.subjectPlaceholder')}
+          required
+          {...register('onderwerp', { required: true })}
         />
         <TextArea
-          label="Message"
+          label={t('form.messageLabel')}
           iconLeft={<Mail />}
-          placeholder="How can we be of service?"
+          required
+          placeholder={t('form.messagePlaceholder')}
+          error={errors?.bericht}
           wrapperClassName={styles.form__textarea}
+          {...register('bericht', { required: true })}
         />
         <Button
           type="submit"
           className={styles.form__button}
           iconRight={<Send />}
+          loading={isSubmitting}
         >
-          Send message
+          {t('form.button')}
         </Button>
+        <p className={styles['message-received']}>
+          {isSubmitted && 'Bericht succesvol verzonden!'}
+        </p>
       </Form>
       <div className={styles.contact__info}>
         <div>
           <Bar />
           <h3 className={cn(styles.title, styles.contact__info__title)}>
-            Our headquarters.
+            {t('contact.title')}
           </h3>
         </div>
         <div className={styles.contact__info__item}>
           <span className={styles.contact__info__item__title}>
-            Zaventem office
+            {t('contact.office')}
           </span>
           <span className={styles.contact__info__item__line}>
             Brucargo 752,
@@ -123,29 +226,37 @@ export const ContactForm = () => {
           <span className={styles.contact__info__item__line}>
             1820 Steenokkerzeel,
           </span>
-          <span className={styles.contact__info__item__line}>Belgium</span>
-        </div>
-        <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Phone</span>
           <span className={styles.contact__info__item__line}>
-            +32 02 751 50 45
+            {t('contact.country')}
           </span>
         </div>
         <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Email</span>
-          <span className={styles.contact__info__item__line}>
-            info@eagleair.be
+          <span className={styles.contact__info__item__title}>
+            {t('contact.phone')}
           </span>
-        </div>
-        <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>Fax</span>
           <span className={styles.contact__info__item__line}>
             +32 02 751 50 45
           </span>
         </div>
         <div className={styles.contact__info__item}>
           <span className={styles.contact__info__item__title}>
-            Company number
+            {t('contact.email')}
+          </span>
+          <span className={styles.contact__info__item__line}>
+            info@eagleair.be
+          </span>
+        </div>
+        <div className={styles.contact__info__item}>
+          <span className={styles.contact__info__item__title}>
+            {t('contact.fax')}
+          </span>
+          <span className={styles.contact__info__item__line}>
+            +32 02 751 50 45
+          </span>
+        </div>
+        <div className={styles.contact__info__item}>
+          <span className={styles.contact__info__item__title}>
+            {t('contact.vat')}
           </span>
           <span className={styles.contact__info__item__line}>
             0712 23 45 24

@@ -68,12 +68,18 @@
 }
 
 .inputLabel {
-  display: block;
+  display: inline-block;
   margin-bottom: 0.5rem;
   font-size: var(--font-size-small);
   font-weight: 600;
   color: var(--color-label-primary-text);
   letter-spacing: 0.02rem;
+
+  sup {
+    color: var(--color-error);
+    line-height: 0;
+    margin-left: 0.25rem;
+  }
 }
 
 .inputIconContainer {

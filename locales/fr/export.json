@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "title": "Services d'exportation",
+    "description": "L'équipe d'exportation d'Eagle Air s'occupe toujours de la manutention rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
+  },
+  "intro": {
+    "title": "Notre <0>exportation</0> va partout.",
+    "paragraph": "Notre équipe d'exportation assure toujours un traitement rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
+  },
+  "list": {
+    "item1": "Prise en charge en Belgique et en Europe",
+    "item2": "Expéditions dans le monde entier",
+    "item3": "Consoles hebdomadaires",
+    "item4": "Exportation temporaire",
+    "item5": "Contrôle interne"
+  },
+  "article": {
+    "title": "Nos collègues qui aboient.",
+    "paragraph": "En collaboration avec notre partenaire ASB security, nous fournissons la méthode de contrôle appropriée pour toutes vos marchandises. ASB security se charge de tous nos filtrages et ceci dans notre propre entrepôt - <0>24/7.</0>."
+  },
+  "contact": {
+    "title": "Vous voulez faire équipe ?",
+    "paragraph": "Envoyez-nous un message pour plus d'informations sur notre initiative de partenariat.",
+    "button": "Contactez nous"
+  }
+}

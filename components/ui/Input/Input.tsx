@@ -58,6 +58,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
       withFeedback = true,
       useRestrictedNumberPattern = false,
       children,
+      required,
       ...rest
     },
     ref
@@ -65,6 +66,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
     <div className={cn({ [`col-span-${colSpan}`]: colSpan })}>
       <label htmlFor={name} className={cn(styles.inputLabel)}>
         {label}
+        {required && <sup>*</sup>}
       </label>
       <div className={cn(styles.inputContainer)}>
         <input
@@ -78,6 +80,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
           })}
           onChange={onChange}
           onBlur={onBlur}
+          required={required}
           type={type}
           inputMode={getInputMode(type)}
           aria-invalid={!!error}

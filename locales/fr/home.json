@@ -3,6 +3,49 @@
     "title": "Accueil",
     "description": "Votre spécialiste du fret en Belgique. Nous sommes experts en import, export et transport d'animaux vivants. Découvrez notre entreprise."
   },
-  "welcome": "Bienvenue à",
-  "intro": "Modèle d'entrée en matière opinionnée par"
+  "landing": {
+    "slogan": "Nous faisons <0>transport</0> correctement.",
+    "button1": "Contactez nous",
+    "button2": "Nos services"
+  },
+  "intro": {
+    "title": "Votre marchandise, livrée avec <0>expertise.</0>",
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio soluta, nulla vel sint aut dolor alias praesentium blanditiis, et id neque dignissimos autem molestiae molestias suscipit reiciendis, quisquam nesciunt."
+  },
+  "card": {
+    "title1": "Importation qui aide votre entreprise à <0>se développer.</0>",
+    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title2": "<0>Professionnels</0> de l'exportation de fret aérien.",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title3": "Les animaux doivent être transportés avec <0>soin.</0>",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "button": "Plus d'infos"
+  },
+  "stats": {
+    "header": "<0>Envoyez tout.</0><1/>Des animaux aux voitures et tout ce qui se trouve entre les deux.",
+    "title1": "1746 m²",
+    "text1": "La surface totale de notre entrepôt.",
+    "title2": "135 pays",
+    "text2": "We export to more than 135 countries worldwide.",
+    "title3": "30 années",
+    "text3": "La quantité d'expérience dans notre secteur.",
+    "title4": "55.000 tonnes",
+    "text4": "C'est beaucoup de fret que nous expédions chaque année !"
+  },
+  "about": {
+    "title": "Nous ne sommes pas une enterprise de transport générique.",
+    "subTitle": "Pourquoi choisir Eagle Air ?",
+    "itemTitle1": "Disponible 24/7",
+    "itemText1": "En tant qu'entreprise familiale, nous sommes à la disposition des clients 24/7.",
+    "itemTitle2": "Flexible",
+    "itemText2": "Expédition urgente ? Nous sommes prêts à vous accueillir immédiatement.",
+    "itemTitle3": "Service personnalisé",
+    "itemText3": "Notre personnel s'occupera de votre cargaison avec les meilleures connaissances et le plus grand soin.",
+    "itemTitle4": "Expertise",
+    "itemText4": "Des années d'expertise dans le domaine du fret aérien depuis 1992.",
+    "partners": "La confiance de nos <0>valeurs</0> partenaires."
+  },
+  "contact": {
+    "title": "Intéressé ? <0/>Discutons des <1>opportunités.</1>"
+  }
 }

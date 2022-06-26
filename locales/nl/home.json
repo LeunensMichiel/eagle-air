@@ -1,8 +1,51 @@
 {
   "seo": {
     "title": "Home",
-    "description": "Uw vrachtspecialist in België. Wij zijn experts in import, export en transport van levende dieren. Maak kennis met ons bedrijf."
+    "description": "Uw vrachtspecialist in België. Wij zijn experts in import, export en transport van levende dieren. Ontdek ons bedrijf."
   },
-  "welcome": "Welkom bij",
-  "intro": "Opiniërend startsjabloon door"
+  "landing": {
+    "slogan": "Wij doen <0>transport</0> op de juiste manier.",
+    "button1": "Contacteer ons",
+    "button2": "Wat we doen"
+  },
+  "intro": {
+    "title": "Uw goederen, geleverd met <0>expertise.</0>",
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio soluta, nulla vel sint aut dolor alias praesentium blanditiis, et id neque dignissimos autem molestiae molestias suscipit reiciendis, quisquam nesciunt."
+  },
+  "card": {
+    "title1": "Import die uw bedrijf helpt te <0>groeien.</0>",
+    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title2": "<0>Professionals</0> in luchtvracht export.",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title3": "Dieren moeten worden behandeld met <0>zorg.</0>",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "button": "Meer info"
+  },
+  "stats": {
+    "header": "<0>Hup en weg ermee.</0><1/>Van dieren tot auto's en alles ertussenin.",
+    "title1": "1746 m²",
+    "text1": "De totale oppervlakte van ons magazijn.",
+    "title2": "135 landen",
+    "text2": " Wij exporteren naar meer dan 135 landen wereldwijd.",
+    "title3": "30 jaar",
+    "text3": "De hoeveelheid ervaring in onze sector",
+    "title4": "55.000 ton",
+    "text4": "Dat is een hoop vracht die we elk jaar vervoeren!"
+  },
+  "about": {
+    "title": "Wij zijn geen typisch vrachtbedrijf.",
+    "subTitle": "Waarom Eagle Air?",
+    "itemTitle1": "24/7 beschikbaar",
+    "itemText1": "Als familiebedrijf zijn wij 24/7 beschikbaar voor onze klanten.",
+    "itemTitle2": "Flexibel",
+    "itemText2": "Dringende zending? Wij staan onmiddellijk voor u klaar.",
+    "itemTitle3": "Persoonlijke service",
+    "itemText3": "Ons personeel zal uw vracht met de beste vakkundigheid en zorg behandelen.",
+    "itemTitle4": "Expertise",
+    "itemText4": "Jarenlange deskundigheid in luchtvracht sinds 1992.",
+    "partners": "Gewaardeerd door onze <0>gewaardeerde</0> partners."
+  },
+  "contact": {
+    "title": "Interesse? <0/>Laten we de <1>mogelijkheden</1> bespreken."
+  }
 }
