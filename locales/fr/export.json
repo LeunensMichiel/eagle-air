@@ -1,26 +1,26 @@
 {
   "seo": {
-    "title": "Export services",
-    "description": "Eagle Air's export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat steeds voor je klaar!"
+    "title": "Services d'exportation",
+    "description": "L'équipe d'exportation d'Eagle Air s'occupe toujours de la manutention rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
   },
   "intro": {
-    "title": " Our <0>export</0> is going places.",
-    "paragraph": "Ons export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat steeds voor je klaar!"
+    "title": "Notre <0>exportation</em> va partout.",
+    "paragraph": "Notre équipe d'exportation assure toujours un traitement rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
   },
   "list": {
-    "item1": "Pick-up in België en Europa",
-    "item2": "Verzendingen over de hele wereld",
-    "item3": "Wekelijkse consols",
-    "item4": "Tijdelijke uitvoer",
-    "item5": "In-house screening"
+    "item1": "Prise en charge en Belgique et en Europe",
+    "item2": "Expéditions dans le monde entier",
+    "item3": "Consoles hebdomadaires",
+    "item4": "Exportation temporaire",
+    "item5": "Contrôle interne"
   },
   "article": {
-    "title": "Our paw partners in crime.",
-    "paragraph": "Samen met onze partner ASB security zorgen wij voor de gepaste screeningmethode voor al jouw vracht. ASB security verzorgt al onze screening en dit in ons eigen magazijn – <0>24/7.</0>"
+    "title": "Nos collègues qui aboient.",
+    "paragraph": "En collaboration avec notre partenaire ASB security, nous fournissons la méthode de contrôle appropriée pour toutes vos marchandises. ASB security se charge de tous nos filtrages et ceci dans notre propre entrepôt - <0>24/7.</0>."
   },
   "contact": {
-    "title": "Wanna team-up?",
-    "paragraph": "Send us a message for more information about our partner initiative.",
-    "button": "Contact us"
+    "title": "Vous voulez faire équipe ?",
+    "paragraph": "Envoyez-nous un message pour plus d'informations sur notre initiative de partenariat.",
+    "button": "Contactez nous"
   }
 }

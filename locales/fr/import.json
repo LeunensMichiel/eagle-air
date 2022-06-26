@@ -1,32 +1,32 @@
 {
   "seo": {
-    "title": "Import services",
-    "description": "Eagleair biedt inklaringen aan overal ter wereld. Wij gebruiken de AEO standaard en beschikken over een eigen duane-entrepot."
+    "title": "Services d'importation",
+    "description": "Eagle Air propose des services de dédouanement dans le monde entier. Nous utilisons la norme AEO et disposons de notre propre entrepôt douanier."
   },
   "intro": {
-    "title": "Import.<0/>The <1>easy</1> way.",
-    "paragraph1": "Wij kunnen inklaringen overal ter wereld aanbieden. Dit door ons eigen medewerkers of door betrouwbare agenten die zorgvuldig worden uitgekozen. Wij werken volgens de <0>AEO standaard</0>. Dit zorgt voor minder fouten en bijkomende controles.",
-    "paragraph2": "Wij beschikken over ons eigen douane-entrepot. Hierdoor kunnen wij jouw goederen opslaan in afwachting van de nodige documenten voor douaneformaliteiten."
+    "title": "Importation. La manière <0>facile</0>.",
+    "paragraph1": "Nous pouvons proposer le dédouanement partout dans le monde. Ce travail est effectué par notre propre personnel ou par des agents fiables et soigneusement sélectionnés. Nous travaillons selon la norme <0>AEO</0>. Cela permet de réduire le nombre d'erreurs et de contrôles supplémentaires.",
+    "paragraph2": "Nous disposons de notre propre entrepôt douanier. Cela nous permet de stocker vos marchandises en attendant les documents nécessaires aux formalités douanières."
   },
   "list": {
-    "item1": "Inklaring",
-    "item2": "Door to door",
-    "item3": "Levering in heel België en Europa",
+    "item1": "Dédouanement",
+    "item2": "Porte à porte",
+    "item3": "Livraison dans toute la Belgique et l'Europe",
     "item4": "NCTS",
-    "item5": "Eigen douane-entrepot",
-    "item6": "AEO standaard",
-    "item7": "Tijdelijke invoer"
+    "item5": "Propre entrepôt douanier",
+    "item6": "Norme OEA",
+    "item7": "Importation temporaire"
   },
   "stats": {
-    "description": "Wij beschikken ook over de nodige borgstellingen voor de opmaak van transitdocumenten. Wij kunnen ook zelf voor het transport zorgen. Dit door onze eigen voertuigen of door betrouwbare transporteurs.",
-    "title1": "250 customs",
-    "text1": "Meer dan 250 inklaringen per maand.",
+    "description": "Nous disposons également des dépôts nécessaires à la préparation des documents de transit. Nous pouvons également nous charger nous-mêmes du transport. Cette opération est effectuée par nos propres véhicules ou par des transporteurs fiables.",
+    "title1": "250 douanes",
+    "text1": "Plus de 250 habilitations par mois.",
     "title2": "200 documents",
-    "text2": "Meer dan 200 documenten per maand."
+    "text2": "Plus de 200 documents par mois."
   },
   "team": {
-    "title": "Jarenlange ervaring in de sector, ons import team biedt jou de <0>beste</0> service.",
-    "card": "Onze medewerkers blijven zich bijscholen om jou steeds de nieuwste informatie te kunnen verschaffen.",
-    "button": "Join the team"
+    "title": "Années d'expérience dans le secteur. Notre équipe d'importation vous offre le <0>meilleur</0> service.",
+    "card": "Notre personnel continue de se former afin de vous fournir les informations les plus récentes.",
+    "button": "Rejoignez l'équipe"
   }
 }

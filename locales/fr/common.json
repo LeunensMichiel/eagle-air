@@ -7,7 +7,7 @@
     "og": {
       "title": "Eagle Air",
       "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
-      "imgAlt": "My Website"
+      "imgAlt": "Un camion Eagle Air sur la route"
     }
   },
   "notFound": {
@@ -26,42 +26,42 @@
     "published": "Publié le"
   },
   "links": {
-    "import": "Import",
-    "export": "Export",
+    "import": "Importation",
+    "export": "Exportation",
     "avi": "AVI",
     "contact": "Contact",
-    "terms-and-conditions": "Terms and conditions",
-    "privacy-policy": "Privacy policy",
+    "terms-and-conditions": "Conditions générales",
+    "privacy-policy": "Politique de confidentialité",
     "services": "Services",
-    "legal": "Legal",
-    "resources": "Resources",
-    "sitemap": "Sitemap",
-    "copyright": "Eagle Air Agencies {{ date }}. All rights preserved."
+    "legal": "Juridique",
+    "resources": "Ressources",
+    "sitemap": "Plan du site",
+    "copyright": "Eagle Air Agencies {{ date }}. Tous droits préservés."
   },
   "form": {
-    "fullNameLabel": "Full Name",
+    "fullNameLabel": "Nom et prénom",
     "fullNamePlaceholder": "John Doe",
-    "companyLabel": "Company",
+    "companyLabel": "Entreprise",
     "companyPlaceholder": "Eagle Air",
-    "emailLabel": "Email",
+    "emailLabel": "Courriel",
     "emailPlaceholder": "address@provider.com",
-    "phoneLabel": "Phone",
+    "phoneLabel": "Téléphone",
     "phonePlaceholder": "+00 000 00 00 00",
-    "countryLabel": "Country",
-    "countryPlaceholder": "🇧🇪 Belgium",
-    "subjectLabel": "Subject",
-    "subjectPlaceholder": "Subject",
+    "countryLabel": "Pays",
+    "countryPlaceholder": "🇧🇪 Belgique",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Sujet",
     "messageLabel": "Message",
-    "messagePlaceholder": "How can we be of service?",
-    "button": "Send message"
+    "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+    "button": "Envoyez-le"
   },
   "contact": {
-    "title": "Our headquarters.",
-    "office": "Zaventem office",
-    "country": "Belgium",
-    "phone": "Phone",
-    "email": "Email",
+    "title": "Notre bureau.",
+    "office": "Bureau de Zaventem",
+    "country": "Belgique",
+    "phone": "Téléphone",
+    "email": "Courriel",
     "fax": "Fax",
-    "vat": "VAT number"
+    "vat": "Numéro de TVA"
   }
 }
