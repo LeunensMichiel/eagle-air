@@ -40,8 +40,9 @@ function encode(values: Submit) {
   return Object.keys(values)
     .map(
       (key) =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        encodeURIComponent(key) + '=' + encodeURIComponent(values[key as any])
+        encodeURIComponent(key) +
+        '=' +
+        encodeURIComponent(values?.[key as keyof Submit] ?? 'Niet opgegeven')
     )
     .join('&');
 }
