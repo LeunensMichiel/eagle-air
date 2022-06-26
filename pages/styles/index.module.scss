@@ -151,7 +151,7 @@
 .logo--small {
   color: var(--color-text-brand);
   width: 100%;
-  max-width: 4rem;
+  max-width: 5rem;
   height: auto;
   margin-bottom: 0.25rem;
 
@@ -163,6 +163,13 @@
   }
 
   @include mixins.breakpoint-up(lg) {
+    position: absolute;
+    right: 8%;
+    bottom: 90%;
+    max-width: 15rem;
+  }
+
+  @include mixins.breakpoint-up(xl) {
     position: absolute;
     right: 5%;
     bottom: 60%;

@@ -3,6 +3,10 @@
   "defaultLocale": "nl",
   "pages": {
     "*": ["common"],
-    "/": ["home"]
-  }
+    "/": ["home"],
+    "/import": ["import"],
+    "/export": ["export"],
+    "/avi": ["avi"]
+  },
+  "revalidate": 1000
 }
