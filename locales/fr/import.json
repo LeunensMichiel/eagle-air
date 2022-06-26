@@ -4,7 +4,7 @@
     "description": "Eagle Air propose des services de dédouanement dans le monde entier. Nous utilisons la norme AEO et disposons de notre propre entrepôt douanier."
   },
   "intro": {
-    "title": "Importation. La manière <0>facile</0>.",
+    "title": "Importation.<0/> La manière <1>facile.</1>",
     "paragraph1": "Nous pouvons proposer le dédouanement partout dans le monde. Ce travail est effectué par notre propre personnel ou par des agents fiables et soigneusement sélectionnés. Nous travaillons selon la norme <0>AEO</0>. Cela permet de réduire le nombre d'erreurs et de contrôles supplémentaires.",
     "paragraph2": "Nous disposons de notre propre entrepôt douanier. Cela nous permet de stocker vos marchandises en attendant les documents nécessaires aux formalités douanières."
   },
@@ -27,6 +27,6 @@
   "team": {
     "title": "Années d'expérience dans le secteur. Notre équipe d'importation vous offre le <0>meilleur</0> service.",
     "card": "Notre personnel continue de se former afin de vous fournir les informations les plus récentes.",
-    "button": "Rejoignez l'équipe"
+    "button": "Rejoignez nous"
   }
 }

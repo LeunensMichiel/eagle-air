@@ -222,6 +222,7 @@
 
 .stats__stat {
   display: grid;
+  align-content: start;
   gap: 0.5rem;
   padding: 0.125rem;
   padding-left: 0.5rem;

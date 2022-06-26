@@ -4,7 +4,7 @@
     "description": "Votre spécialiste du fret en Belgique. Nous sommes experts en import, export et transport d'animaux vivants. Découvrez notre entreprise."
   },
   "landing": {
-    "slogan": "Nous faisons <0>transport</0> correct.",
+    "slogan": "Nous faisons <0>transport</0> correctement.",
     "button1": "Contactez nous",
     "button2": "Nos services"
   },
@@ -33,7 +33,7 @@
     "text4": "C'est beaucoup de fret que nous expédions chaque année !"
   },
   "about": {
-    "title": "Nous ne sommes pas une société de transport générique.",
+    "title": "Nous ne sommes pas une enterprise de transport générique.",
     "subTitle": "Pourquoi choisir Eagle Air ?",
     "itemTitle1": "Disponible 24/7",
     "itemText1": "En tant qu'entreprise familiale, nous sommes à la disposition des clients 24/7.",
