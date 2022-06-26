@@ -112,21 +112,39 @@ const Home = () => {
           <Card
             imgSrc="/assets/web-08875.jpg"
             text={t('card.text1')}
-            title={t('card.title1')}
+            title={
+              <Trans
+                i18nKey="card.title1"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/import"
             buttonText={t('card.button')}
           />
           <Card
             imgSrc="/assets/web-08964.jpg"
             text={t('card.text2')}
-            title={t('card.title2')}
+            title={
+              <Trans
+                i18nKey="card.title2"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/export"
             buttonText={t('card.button')}
           />
           <Card
             imgSrc="/assets/chicks-in-transport.jpg"
             text={t('card.text3')}
-            title={t('card.title3')}
+            title={
+              <Trans
+                i18nKey="card.title3"
+                ns="home"
+                components={[<span className="underline" />]}
+              />
+            }
             url="/avi"
             buttonText={t('card.button')}
             isAlternative
