@@ -25,16 +25,16 @@ type FormValues = {
   naam: string;
   email: string;
   bedrijf?: string;
-  countryOption: { value: string; label: string };
+  land: { value: string; label: string };
   onderwerp: string;
   bericht: string;
   telefoon: string;
 };
 
-type Submit = {
+type Submit = Omit<FormValues, 'land'> & {
   'form-name': string;
   land: string;
-} & Omit<FormValues, 'countryOption'>;
+};
 
 function encode(values: Submit) {
   return Object.keys(values)
@@ -87,7 +87,7 @@ export const ContactForm = () => {
     .sort((a, b) => a.label.localeCompare(b.label));
 
   const onSubmit = useCallback((values: FormValues) => {
-    const { countryOption, ...data } = values;
+    const { land: countryOption, ...data } = values;
     try {
       setIsSubmitted(false);
       setIsSubmitting(true);
@@ -97,7 +97,7 @@ export const ContactForm = () => {
         body: encode({
           'form-name': 'contact',
           ...data,
-          land: `${countryOption.value} - ${countryOption.label}`,
+          land: `${countryOption.value}-${countryOption.label}`,
         }),
       }).catch((error) => console.error(error));
       setIsSubmitted(true);
@@ -158,7 +158,7 @@ export const ContactForm = () => {
           {...register('telefoon', { required: true })}
         />
         <Controller
-          name="countryOption"
+          name="land"
           control={control}
           rules={{ required: true }}
           render={({ field: { onChange, name, value } }) => (
@@ -172,7 +172,7 @@ export const ContactForm = () => {
                   option.label
                 }`
               }
-              error={errors?.countryOption?.label}
+              error={errors?.land?.label}
               onChange={onChange}
               name={name}
               value={value}
