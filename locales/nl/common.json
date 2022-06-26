@@ -3,65 +3,65 @@
     "title": "Eagle Air",
     "titleTemplate": "%s | Eagle Air",
     "defaultTitle": "Eagle Air",
-    "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
+    "description": "Uw specialist voor goederentransport in België. Ontdek wat we doen.",
     "og": {
       "title": "Eagle Air",
-      "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
-      "imgAlt": "My Website"
+      "description": "Uw specialist voor goederentransport in België. Ontdek wat we doen.",
+      "imgAlt": "Een Eagle Air vrachtwagen op de weg"
     }
   },
   "notFound": {
-    "title": "Page non trouvée",
-    "description": "Aller à la page d'accueil"
+    "title": "Pagina niet gevonden",
+    "description": "Ga terug naar de homepagina"
   },
   "errorPage": {
-    "oops": "Oh-oh.",
-    "title": "Quelque chose a mal tourné de notre côté",
-    "description": "Veuillez réessayer plus tard."
+    "oops": "Ai-ai.",
+    "title": "Er is iets stuk langs onze kant",
+    "description": "Gelieve op een ander moment opnieuw te proberen."
   },
   "i18n": {
-    "select": "Sélectionnez langue préférée"
+    "select": "Selecteer uw taal"
   },
   "date": {
-    "published": "Publié le"
+    "published": "Gepubliceerd op"
   },
   "links": {
     "import": "Import",
     "export": "Export",
     "avi": "AVI",
     "contact": "Contact",
-    "terms-and-conditions": "Terms and conditions",
-    "privacy-policy": "Privacy policy",
-    "services": "Services",
-    "legal": "Legal",
-    "resources": "Resources",
+    "terms-and-conditions": "Algemene voorwaarden",
+    "privacy-policy": "Privacyverklaring",
+    "services": "Diensten",
+    "legal": "Juridisch",
+    "resources": "Overige",
     "sitemap": "Sitemap",
-    "copyright": "Eagle Air Agencies {{ date }}. All rights preserved."
+    "copyright": "Eagle Air Agencies {{ date }}. Alle rechten voorbehouden."
   },
   "form": {
-    "fullNameLabel": "Full Name",
+    "fullNameLabel": "Volledige naam",
     "fullNamePlaceholder": "John Doe",
-    "companyLabel": "Company",
+    "companyLabel": "Bedrijf",
     "companyPlaceholder": "Eagle Air",
     "emailLabel": "Email",
     "emailPlaceholder": "address@provider.com",
-    "phoneLabel": "Phone",
+    "phoneLabel": "Telefoon",
     "phonePlaceholder": "+00 000 00 00 00",
-    "countryLabel": "Country",
-    "countryPlaceholder": "🇧🇪 Belgium",
-    "subjectLabel": "Subject",
-    "subjectPlaceholder": "Subject",
-    "messageLabel": "Message",
-    "messagePlaceholder": "How can we be of service?",
-    "button": "Send message"
+    "countryLabel": "Land",
+    "countryPlaceholder": "🇧🇪 België",
+    "subjectLabel": "Onderwerp",
+    "subjectPlaceholder": "Onderwerp",
+    "messageLabel": "Bericht",
+    "messagePlaceholder": "Waarmee kunnen wij jou helpen?",
+    "button": "Verstuur bericht"
   },
   "contact": {
-    "title": "Our headquarters.",
+    "title": "Ons hoofdkantoor.",
     "office": "Zaventem office",
-    "country": "Belgium",
-    "phone": "Phone",
+    "country": "België",
+    "phone": "Telefoon",
     "email": "Email",
     "fax": "Fax",
-    "vat": "VAT number"
+    "vat": "BTW-nummer"
   }
 }
