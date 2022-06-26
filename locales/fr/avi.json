@@ -1,1 +1,23 @@
-{}
+{
+  "seo": {
+    "title": "AVI services",
+    "description": "Eagleair's live animals department staat jou steeds bij in de verscheping van jouw levende dieren, groot en klein. Geen vraag is ons te veel en wij zorgen dat jouw dieren in de beste omstandigheden reizen. Dit onder andere door het verschaffen van opbouwmateriaal en koten."
+  },
+  "intro": {
+    "title": "Live <0>Animal</0> Department.",
+    "paragraph": "Ons live animals department staat jou steeds bij in de verscheping van jouw levende dieren, groot en klein. Geen vraag is ons te veel en wij zorgen dat jouw dieren in de beste omstandigheden reizen. Dit onder andere door het verschaffen van opbouwmateriaal en koten.",
+    "button1": "How we take care",
+    "button2": "Informational video"
+  },
+  "card": {
+    "title1": "Hatching eggs and chicks",
+    "text1": "Reeds jaren zijn wij de Europese marktleider in de export van broedeieren en kuikens. Ons AVI team is 24/7 beschikbaar en staat jou steeds bij met hun kennis en expertise. Wij werken voor de grootste broeierijen over heel Europa en verschepen voornamelijk naar Afrika en het Midden-Oosten.",
+    "title2": "Heifers (cows)",
+    "text2": "Ook de export van vee, kent voor ons geen geheimen meer. Jouw vee is bij ons in goede handen. Wij zijn steeds zelf aanwezig bij opbouw van de dieren op de luchthaven van vertrek.",
+    "button": "Request quote"
+  },
+  "article": {
+    "title": "Eagle Air takes care of <0>everything.</0>",
+    "paragraph": "Bij ons staat het comfort en de veiligheid van de dieren centraal. Animal welfare is voor ons niet zomaar een begrip, maar een prioriteit! Daarom bieden wij onze klanten de optie aan om het opbouwmateriaal door ons te laten verzorgen. Zo weet je met zekerheid dat de zending aan de regelgeving voldoet en dat de diertjes in optimale omstandigheden kunnen reizen."
+  }
+}
