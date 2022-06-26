@@ -36,6 +36,7 @@ const TextArea: FC<TextAreaProps> = forwardRef<
       withFeedback = true,
       className,
       wrapperClassName,
+      required,
       ...rest
     },
     ref
@@ -43,6 +44,7 @@ const TextArea: FC<TextAreaProps> = forwardRef<
     <div className={cn(wrapperClassName, { [`col-span-${colSpan}`]: colSpan })}>
       <label htmlFor={name} className={cn(styles.textAreaLabel)}>
         {label}
+        {required && <sup>*</sup>}
       </label>
       <div className={cn(styles.textAreaContainer)}>
         <textarea
@@ -58,6 +60,7 @@ const TextArea: FC<TextAreaProps> = forwardRef<
           onChange={onChange}
           onBlur={onBlur}
           aria-invalid={!!error}
+          required={required}
           {...rest}
         />
         {iconLeft && (

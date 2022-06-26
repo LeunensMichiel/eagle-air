@@ -158,6 +158,7 @@ type SelectProps<
   colSpan?: 1 | 2 | 3 | 4;
   name?: string;
   placeholder: string;
+  required?: boolean;
 } & Props<Option, IsMulti, Group>;
 
 const SelectField = <
@@ -173,12 +174,14 @@ const SelectField = <
   withFeedback = true,
   placeholder,
   name,
+  required,
   ...props
 }: SelectProps<Option, IsMulti, Group>) => {
   return (
     <div className={cn({ [`col-span-${colSpan}`]: colSpan })}>
       <label htmlFor={name} className={cn(styles.inputLabel)}>
         {label}
+        {required && <sup>*</sup>}
       </label>
       <Select
         {...props}
