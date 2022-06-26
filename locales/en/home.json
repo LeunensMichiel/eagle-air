@@ -1,8 +1,51 @@
 {
   "seo": {
     "title": "Home",
-    "description": "Your freightage specialist in Belgium. We're experts in import, export and live animal transport. Discover our company."
+    "description": "Your cargo specialist in Belgium. We are experts in import, export and live animal transport. Discover our company."
   },
-  "welcome": "Welcome to",
-  "intro": "Opinionated starter template by"
+  "landing": {
+    "slogan": "We do <0>transport</0> right.",
+    "button1": "Contact us",
+    "button2": "What we do"
+  },
+  "intro": {
+    "title": "Your goods, delivered with <0>expertise.</0>",
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio soluta, nulla vel sint aut dolor alias praesentium blanditiis, et id neque dignissimos autem molestiae molestias suscipit reiciendis, quisquam nesciunt."
+  },
+  "card": {
+    "title1": "Import that helps your business <0>grow.</0>",
+    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title2": "<0>Professionals</0> in air freight export.",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title3": "Animals should be transported with <0>care.</0>",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "button": "More info"
+  },
+  "stats": {
+    "header": "<0>Dock and load.</0><1/>From animals to cars and everything in between.",
+    "title1": "1746 m²",
+    "text1": "The total surface of our warehouse.",
+    "title2": "135 countries",
+    "text2": " We export to more than 135 countries worldwide.",
+    "title3": "30 years",
+    "text3": "The amount of experience in our sector",
+    "title4": "55.000 tonnes",
+    "text4": "That’s a lot of freightage we ship each year!"
+  },
+  "about": {
+    "title": "We’re no generic freightage company.",
+    "subTitle": "Why Eagle Air?",
+    "itemTitle1": "Available 24/7",
+    "itemText1": "As a family business, we are available to customers 24/7.",
+    "itemTitle2": "Flexible",
+    "itemText2": " Urgent shipment? We are ready for you immediately.",
+    "itemTitle3": "Personal service",
+    "itemText3": "Our staff will take care of your cargo with the best knowledge and care.",
+    "itemTitle4": "Expertise",
+    "itemText4": "Years of expertise in air freight since 1992.",
+    "partners": "Trusted by our <0>valued</0> partners."
+  },
+  "contact": {
+    "title": "Interested? <0/>Let's discuss <1>opportunities.</1>"
+  }
 }

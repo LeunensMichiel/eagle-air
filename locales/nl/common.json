@@ -3,26 +3,65 @@
     "title": "Eagle Air",
     "titleTemplate": "%s | Eagle Air",
     "defaultTitle": "Eagle Air",
-    "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
+    "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
     "og": {
       "title": "Eagle Air",
-      "description": "Uw vrachtspecialist in België. Ontdek wat we doen.",
+      "description": "Votre spécialiste du transport de marchandises en Belgique. Découvrez ce que nous faisons.",
       "imgAlt": "My Website"
     }
   },
   "notFound": {
-    "title": "Pagina niet gevonden",
-    "description": "Ga naar de homepagina"
+    "title": "Page non trouvée",
+    "description": "Aller à la page d'accueil"
   },
   "errorPage": {
-    "oops": "Uh-oh.",
-    "title": "Er ging iets mis langs onze kant",
-    "description": "Probeer later opnieuw."
+    "oops": "Oh-oh.",
+    "title": "Quelque chose a mal tourné de notre côté",
+    "description": "Veuillez réessayer plus tard."
   },
   "i18n": {
-    "select": "Taalvoorkeur selecteren"
+    "select": "Sélectionnez langue préférée"
   },
   "date": {
-    "published": "Gepupliceerd om"
+    "published": "Publié le"
+  },
+  "links": {
+    "import": "Import",
+    "export": "Export",
+    "avi": "AVI",
+    "contact": "Contact",
+    "terms-and-conditions": "Terms and conditions",
+    "privacy-policy": "Privacy policy",
+    "services": "Services",
+    "legal": "Legal",
+    "resources": "Resources",
+    "sitemap": "Sitemap",
+    "copyright": "Eagle Air Agencies {{ date }}. All rights preserved."
+  },
+  "form": {
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Eagle Air",
+    "emailLabel": "Email",
+    "emailPlaceholder": "address@provider.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+00 000 00 00 00",
+    "countryLabel": "Country",
+    "countryPlaceholder": "🇧🇪 Belgium",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Subject",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we be of service?",
+    "button": "Send message"
+  },
+  "contact": {
+    "title": "Our headquarters.",
+    "office": "Zaventem office",
+    "country": "Belgium",
+    "phone": "Phone",
+    "email": "Email",
+    "fax": "Fax",
+    "vat": "VAT number"
   }
 }
