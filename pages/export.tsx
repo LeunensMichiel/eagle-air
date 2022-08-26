@@ -2,7 +2,10 @@ import { Bar, Layout, TiltedBar } from '@components/common';
 import { Chevron } from '@components/icons';
 import { Asb, BrusselsAirport, IATA, PPL, WCA } from '@components/partners';
 import { Button } from '@components/ui';
+import Parallax from '@lib/parallax';
+import { slideLeftVariants } from '@lib/variants';
 import cn from 'classnames';
+import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
@@ -13,6 +16,22 @@ import styles from './styles/export.module.scss';
 
 const ExportPage = () => {
   const { t } = useTranslation('export');
+  const circleAnimation = useAnimation();
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleMouseMove = (e: any) => {
+    if (typeof window !== undefined) {
+      const { clientX, clientY } = e;
+      const moveX = clientX - window.innerWidth / 2;
+      const moveY = clientY - window.innerHeight / 2;
+      const offsetFactor = 100;
+      circleAnimation.start({
+        x: -moveX / offsetFactor,
+        y: moveY / offsetFactor,
+      });
+    }
+  };
+
   return (
     <>
       <NextSeo
@@ -23,13 +42,17 @@ const ExportPage = () => {
           description: t('seo.description'),
         }}
       />
-      <section className={cn('py-container', styles.export)}>
+      <section
+        className={cn('py-container', styles.export)}
+        onMouseMove={(e) => handleMouseMove(e)}
+      >
         <div className={cn('container')}>
           <div className={styles.export__intro}>
-            <img
+            <motion.img
               src="/assets/cccircular.svg"
               alt="geometric shape"
               className={styles['geometric-shape']}
+              animate={circleAnimation}
             />
             <h1 className={cn('title', styles.export__title)}>
               <Trans
@@ -41,27 +64,39 @@ const ExportPage = () => {
             <p className={cn('paragraph', styles.export__paragraph)}>
               {t('intro.paragraph')}
             </p>
-            <ul className={styles.export__list}>
-              <li>{t('list.item1')}</li>
-              <li>{t('list.item2')}</li>
-              <li>{t('list.item3')}</li>
-              <li>{t('list.item4')}</li>
-              <li>{t('list.item5')}</li>
-            </ul>
+            <motion.ul
+              className={styles.export__list}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{
+                once: true,
+                amount: 0.8,
+                fallback: true,
+              }}
+              transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+            >
+              {[...Array(5)].map((_, i) => (
+                <motion.li key={i} variants={slideLeftVariants}>
+                  {t(`list.item${i + 1}`)}
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
         </div>
       </section>
       <div className={styles.export__image__container}>
         <TiltedBar className={styles['export__tilted-bar']} />
-        <Image
-          src="/assets/web-09013.jpg"
-          layout="responsive"
-          width="1080"
-          height="640"
-          objectFit="cover"
-          alt="truck loading"
-          className={styles.export__image}
-        />
+        <Parallax>
+          <Image
+            src="/assets/web-09013.jpg"
+            layout="responsive"
+            width="1080"
+            height="640"
+            objectFit="cover"
+            alt="truck loading"
+            className={styles.export__image}
+          />
+        </Parallax>
       </div>
       <section className={cn('py-container--sm')}>
         <div className={cn('container')}>

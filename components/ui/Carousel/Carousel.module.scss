@@ -71,6 +71,7 @@
   font-weight: 600;
   color: var(--color-text-disabled);
   @include mixins.transition(color);
+  cursor: pointer;
 
   &--active {
     color: var(--color-text-primary);

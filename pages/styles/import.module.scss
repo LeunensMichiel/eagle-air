@@ -76,8 +76,8 @@
 
   @include mixins.breakpoint-up(lg) {
     background-size: 480px;
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     li {
       font-size: var(--font-size-h3);
     }

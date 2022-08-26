@@ -12,7 +12,7 @@ const { locales } = i18nConfig;
 const COOKIE_NAME = 'NEXT_LOCALE';
 
 const LanguageModalView = () => {
-  const { t } = useTranslation('common');
+  const { t, lang } = useTranslation('common');
   const [, setCookie] = useCookies([COOKIE_NAME]);
 
   const handleLangChange = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,12 +22,14 @@ const LanguageModalView = () => {
       setCookie(COOKIE_NAME, e.target.value, { maxAge: 2629743 });
     }
   };
+
   return (
     <Fieldset label={t('i18n.select')}>
       {locales.map((lng) => (
         <RadioButton
           label={LangCode[lng]}
           onChange={handleLangChange}
+          checked={lng === lang}
           value={lng}
           key={lng}
           name="language"

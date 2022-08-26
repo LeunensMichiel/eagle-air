@@ -1,7 +1,9 @@
 import { Layout } from '@components/common';
 import { Chevron } from '@components/icons';
 import { Button } from '@components/ui';
+import { slideLeftVariants, slideUpVariants } from '@lib/variants';
 import cn from 'classnames';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
@@ -53,15 +55,23 @@ const ImportPage = () => {
                 alt="real_time_analytics_illustration"
               />
             </div>
-            <ul className={styles.import__list}>
-              <li>{t('list.item1')}</li>
-              <li>{t('list.item2')}</li>
-              <li>{t('list.item3')}</li>
-              <li>{t('list.item4')}</li>
-              <li>{t('list.item5')}</li>
-              <li>{t('list.item6')}</li>
-              <li>{t('list.item7')}</li>
-            </ul>
+            <motion.ul
+              className={styles.import__list}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{
+                once: true,
+                amount: 0.8,
+                fallback: true,
+              }}
+              transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+            >
+              {[...Array(7)].map((_, i) => (
+                <motion.li key={i} variants={slideLeftVariants}>
+                  {t(`list.item${i + 1}`)}
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
           <div className={styles.stats}>
             <Image
@@ -77,20 +87,32 @@ const ImportPage = () => {
               <p className={styles.stats__description}>
                 {t('stats.description')}
               </p>
-              <div className={styles.stats__grid}>
-                <div className={styles.stats__stat}>
-                  <span className={styles.stats__title}>
-                    {t('stats.title1')}
-                  </span>
-                  <span className={styles.stats__text}>{t('stats.text1')}</span>
-                </div>
-                <div className={styles.stats__stat}>
-                  <span className={styles.stats__title}>
-                    {t('stats.title2')}
-                  </span>
-                  <span className={styles.stats__text}>{t('stats.text2')}</span>
-                </div>
-              </div>
+              <motion.div
+                className={styles.stats__grid}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{
+                  once: true,
+                  amount: 0.8,
+                  fallback: true,
+                }}
+                transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+              >
+                {[...Array(2)].map((_, i) => (
+                  <motion.div
+                    className={styles.stats__stat}
+                    key={i}
+                    variants={slideUpVariants}
+                  >
+                    <span className={styles.stats__title}>
+                      {t(`stats.title${i + 1}`)}
+                    </span>
+                    <span className={styles.stats__text}>
+                      {t(`stats.text${i + 1}`)}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
