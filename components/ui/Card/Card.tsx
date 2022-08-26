@@ -35,6 +35,7 @@ const Card: FC<CardProps> = ({
         alt={`A picture describing the following title: ${title}`}
         aspectRatio="148/81"
         src={imgSrc}
+        quality={100}
         wrapperClassName={styles.card__image}
       />
       <div className={styles.card__body}>
