@@ -55,18 +55,13 @@ const AVIPage = () => {
           </div>
         </div>
         <div className={styles.avi__video__wrapper} id="video">
-          <video
-            className={styles.avi__video}
-            playsInline
-            poster="/assets/tarmac.jpg"
-            preload="metadata"
-            controls
-          >
-            <source
-              src="https://drive.google.com/uc?export=download&id=1Pe2wM_O0ABdQyoKusZ9ktV9yU_8-Mavi"
-              type="video/mp4"
-            />
-          </video>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/J3lQl-ZT2cg"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         <div className={cn('container')} id="info">
           <div className={styles.cards}>
