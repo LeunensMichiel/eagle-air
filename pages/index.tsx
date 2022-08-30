@@ -12,7 +12,7 @@ import { Asb, BrusselsAirport, IATA, PPL, WCA } from '@components/partners';
 import { Button, Card, Carousel, Logo } from '@components/ui';
 import { dynamicSlideUpVariants, slideUpVariants } from '@lib/variants';
 import cn from 'classnames';
-import { motion, useAnimation, Variants } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Trans from 'next-translate/Trans';
@@ -222,7 +222,6 @@ const Home = () => {
             className={cn(styles.circle, styles['circle--small'])}
             animate={circleAnimation2}
           />
-          <span className={styles.about__subtitle}>{t('about.subTitle')}</span>
           <h1 className={styles.about__title}>{t('about.title')}</h1>
           <motion.div
             className={styles.about__items}

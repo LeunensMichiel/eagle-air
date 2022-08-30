@@ -1,12 +1,10 @@
-import { Bar, Layout, TiltedBar } from '@components/common';
+import { Layout } from '@components/common';
 import { Chevron } from '@components/icons';
 import { Asb, BrusselsAirport, IATA, PPL, WCA } from '@components/partners';
-import { Button } from '@components/ui';
-import Parallax from '@lib/parallax';
+import { Button, Card, ImageWithAspectRatio } from '@components/ui';
 import { slideLeftVariants } from '@lib/variants';
 import cn from 'classnames';
 import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Trans from 'next-translate/Trans';
@@ -43,7 +41,7 @@ const ExportPage = () => {
         }}
       />
       <section
-        className={cn('py-container', styles.export)}
+        className={cn('py-container--sm', styles.export)}
         onMouseMove={(e) => handleMouseMove(e)}
       >
         <div className={cn('container')}>
@@ -58,7 +56,7 @@ const ExportPage = () => {
               <Trans
                 i18nKey="intro.title"
                 ns="export"
-                components={[<span className="title--emphasized--light" />]}
+                components={[<span className="title--emphasized" />, <br />]}
               />
             </h1>
             <p className={cn('paragraph', styles.export__paragraph)}>
@@ -84,45 +82,46 @@ const ExportPage = () => {
           </div>
         </div>
       </section>
-      <div className={styles.export__image__container}>
-        <TiltedBar className={styles['export__tilted-bar']} />
-        <Parallax>
-          <Image
-            src="/assets/web-09013.jpg"
-            layout="responsive"
-            width="1080"
-            height="640"
-            objectFit="cover"
-            alt="truck loading"
-            className={styles.export__image}
-          />
-        </Parallax>
-      </div>
+      <section className="container">
+        <ImageWithAspectRatio
+          alt="Colleague transporting goods in our warehouse"
+          aspectRatio="16/9"
+          src="/assets/web-08998.jpg"
+        />
+      </section>
       <section className={cn('py-container--sm')}>
         <div className={cn('container')}>
-          <div className={styles.article}>
-            <div>
-              <Bar className={styles.article__bar} />
-              <h2>{t('article.title')}</h2>
-            </div>
-          </div>
-          <div className={styles.article__body}>
-            <p className={styles.article__paragraph}>
-              <Trans
-                i18nKey="article.paragraph"
-                ns="export"
-                components={[<strong />]}
-              />
-            </p>
-            <Image
-              layout="responsive"
-              width="540"
-              height="280"
-              objectFit="cover"
-              objectPosition="50% 50%"
-              src="/assets/dog.jpg"
-              alt="Donna, a security dog"
-              className={styles.article__image}
+          <h1 className={cn(styles.articles__header, 'title')}>
+            <Trans
+              i18nKey="article.header"
+              ns="export"
+              components={[<span className="title--emphasized" />]}
+            />
+          </h1>
+          <div className={styles.articles}>
+            <Card
+              imgSrc="/assets/dog.jpg"
+              squared
+              text={
+                <Trans
+                  i18nKey="article.paragraph"
+                  ns="export"
+                  components={[<strong />]}
+                />
+              }
+              title={t('article.title')}
+            />
+            <Card
+              imgSrc="/assets/dog.jpg"
+              squared
+              text={
+                <Trans
+                  i18nKey="article.paragraph2"
+                  ns="export"
+                  components={[<strong />]}
+                />
+              }
+              title={t('article.title2')}
             />
           </div>
         </div>

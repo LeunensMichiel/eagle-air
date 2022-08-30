@@ -244,15 +244,7 @@ export const ContactForm = () => {
             {t('contact.email')}
           </span>
           <span className={styles.contact__info__item__line}>
-            info@eagleair.be
-          </span>
-        </div>
-        <div className={styles.contact__info__item}>
-          <span className={styles.contact__info__item__title}>
-            {t('contact.fax')}
-          </span>
-          <span className={styles.contact__info__item__line}>
-            +32 02 751 50 45
+            brucargo@eagleair.be
           </span>
         </div>
         <div className={styles.contact__info__item}>
@@ -260,7 +252,7 @@ export const ContactForm = () => {
             {t('contact.vat')}
           </span>
           <span className={styles.contact__info__item__line}>
-            0712 23 45 24
+            BE 0448.201.762
           </span>
         </div>
         <TiltedBar />

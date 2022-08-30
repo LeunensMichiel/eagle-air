@@ -9,11 +9,12 @@ import ImageWithAspectRatio from '../ImageWithAspectRatio';
 import styles from './Card.module.scss';
 
 type CardProps = {
+  squared?: boolean;
   imgSrc: string;
   title: string | ReactNode | ReactNode[];
-  text: string;
-  buttonText: string;
-  url: string;
+  text: string | ReactNode | ReactNode[];
+  buttonText?: string;
+  url?: string;
   isAlternative?: boolean;
 };
 
@@ -23,6 +24,7 @@ const Card: FC<CardProps> = ({
   title,
   url,
   isAlternative,
+  squared,
   buttonText,
 }) => {
   return (
@@ -33,7 +35,7 @@ const Card: FC<CardProps> = ({
     >
       <ImageWithAspectRatio
         alt={`A picture describing the following title: ${title}`}
-        aspectRatio="148/81"
+        aspectRatio={squared ? '1/1' : '148/81'}
         src={imgSrc}
         quality={100}
         wrapperClassName={styles.card__image}
@@ -44,17 +46,19 @@ const Card: FC<CardProps> = ({
           <h2 className={styles.card__title}>{title}</h2>
         </div>
         <p className={styles.card__text}>{text}</p>
-        <Link href={url} passHref>
-          <Button
-            className={styles.card__button}
-            size="sm"
-            as="a"
-            iconRight={<Chevron />}
-            variant="light"
-          >
-            {buttonText}
-          </Button>
-        </Link>
+        {url && buttonText && (
+          <Link href={url} passHref>
+            <Button
+              className={styles.card__button}
+              size="sm"
+              as="a"
+              iconRight={<Chevron />}
+              variant="light"
+            >
+              {buttonText}
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );

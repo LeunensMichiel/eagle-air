@@ -12,7 +12,7 @@ type Props = {
   children: ReactNode;
 };
 
-const transparentRoutes = ['/', '/export'];
+const transparentRoutes = ['/'];
 
 const Layout: FC<Props> = ({ children }: Props) => {
   const { displayModal, closeModal, modalView, modalTitle } = useUI();

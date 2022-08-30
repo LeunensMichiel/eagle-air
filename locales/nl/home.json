@@ -10,19 +10,19 @@
   },
   "intro": {
     "title": "Uw goederen, geleverd met <0>expertise.</0>",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio soluta, nulla vel sint aut dolor alias praesentium blanditiis, et id neque dignissimos autem molestiae molestias suscipit reiciendis, quisquam nesciunt."
+    "paragraph": "Voor de verzending van jouw goederen, ben je bij Eagle Air aan het juiste adres. Door onze jarenlange ervaring in het vak, komen jouw goederen met de grootste zorg aan op bestemming."
   },
   "card": {
-    "title1": "Import die uw bedrijf helpt te <0>groeien.</0>",
-    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
-    "title2": "<0>Professionals</0> in luchtvracht export.",
-    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
-    "title3": "Dieren moeten worden behandeld met <0>zorg.</0>",
-    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title1": "Professionals in <0>import</0>.",
+    "text1": "Onze medewerkers behandelen jouw zendingen met de beste zorgen van A tot Z.",
+    "title2": "Professionals in <0>export</0>.",
+    "text2": "Wereldwijde verzending van jouw vracht. Geen bestemming is ons te ver.",
+    "title3": "<0>First class</0> service voor levende dieren.",
+    "text3": "Wij versturen de levende dieren in de best mogelijke omstandigheden.",
     "button": "Meer info"
   },
   "stats": {
-    "header": "<0>Hup en weg ermee.</0><1/>Van dieren tot auto's en alles ertussenin.",
+    "header": "<0>Dock and load.</0><1/>Let the numbers convince you!",
     "title1": "1746 m²",
     "text1": "De totale oppervlakte van ons magazijn.",
     "title2": "135 landen",
@@ -33,14 +33,13 @@
     "text4": "Dat is een hoop vracht die we elk jaar vervoeren!"
   },
   "about": {
-    "title": "Wij zijn geen typisch vrachtbedrijf.",
-    "subTitle": "Waarom Eagle Air?",
+    "title": "Waarom Eagle Air?",
     "itemTitle1": "24/7 beschikbaar",
     "itemText1": "Als familiebedrijf zijn wij 24/7 beschikbaar voor onze klanten.",
     "itemTitle2": "Flexibel",
-    "itemText2": "Dringende zending? Wij staan onmiddellijk voor u klaar.",
+    "itemText2": "Dringende zending? Wij staan onmiddellijk voor je klaar.",
     "itemTitle3": "Persoonlijke service",
-    "itemText3": "Ons personeel zal uw vracht met de beste vakkundigheid en zorg behandelen.",
+    "itemText3": "Ons personeel zal jouw vracht met de beste vakkundigheid en zorg behandelen.",
     "itemTitle4": "Expertise",
     "itemText4": "Jarenlange deskundigheid in luchtvracht sinds 1992.",
     "partners": "Gewaardeerd door onze <0>gewaardeerde</0> partners."

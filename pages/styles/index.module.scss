@@ -63,7 +63,6 @@
 }
 
 .landing__title__super {
-  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
@@ -72,10 +71,10 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: var(--color-eagleair-70);
 
   strong {
     font-weight: 900;
-    color: var(--color-eagleair-70);
   }
 
   &::after,

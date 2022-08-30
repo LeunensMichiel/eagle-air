@@ -1,11 +1,11 @@
 {
   "seo": {
     "title": "Export diensten",
-    "description": "Eagle Air's export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat steeds voor je klaar!"
+    "description": "Eagle Air's export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat voor je klaar!"
   },
   "intro": {
-    "title": "Onze <0>export</0> gaan de wereld rond.",
-    "paragraph": "Ons export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat steeds voor je klaar!"
+    "title": "<0>Export.</0><1/> De wereld rond.",
+    "paragraph": "Ons export team zorgt steeds voor de snelle afhandeling van jouw vracht. Wij snappen als geen ander de tijdsgevoeligheid van luchtvracht. Daarom dat wij alles regelen van pick-up tot eindbestemming. Wat je wensen ook zijn, ons team staat voor je klaar!"
   },
   "list": {
     "item1": "Pick-up in België en Europa",
@@ -15,8 +15,11 @@
     "item5": "In-house screening"
   },
   "article": {
+    "header": "De gepaste methode voor <0>elke</0> vracht.",
     "title": "Onze viervoetige collega's",
-    "paragraph": "Samen met onze partner ASB security zorgen wij voor de gepaste screeningmethode voor al jouw vracht. ASB security verzorgt al onze screening en dit in ons eigen magazijn – <0>24/7.</0>"
+    "paragraph": "Samen met onze partner ASB security zorgen wij voor de gepaste screeningmethode voor al jouw vracht. ASB security verzorgt al onze screening en dit in ons eigen magazijn – <0>24/7.</0>",
+    "title2": "Onze alziende vriend",
+    "paragraph2": "Samen met onze partner ASB security zorgen wij voor de gepaste screeningmethode voor al jouw vracht. ASB security verzorgt al onze screening en dit in ons eigen magazijn – <0>24/7.</0>"
   },
   "contact": {
     "title": "Wens je samen te werken?",

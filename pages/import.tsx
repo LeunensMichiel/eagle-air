@@ -24,7 +24,7 @@ const ImportPage = () => {
           description: t('seo.description'),
         }}
       />
-      <section className={cn('py-container', styles.import)}>
+      <section className={cn('py-container--sm', styles.import)}>
         <div className={cn('container')}>
           <div className={styles.import__intro}>
             <h1 className={cn('title', styles.import__title)}>

@@ -2,16 +2,6 @@
 
 .export {
   overflow: hidden;
-  background-color: var(--color-bg-brand);
-  padding-bottom: 1rem;
-
-  @include mixins.breakpoint-up(md) {
-    padding-bottom: 9.5rem;
-  }
-
-  @include mixins.breakpoint-up(lg) {
-    padding-bottom: 9.625rem;
-  }
 }
 
 .export__intro {
@@ -53,38 +43,9 @@
 .export__title {
   position: relative;
   z-index: 1;
-  color: var(--color-white);
 }
 
 .export__paragraph {
-  color: var(--color-eagleair-50);
-  font-weight: 500;
-}
-
-.export__image__container {
-  position: relative;
-  margin-bottom: 2rem;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 50%;
-    background-color: var(--color-bg-brand);
-  }
-}
-
-.export__image {
-  clip-path: polygon(100% 25%, 100% 100%, 0 75%, 0 0);
-}
-
-.export__tilted-bar {
-  top: 10%;
-  bottom: unset;
-  width: 50%;
 }
 
 .export__list {
@@ -95,7 +56,7 @@
   li {
     font-size: var(--font-size-h5);
     font-weight: 900;
-    color: var(--color-eagleair-60);
+    color: var(--color-eagleair-100);
     margin-bottom: 1rem;
   }
 
@@ -107,11 +68,11 @@
   }
 }
 
-.article {
-  display: grid;
-  gap: 1.5rem;
-  position: relative;
-  margin-bottom: 1.5rem;
+.articles__header {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-h2);
+
   @include mixins.breakpoint-up(md) {
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -125,36 +86,19 @@
   }
 }
 
-.article__bar {
-  background-color: var(--color-charcoal-100);
-}
-
-.article__paragraph {
-  color: var(--color-eagleair-100);
-  background-color: var(--color-eagleair-50);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-
-  @include mixins.breakpoint-up(md) {
-    order: 2;
-  }
-}
-
-.article__body {
+.articles {
   display: grid;
-  gap: 1.5rem;
+  gap: 5rem;
+  margin-bottom: 6rem;
 
   @include mixins.breakpoint-up(md) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+
   @include mixins.breakpoint-up(lg) {
     gap: 2rem;
-    align-items: start;
   }
-}
-
-.article__image {
-  border-radius: var(--border-radius);
 }
 
 .contact {
