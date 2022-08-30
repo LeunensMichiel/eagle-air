@@ -91,13 +91,18 @@ const ExportPage = () => {
       </section>
       <section className={cn('py-container--sm')}>
         <div className={cn('container')}>
-          <h1 className={cn(styles.articles__header, 'title')}>
-            <Trans
-              i18nKey="article.header"
-              ns="export"
-              components={[<span className="title--emphasized" />]}
-            />
-          </h1>
+          <div className={styles.export__intro}>
+            <h1 className={cn(styles.articles__header, 'title')}>
+              <Trans
+                i18nKey="article.header"
+                ns="export"
+                components={[<span className="title--emphasized" />]}
+              />
+            </h1>
+            <p className={cn('paragraph', styles.export__paragraph)}>
+              {t('article.subtitle')}
+            </p>
+          </div>
           <div className={styles.articles}>
             <Card
               imgSrc="/assets/dog.jpg"
@@ -112,7 +117,7 @@ const ExportPage = () => {
               title={t('article.title')}
             />
             <Card
-              imgSrc="/assets/dog.jpg"
+              videoSrc="/assets/xray.mp4"
               squared
               text={
                 <Trans

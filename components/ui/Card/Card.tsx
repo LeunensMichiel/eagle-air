@@ -10,7 +10,8 @@ import styles from './Card.module.scss';
 
 type CardProps = {
   squared?: boolean;
-  imgSrc: string;
+  videoSrc?: string;
+  imgSrc?: string;
   title: string | ReactNode | ReactNode[];
   text: string | ReactNode | ReactNode[];
   buttonText?: string;
@@ -20,6 +21,7 @@ type CardProps = {
 
 const Card: FC<CardProps> = ({
   imgSrc,
+  videoSrc,
   text,
   title,
   url,
@@ -33,13 +35,22 @@ const Card: FC<CardProps> = ({
         [styles['card--alternative']]: isAlternative,
       })}
     >
-      <ImageWithAspectRatio
-        alt={`A picture describing the following title: ${title}`}
-        aspectRatio={squared ? '1/1' : '148/81'}
-        src={imgSrc}
-        quality={100}
-        wrapperClassName={styles.card__image}
-      />
+      {imgSrc && (
+        <ImageWithAspectRatio
+          alt={`A picture describing the following title: ${title}`}
+          aspectRatio={squared ? '1/1' : '148/81'}
+          src={imgSrc}
+          quality={100}
+          wrapperClassName={styles.card__image}
+        />
+      )}
+      {videoSrc && (
+        <div className={styles['card__video-container']}>
+          <video playsInline autoPlay muted loop>
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        </div>
+      )}
       <div className={styles.card__body}>
         <div>
           <Bar className={styles.card__bar} />
