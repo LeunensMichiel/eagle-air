@@ -3,7 +3,7 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: local(''),
     url('/fonts/fira-sans-v16-latin-regular.woff2') format('woff2');
 }
@@ -12,7 +12,7 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 500;
-  font-display: optional;
+  font-display: swap;
   src: local(''), url('/fonts/fira-sans-v16-latin-500.woff2') format('woff2');
 }
 /* fira-sans-600 - latin */
@@ -20,7 +20,7 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 600;
-  font-display: optional;
+  font-display: swap;
   src: local(''), url('/fonts/fira-sans-v16-latin-600.woff2') format('woff2');
 }
 /* fira-sans-900 - latin */
@@ -28,7 +28,7 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 900;
-  font-display: optional;
+  font-display: swap;
   src: local(''), url('/fonts/fira-sans-v16-latin-900.woff2') format('woff2');
 }
 /* Cooper Black - latin */
@@ -36,6 +36,6 @@
   font-family: 'Cooper Black';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: local(''), url('/fonts/cooper-black.woff2') format('woff2');
 }

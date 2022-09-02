@@ -26,15 +26,15 @@
     "published": "Publié le"
   },
   "links": {
-    "import": "Importation",
-    "export": "Exportation",
+    "import": "Import",
+    "export": "Export",
     "avi": "AVI",
     "contact": "Contact",
     "terms-and-conditions": "Conditions générales",
     "privacy-policy": "Politique de confidentialité",
     "services": "Services",
     "legal": "Juridique",
-    "resources": "Ressources",
+    "resources": "Resources",
     "sitemap": "Plan du site",
     "copyright": "Eagle Air Agencies {{ date }}. Tous droits préservés."
   },
@@ -53,10 +53,10 @@
     "subjectPlaceholder": "Sujet",
     "messageLabel": "Message",
     "messagePlaceholder": "Comment pouvons-nous vous aider ?",
-    "button": "Envoyez-le"
+    "button": "Envoyer le message"
   },
   "contact": {
-    "title": "Notre quartier général.",
+    "title": "Notre siège général.",
     "office": "Bureau de Zaventem",
     "country": "Belgique",
     "phone": "Téléphone",

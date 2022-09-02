@@ -4,45 +4,44 @@
     "description": "Your cargo specialist in Belgium. We are experts in import, export and live animal transport. Discover our company."
   },
   "landing": {
-    "slogan": "We do <0>transport</0> right.",
-    "button1": "Contact us",
-    "button2": "What we do"
+    "slogan": "We have an <0>eye</0> for logistics.",
+    "button1": "Get in contact",
+    "button2": "Our services"
   },
   "intro": {
     "title": "Your goods, delivered with <0>expertise.</0>",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio soluta, nulla vel sint aut dolor alias praesentium blanditiis, et id neque dignissimos autem molestiae molestias suscipit reiciendis, quisquam nesciunt."
+    "paragraph": "For the expedition of your goods, there is only one address: Eagle Air Agencies. Your freight will arrive in the best condition thanks to our many years of mastering the business."
   },
   "card": {
-    "title1": "Import that helps your business <0>grow.</0>",
-    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
-    "title2": "<0>Professionals</0> in air freight export.",
-    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
-    "title3": "Animals should be transported with <0>care.</0>",
-    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget enim pharetra adipiscing.",
+    "title1": "Professionals in <0>import</0>.",
+    "text1": "Our import team takes care of your freight from A to Z.",
+    "title2": "Professionals in <0>export</0>.",
+    "text2": "Worldwide shipment for your freight. No destination is too far.",
+    "title3": "First class service for <0>live animals</0>.",
+    "text3": "Live animals are transported in the best possible conditions.",
     "button": "More info"
   },
   "stats": {
-    "header": "<0>Dock and load.</0><1/>From animals to cars and everything in between.",
-    "title1": "1746 m²",
+    "header": "<0>Dock and load.</0><1/>Let the numbers convince you!",
+    "title1": "2500 m²",
     "text1": "The total surface of our warehouse.",
     "title2": "135 countries",
     "text2": "We export to more than 135 countries worldwide.",
     "title3": "30 years",
     "text3": "The amount of experience in our sector",
-    "title4": "55.000 tonnes",
+    "title4": "100.000 tonnes",
     "text4": "That’s a lot of freightage we ship each year!"
   },
   "about": {
-    "title": "We’re no generic freightage company.",
-    "subTitle": "Why Eagle Air?",
+    "title": "Why Eagle Air?",
     "itemTitle1": "Available 24/7",
-    "itemText1": "As a family business, we are available to customers 24/7.",
+    "itemText1": "As a family business, we are 24/7 available.",
     "itemTitle2": "Flexible",
-    "itemText2": "Urgent shipment? We are ready for you immediately.",
+    "itemText2": "Urgent shipment? We are immediately at your disposal.",
     "itemTitle3": "Personal service",
     "itemText3": "Our staff will take care of your cargo with the best knowledge and care.",
     "itemTitle4": "Expertise",
-    "itemText4": "Years of expertise in air freight since 1992.",
+    "itemText4": "Experts in air freight since 1992 and top 5 IATA-CASS forwarder in Belgium.",
     "partners": "Trusted by our <0>valued</0> partners."
   },
   "contact": {

@@ -71,7 +71,7 @@ const ExportPage = () => {
                 amount: 0.8,
                 fallback: true,
               }}
-              transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+              transition={{ staggerChildren: 0.07 }}
             >
               {[...Array(5)].map((_, i) => (
                 <motion.li key={i} variants={slideLeftVariants}>

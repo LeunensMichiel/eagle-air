@@ -85,24 +85,14 @@
 }
 
 .stats {
-  display: grid;
-  gap: 1.5rem;
   margin-bottom: 4.5rem;
 
   @include mixins.breakpoint-up(md) {
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 6rem;
   }
   @include mixins.breakpoint-up(lg) {
-    gap: 2rem;
-    align-items: start;
     margin-bottom: 12rem;
   }
-}
-
-.stats__list {
-  display: grid;
-  gap: 2rem;
 }
 
 .import__image {
@@ -111,49 +101,6 @@
 
 .stats__description {
   color: var(--color-neutrals-130);
-}
-
-.stats__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem 1.5rem;
-  @include mixins.breakpoint-up(md) {
-    gap: 1rem;
-  }
-}
-
-.stats__stat {
-  display: grid;
-  gap: 0.5rem;
-  padding: 0.125rem;
-  padding-left: 0.5rem;
-  border-left: 0.25rem solid var(--color-charcoal-100);
-  @include mixins.breakpoint-up(lg) {
-    padding-left: 1rem;
-  }
-}
-
-.stats__title {
-  font-weight: 900;
-  font-size: var(--font-size-title);
-  @include mixins.breakpoint-up(lg) {
-    font-size: var(--font-size-h5);
-  }
-}
-
-.stats__text {
-  font-weight: 400;
-  color: var(--color-text-tertiary);
-  font-size: var(--font-size-x-small);
-  line-height: var(--line-height-paragraph);
-
-  @include mixins.breakpoint-up(md) {
-    font-size: var(--font-size-small);
-  }
-
-  @include mixins.breakpoint-up(lg) {
-    font-size: var(--font-size);
-  }
 }
 
 .team__title {

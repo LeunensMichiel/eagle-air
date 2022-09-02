@@ -190,7 +190,7 @@ const Home = () => {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8, fallback: true }}
-            transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+            transition={{ staggerChildren: 0.07 }}
           >
             {[...Array(4)].map((_, i) => (
               <motion.div

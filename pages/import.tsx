@@ -1,9 +1,9 @@
 import { Layout } from '@components/common';
 import { Chevron } from '@components/icons';
-import { Button } from '@components/ui';
-import { slideLeftVariants, slideUpVariants } from '@lib/variants';
+import { Button, Card } from '@components/ui';
+import { slideLeftVariants } from '@lib/variants';
 import cn from 'classnames';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
@@ -64,7 +64,7 @@ const ImportPage = () => {
                 amount: 0.8,
                 fallback: true,
               }}
-              transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
+              transition={{ staggerChildren: 0.07 }}
             >
               {[...Array(7)].map((_, i) => (
                 <motion.li key={i} variants={slideLeftVariants}>
@@ -74,46 +74,12 @@ const ImportPage = () => {
             </motion.ul>
           </div>
           <div className={styles.stats}>
-            <Image
-              src="/assets/web-08923.jpg"
-              layout="responsive"
-              width="540"
-              height="280"
-              objectFit="cover"
-              alt="truck loading"
-              className={styles.import__image}
+            <Card
+              text={t('stats.description')}
+              title={t('stats.title')}
+              isAlternative
+              imgSrc="/assets/web-08923.jpg"
             />
-            <div className={styles.stats__list}>
-              <p className={styles.stats__description}>
-                {t('stats.description')}
-              </p>
-              <motion.div
-                className={styles.stats__grid}
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{
-                  once: true,
-                  amount: 0.8,
-                  fallback: true,
-                }}
-                transition={{ staggerChildren: 0.07, delayChildren: 0.1 }}
-              >
-                {[...Array(2)].map((_, i) => (
-                  <motion.div
-                    className={styles.stats__stat}
-                    key={i}
-                    variants={slideUpVariants}
-                  >
-                    <span className={styles.stats__title}>
-                      {t(`stats.title${i + 1}`)}
-                    </span>
-                    <span className={styles.stats__text}>
-                      {t(`stats.text${i + 1}`)}
-                    </span>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
           </div>
         </div>
         <div className={cn('container')}>
