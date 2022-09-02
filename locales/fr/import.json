@@ -4,9 +4,9 @@
     "description": "Eagle Air propose des services de dédouanement dans le monde entier. Nous utilisons la norme AEO et disposons de notre propre entrepôt douanier."
   },
   "intro": {
-    "title": "Importation.<0/> La manière <1>facile.</1>",
-    "paragraph1": "Nous pouvons proposer le dédouanement partout dans le monde. Ce travail est effectué par notre propre personnel ou par des agents fiables et soigneusement sélectionnés. Nous travaillons selon la norme <0>AEO</0>. Cela permet de réduire le nombre d'erreurs et de contrôles supplémentaires.",
-    "paragraph2": "Nous disposons de notre propre entrepôt douanier. Cela nous permet de stocker vos marchandises en attendant les documents nécessaires aux formalités douanières."
+    "title": "Import.<0/><1>Années d'expérience</1> dans le secteur.",
+    "paragraph1": "Nous pouvons faire le dédouanement partout dans le monde. Ce travail est effectué par notre propre personnel ou par des agents fiables et soigneusement sélectionnés. Nous travaillons selon la norme <0>AEO</0>. Cela permet de réduire le nombre d'erreurs et de contrôles supplémentaires.",
+    "paragraph2": "Nous avons notre propre entrepôt douanier. Cela nous permet de stocker vos marchandises en attendant les documents nécessaires aux formalités douanières."
   },
   "list": {
     "item1": "Dédouanement",
@@ -15,17 +15,14 @@
     "item4": "NCTS",
     "item5": "Propre entrepôt douanier",
     "item6": "Norme OEA",
-    "item7": "Importation temporaire"
+    "item7": "Import temporaire"
   },
   "stats": {
-    "description": "Nous disposons également des dépôts nécessaires à la préparation des documents de transit. Nous pouvons également nous charger nous-mêmes du transport. Cette opération est effectuée par nos propres véhicules ou par des transporteurs fiables.",
-    "title1": "250 douanes",
-    "text1": "Plus de 250 habilitations par mois.",
-    "title2": "200 documents",
-    "text2": "Plus de 200 documents par mois."
+    "description": "Nous avons aussi des dépôts nécessaires à la préparation des documents de transit. Nous pouvons également faire nous-mêmes le transport. Cette opération est effectuée par nos propres véhicules ou par des transporteurs fiables.",
+    "title": "250 douanes"
   },
   "team": {
-    "title": "Années d'expérience dans le secteur. Notre équipe d'importation vous offre le <0>meilleur</0> service.",
+    "title": "<0>Up-to-date</0> avec les dernières procédures.",
     "card": "Notre personnel continue de se former afin de vous fournir les informations les plus récentes.",
     "button": "Rejoignez nous"
   }
