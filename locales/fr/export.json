@@ -1,26 +1,30 @@
 {
   "seo": {
-    "title": "Services d'exportation",
-    "description": "L'équipe d'exportation d'Eagle Air s'occupe toujours de la manutention rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
+    "title": "Services d'export",
+    "description": "L'équipe d'export d'Eagle Air s'occupe toujours de la manutention rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
   },
   "intro": {
-    "title": "Notre <0>exportation</0> va partout.",
-    "paragraph": "Notre équipe d'exportation assure toujours un traitement rapide de votre cargaison. Nous comprenons mieux que quiconque la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Quels que soient vos souhaits, notre équipe est toujours là pour vous !"
+    "title": "<0>Export.</0><1/> Autour du monde.",
+    "paragraph": "Notre équipe d'export assure toujours un traitement rapide de votre envoi. Nous comprenons comme personne d'autre la sensibilité au temps du fret aérien. C'est pourquoi nous nous occupons de tout, de la prise en charge à la destination finale. Pour tous vos souhaits, notre équipe est toujours là pour vous !"
   },
   "list": {
     "item1": "Prise en charge en Belgique et en Europe",
     "item2": "Expéditions dans le monde entier",
-    "item3": "Consoles hebdomadaires",
-    "item4": "Exportation temporaire",
-    "item5": "Contrôle interne"
+    "item3": "Consolidation hebdomadaire",
+    "item4": "Export temporaire",
+    "item5": "Screening in-house"
   },
   "article": {
+    "header": "La méthode correcte pour <0>chaque</0> envoi.",
+    "subtitle": "En collaboration avec notre partenaire ASB Security, nous fournissons la méthode de détection appropriée pour toutes vos marchandises. ASB Security se charge de tous nos détections et ceci dans notre propre entrepôt - 24/7.",
     "title": "Nos collègues qui aboient.",
-    "paragraph": "En collaboration avec notre partenaire ASB security, nous fournissons la méthode de contrôle appropriée pour toutes vos marchandises. ASB security se charge de tous nos filtrages et ceci dans notre propre entrepôt - <0>24/7.</0>."
+    "paragraph": "La majorité de nos expéditions est contrôlée par des équipes K9 dans notre propre entrepôt. Les agents de sécurités et leurs chiens sont à notre disposition à toute heure de la journée.\n\n Lorsque votre cargo est amené à notre entrepôt, le contrôle est toujours possible. C'est un avantage majeur pour le fret urgent. Il facilite également le suivi de grandes quantités de marchandises. Un team K9 peut détecter de grandes quantités en peu de temps.",
+    "title2": "Notre collègue à qui rien n'échappe",
+    "paragraph2": "Eagle air dispose également d'un appareil à rayons X interne. Le plus grand avantage de ceci est que le fret, qui ne peut pas être contrôlé avec des chiens, peut être contrôlé avec nous.\n\n Parce que nous avons la machine disponible en interne, nous pouvons à nouveau avoir le fret prêt à être transporté à court terme."
   },
   "contact": {
-    "title": "Vous voulez faire équipe ?",
-    "paragraph": "Envoyez-nous un message pour plus d'informations sur notre initiative de partenariat.",
-    "button": "Contactez nous"
+    "title": "Vous souhaitez travailler ensemble ?",
+    "paragraph": "Envoyez-nous un message pour plus d'informations sur notre initiative de partenaire.",
+    "button": "Contactez-nous"
   }
 }

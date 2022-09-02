@@ -5,7 +5,7 @@
   },
   "intro": {
     "title": "Our <0>export</0> is going places.",
-    "paragraph": "Our export team always ensures the fast handling of your cargo. We understand like no other the time sensitivity of air freight. That is why we arrange everything from pick-up to final destination. Whatever your wishes, our team is always ready to assist you!"
+    "paragraph": "Our export team ensures the fast handling of your cargo. We understand like no other the time-sensitivity of air freight. That is why we arrange everything from pick-up to final destination. Whatever your wish is, our team is always ready to assist you!"
   },
   "list": {
     "item1": "Pick-up in Belgium and Europe",
@@ -15,8 +15,12 @@
     "item5": "In-house screening"
   },
   "article": {
+    "header": "The right method for <0>every</0> freight.",
+    "subtitle": "Together with our partner ASB security we provide the appropriate screening method for all your cargo. ASB security takes care of all our screening and this in our own warehouse - 24/7.",
     "title": "Our paw partners in crime.",
-    "paragraph": "Together with our partner ASB security we provide the appropriate screening method for all your cargo. ASB security takes care of all our screening and this in our own warehouse - <0>24/7.</0>"
+    "paragraph": "Most of our freight is screened with explosive detection dogs in our own warehouse. The screening agents and their dogs are available at every hour of the day. When your freight is delivered, screening is therefore immediately possible. A huge advantage for time-sensitive freight.\n\n Another advantage is the ability to screen large amounts of shipments. Explosive detection dog scan screen big quantities in a small amount of time.",
+    "title2": "Our watchful friend.",
+    "paragraph2": "Eagle air has an in-house X-ray machine. This gives us the advantage of being able to also screen freight which our four-legged friends are not allowed to.\n\n Because the machine is located in our own warehouse, freight is ready-for-carriage at short term."
   },
   "contact": {
     "title": "Wanna team-up?",
