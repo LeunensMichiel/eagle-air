@@ -24,6 +24,7 @@ const CustomSlide: FC<CustomSlideProps> = ({ slide }) => {
             <h2 className={styles.slide__title}>{slide.title}</h2>
             <ImageWithAspectRatio
               aspectRatio="148/81"
+              priority
               wrapperClassName={styles.slide__image}
               alt={slide.title}
               src={slide.image}

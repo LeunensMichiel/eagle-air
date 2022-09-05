@@ -41,6 +41,7 @@ const Card: FC<CardProps> = ({
           aspectRatio={squared ? '1/1' : '148/81'}
           src={imgSrc}
           quality={100}
+          priority
           wrapperClassName={styles.card__image}
         />
       )}
