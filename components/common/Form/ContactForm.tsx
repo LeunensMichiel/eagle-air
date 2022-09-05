@@ -57,6 +57,7 @@ export const ContactForm = () => {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm<FormValues>();
 
   const countryOptions = countries
@@ -86,27 +87,31 @@ export const ContactForm = () => {
     })
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const onSubmit = useCallback((values: FormValues) => {
-    const { land: countryOption, ...data } = values;
-    try {
-      setIsSubmitted(false);
-      setIsSubmitting(true);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          ...data,
-          land: `${countryOption.value}-${countryOption.label}`,
-        }),
-      }).catch((error) => console.error(error));
-      setIsSubmitted(true);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
+  const onSubmit = useCallback(
+    (values: FormValues) => {
+      const { land: countryOption, ...data } = values;
+      try {
+        setIsSubmitted(false);
+        setIsSubmitting(true);
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({
+            'form-name': 'contact',
+            ...data,
+            land: `${countryOption.value}-${countryOption.label}`,
+          }),
+        }).catch((error) => console.error(error));
+        setIsSubmitted(true);
+        reset();
+      } catch (e) {
+        console.error(e);
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [reset]
+  );
 
   return (
     <div className={styles.contact}>
