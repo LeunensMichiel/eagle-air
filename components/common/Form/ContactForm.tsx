@@ -10,6 +10,7 @@ import {
 } from '@components/icons';
 import { Button, Input, Select, TextArea } from '@components/ui';
 import cn from 'classnames';
+import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -55,6 +56,7 @@ export const ContactForm = () => {
   const { t, lang } = useTranslation('common');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -96,7 +98,7 @@ export const ContactForm = () => {
     try {
       setIsSubmitted(false);
       setIsSubmitting(true);
-      fetch('/', {
+      fetch(`/${router.locale}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
@@ -112,11 +114,11 @@ export const ContactForm = () => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (isSubmitSuccessful) {
-  //     reset();
-  //   }
-  // }, [isSubmitSuccessful, reset]);
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <div className={styles.contact}>
