@@ -93,26 +93,29 @@ export const ContactForm = () => {
     })
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const onSubmit = useCallback((values: FormValues) => {
-    const { land: countryOption, ...data } = values;
-    try {
-      setIsSubmitted(false);
-      setIsSubmitting(true);
-      fetch(`/${router.locale}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          ...data,
-          land: `${countryOption?.value}-${countryOption?.label}`,
-        }),
-      });
-      setIsSubmitted(true);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
+  const onSubmit = useCallback(
+    (values: FormValues) => {
+      const { land: countryOption, ...data } = values;
+      try {
+        setIsSubmitted(false);
+        setIsSubmitting(true);
+        fetch(`/${router.locale}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({
+            ...data,
+            land: `${countryOption?.value}-${countryOption?.label}`,
+          }),
+        });
+        setIsSubmitted(true);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [router.locale]
+  );
 
   useEffect(() => {
     if (isSubmitSuccessful) {
