@@ -11,7 +11,7 @@ import {
 import { Button, Input, Select, TextArea } from '@components/ui';
 import cn from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
 import countries from '../../../data/countries.json';
@@ -25,7 +25,7 @@ type FormValues = {
   naam: string;
   email: string;
   bedrijf?: string;
-  land: { value: string; label: string };
+  land?: { value: string; label: string };
   onderwerp: string;
   bericht: string;
   telefoon: string;
@@ -56,7 +56,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful, submitCount },
     reset,
   } = useForm<FormValues>();
 
@@ -87,31 +87,33 @@ export const ContactForm = () => {
     })
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const onSubmit = useCallback(
-    async (values: FormValues) => {
-      const { land: countryOption, ...data } = values;
-      try {
-        setIsSubmitted(false);
-        setIsSubmitting(true);
-        await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({
-            'form-name': 'contact',
-            ...data,
-            land: `${countryOption.value}-${countryOption.label}`,
-          }),
-        })
-        setIsSubmitted(true);
-        reset();
-      } catch (e) {
-        console.error(e);
-      } finally {
-        setIsSubmitting(false);
-      }
-    },
-    [reset]
-  );
+  const onSubmit = useCallback(async (values: FormValues) => {
+    const { land: countryOption, ...data } = values;
+    try {
+      setIsSubmitted(false);
+      setIsSubmitting(true);
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          ...data,
+          land: `${countryOption?.value}-${countryOption?.label}`,
+        }),
+      });
+      setIsSubmitted(true);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <div className={styles.contact}>
@@ -169,7 +171,8 @@ export const ContactForm = () => {
           render={({ field: { onChange, name, value } }) => (
             <Select
               label={t('form.countryLabel')}
-              instanceId="1"
+              key={submitCount}
+              instanceId={submitCount}
               placeholder={t('form.countryPlaceholder')}
               options={countryOptions}
               getOptionLabel={(option) =>
