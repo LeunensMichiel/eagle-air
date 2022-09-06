@@ -88,12 +88,12 @@ export const ContactForm = () => {
     .sort((a, b) => a.label.localeCompare(b.label));
 
   const onSubmit = useCallback(
-    (values: FormValues) => {
+    async (values: FormValues) => {
       const { land: countryOption, ...data } = values;
       try {
         setIsSubmitted(false);
         setIsSubmitting(true);
-        fetch('/', {
+        await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
@@ -101,7 +101,7 @@ export const ContactForm = () => {
             ...data,
             land: `${countryOption.value}-${countryOption.label}`,
           }),
-        }).catch((error) => console.error(error));
+        })
         setIsSubmitted(true);
         reset();
       } catch (e) {
