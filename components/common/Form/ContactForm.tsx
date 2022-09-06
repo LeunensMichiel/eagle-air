@@ -31,8 +31,9 @@ type FormValues = {
   telefoon: string;
 };
 
+const formName = 'contactformulier';
+
 type Submit = Omit<FormValues, 'land'> & {
-  'form-name': string;
   land: string;
 };
 
@@ -42,9 +43,12 @@ function encode(values: Submit) {
       (key) =>
         encodeURIComponent(key) +
         '=' +
-        encodeURIComponent(values?.[key as keyof Submit] ?? 'Niet opgegeven')
+        encodeURIComponent(
+          values?.[key as keyof FormValues] ?? 'Niet opgegeven'
+        )
     )
-    .join('&');
+    .join('&')
+    .concat(`&form-name=${formName}`);
 }
 
 export const ContactForm = () => {
@@ -87,16 +91,15 @@ export const ContactForm = () => {
     })
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const onSubmit = useCallback(async (values: FormValues) => {
+  const onSubmit = useCallback((values: FormValues) => {
     const { land: countryOption, ...data } = values;
     try {
       setIsSubmitted(false);
       setIsSubmitting(true);
-      await fetch('/', {
+      fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': 'contact',
           ...data,
           land: `${countryOption?.value}-${countryOption?.label}`,
         }),
@@ -119,13 +122,13 @@ export const ContactForm = () => {
     <div className={styles.contact}>
       <Form
         className={styles.form}
-        name="contact"
+        name={formName}
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit(onSubmit)}
         netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value={formName} />
         <label style={{ display: 'none' }}>
           Don’t fill this out if you’re human:
           <input name="bot-field" />
