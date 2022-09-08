@@ -1,9 +1,12 @@
+/* eslint-disable react/display-name */
 import { Spinner } from '@components/ui';
 import cn from 'classnames';
 import {
   ComponentPropsWithoutRef,
   ComponentPropsWithRef,
   ElementType,
+  forwardRef,
+  ReactElement,
   ReactNode,
 } from 'react';
 
@@ -37,67 +40,79 @@ interface ButtonCustomProps<C extends React.ElementType> {
 export type ButtonProps<C extends ElementType> = ButtonCustomProps<C> &
   Omit<ComponentPropsWithRef<C>, keyof ButtonCustomProps<C>>;
 
-const Button = <C extends React.ElementType = 'button'>({
-  as,
-  className,
-  children,
-  disabled = false,
-  iconLeft,
-  iconRight,
-  loading = false,
-  size = 'md',
-  stretched = false,
-  variant = 'default',
-  onClick,
-  squared,
-  ...props
-}: ButtonProps<C>) => {
-  const Component = as || 'button';
-  const rootClassName = cn(styles.buttonBase, styles[`button-${variant}`], {
-    [styles.loading]: loading,
-    [styles.disabled]: disabled,
-    [styles[`button-${size}`]]: true,
-    [styles.stretched]: stretched,
-    [styles['button-squared']]: squared && !children,
-    [`${className}`]: className,
-  });
+type PolymorphicButton = <C extends ElementType = 'button'>(
+  props: ButtonProps<C>
+) => ReactElement | null;
+type PolymorphicRef<C extends ElementType> = ComponentPropsWithRef<C>['ref'];
 
-  return (
-    <Component
-      className={rootClassName}
-      data-variant={variant}
-      aria-disabled={disabled}
-      disabled={disabled}
-      tabIndex={disabled ? -1 : 0}
-      onClick={(e) => {
-        e.currentTarget.blur();
-        onClick?.(e);
-      }}
-      {...props}
-    >
-      <>
-        {(loading || iconLeft) && (
-          <span
-            className={cn({
-              [styles[`button-icon-left`]]: (!!iconLeft || loading) && children,
-            })}
-          >
-            {loading ? <Spinner /> : iconLeft}
-          </span>
-        )}
-        {children}
-        {iconRight && (
-          <span
-            className={cn({
-              [styles[`button-icon-right`]]: !!iconRight && children,
-            })}
-          >
-            {iconRight}
-          </span>
-        )}
-      </>
-    </Component>
-  );
-};
+const Button: PolymorphicButton = forwardRef(
+  <C extends ElementType>(
+    {
+      as,
+      className,
+      children,
+      disabled = false,
+      iconLeft,
+      iconRight,
+      loading = false,
+      size = 'md',
+      stretched = false,
+      variant = 'default',
+      onClick,
+      squared,
+      ...props
+    }: ButtonProps<C>,
+    ref: PolymorphicRef<C>
+  ) => {
+    const Component = as || 'button';
+    const rootClassName = cn(styles.buttonBase, styles[`button-${variant}`], {
+      [styles.loading]: loading,
+      [styles.disabled]: disabled,
+      [styles[`button-${size}`]]: true,
+      [styles.stretched]: stretched,
+      [styles['button-squared']]: squared && !children,
+      [`${className}`]: className,
+    });
+
+    return (
+      <Component
+        ref={ref}
+        className={rootClassName}
+        data-variant={variant}
+        aria-disabled={disabled}
+        disabled={disabled}
+        tabIndex={disabled ? -1 : 0}
+        onClick={(e) => {
+          e.currentTarget.blur();
+          onClick?.(e);
+        }}
+        {...props}
+      >
+        <>
+          {(loading || iconLeft) && (
+            <span
+              className={cn({
+                [styles[`button-icon-left`]]:
+                  (!!iconLeft || loading) && children,
+              })}
+            >
+              {loading ? <Spinner /> : iconLeft}
+            </span>
+          )}
+          {children}
+          {iconRight && (
+            <span
+              className={cn({
+                [styles[`button-icon-right`]]: !!iconRight && children,
+              })}
+            >
+              {iconRight}
+            </span>
+          )}
+        </>
+      </Component>
+    );
+  }
+);
 
 export default Button;

@@ -65,7 +65,6 @@ const Banner: FC<BannerProps> = ({
                       type="button"
                       size="sm"
                       variant="light"
-                      outlined
                       onClick={onClickConfirmingAction}
                     >
                       {t('cookies.accept')}
@@ -76,7 +75,6 @@ const Banner: FC<BannerProps> = ({
                       type="button"
                       size="sm"
                       variant="transparent"
-                      outlined
                       onClick={onClickDismissiveAction}
                     >
                       {t('cookies.deny')}

@@ -130,8 +130,11 @@
 }
 
 .landing__chevron {
-  width: 3rem;
-  height: auto;
+  svg {
+    width: 3rem;
+    height: auto;
+    color: white;
+  }
   margin-top: auto;
   align-self: center;
 }

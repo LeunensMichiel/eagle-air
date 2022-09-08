@@ -180,7 +180,7 @@ export const ContactForm = () => {
             <Select
               label={t('form.countryLabel')}
               key={submitCount}
-              instanceId={submitCount}
+              instanceId="selectfield"
               placeholder={t('form.countryPlaceholder')}
               options={countryOptions}
               getOptionLabel={(option) =>

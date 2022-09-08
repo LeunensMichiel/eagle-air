@@ -96,8 +96,10 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <Link href="/#intro">
-            <ChevronDoubleDown className={styles.landing__chevron} />
+          <Link href="/#intro" passHref>
+            <a className={styles.landing__chevron}>
+              <ChevronDoubleDown />
+            </a>
           </Link>
         </div>
         <TiltedBar />

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, SVGMotionProps } from 'framer-motion';
 import React from 'react';
 
 const pathVariants = {
@@ -10,7 +10,11 @@ const pathVariants = {
   },
 };
 
-export const ChevronDoubleDown = ({ ...props }) => {
+export const ChevronDoubleDown = (
+  props: JSX.IntrinsicAttributes &
+    SVGMotionProps<SVGSVGElement> &
+    React.RefAttributes<SVGSVGElement>
+) => {
   return (
     <motion.svg
       width="24"
