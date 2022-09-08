@@ -1,3 +1,4 @@
+export { default as Banner } from './Banner/Banner';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';

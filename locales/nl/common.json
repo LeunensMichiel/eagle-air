@@ -63,5 +63,11 @@
     "email": "Email",
     "fax": "Fax",
     "vat": "BTW-nummer"
+  },
+  "cookies": {
+    "title": "We willen graag een cookie opslaan",
+    "text": "Eagle Air gebruikt cookies alleen voor analytische doeleinden. Eagle Air slaat uw persoonlijke gegevens niet op voor marketing- of advertentieredenen en blijft dus anoniem.",
+    "accept": "Accepteren",
+    "deny": "Weigeren"
   }
 }

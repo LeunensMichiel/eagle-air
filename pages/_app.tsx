@@ -3,10 +3,11 @@ import '@styles/global/style.scss';
 import { Head } from '@components/common';
 import { ManagedUIProvider } from '@lib/context/ui';
 import { AppProps } from 'next/app';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { ReactNode, useEffect } from 'react';
 import { CookiesProvider } from 'react-cookie';
 
-import { useSmoothHashScroll } from '../lib/hooks';
+import { useAcceptCookies, useSmoothHashScroll } from '../lib/hooks';
 
 type NoopProps = {
   children: ReactNode;
@@ -19,6 +20,7 @@ function App({ Component, pageProps }: AppProps) {
 
   //https://github.com/vercel/next.js/issues/5136
   useSmoothHashScroll();
+  const { acceptedCookies } = useAcceptCookies();
 
   // Chrome-transition-bug
   useEffect(() => {
@@ -27,6 +29,7 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <CookiesProvider>
+      {acceptedCookies && <GoogleAnalytics trackPageViews />}
       <Head />
       <ManagedUIProvider>
         <Layout>

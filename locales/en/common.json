@@ -63,5 +63,11 @@
     "email": "Email",
     "fax": "Fax",
     "vat": "VAT number"
+  },
+  "cookies": {
+    "title": "We'd like to offer you a cookie",
+    "text": "Eagle Air uses cookies for analytical reasons only. Eagle Air does not save your personal data for marketing or advertising reasons and thus remains anonymously.",
+    "accept": "Accept",
+    "deny": "Deny"
   }
 }

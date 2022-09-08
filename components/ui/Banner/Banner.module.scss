@@ -1,0 +1,81 @@
+@use '@styles/mixins';
+
+.banner {
+  width: calc(100% - 3rem);
+  max-width: 420px;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 2rem;
+  z-index: var(--z-mid);
+  color: var(--color-white);
+  background-color: var(--color-bg-brand);
+  box-shadow: var(--box-shadow-md);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.bannerContainer {
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  @include mixins.breakpoint-up(md) {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    flex-direction: row;
+  }
+  @include mixins.breakpoint-up(xl) {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+.bannerIcon {
+  font-size: 5rem;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include mixins.breakpoint-up(md) {
+    font-size: 8rem;
+  }
+}
+
+.closeButton {
+  align-self: flex-end;
+}
+
+.bannerBody {
+  display: grid;
+  grid-gap: 1rem;
+  .title {
+    display: inline-flex;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-header);
+  }
+  p {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+  }
+  @include mixins.breakpoint-up(md) {
+    grid-gap: 1.5rem;
+  }
+}
+
+.actionRow {
+  display: grid;
+  gap: 0.5rem;
+  & > * {
+    width: 100%;
+  }
+
+  @include mixins.breakpoint-up(md) {
+    & > * {
+      width: unset;
+    }
+  }
+}
