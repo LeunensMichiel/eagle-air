@@ -227,7 +227,7 @@ const Home = () => {
             className={styles.about__items}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8, fallback: true }}
+            viewport={{ once: true, amount: 0.2, fallback: true }}
           >
             {[...Array(4)].map((_, i) => (
               <motion.div
