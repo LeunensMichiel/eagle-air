@@ -2,6 +2,7 @@ export * from './Bar/Bar';
 export { default as Footer } from './Footer';
 export { default as Form } from './Form';
 export { Fieldset } from './Form';
+export { GoogleAnalytics } from './GoogleAnalytics/GoogleAnalytics';
 export { default as Head } from './Head';
 export * from './IconButtons';
 export { default as LanguagePicker } from './LanguagePicker';
