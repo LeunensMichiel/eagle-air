@@ -36,7 +36,8 @@
     "legal": "Juridique",
     "resources": "Resources",
     "sitemap": "Plan du site",
-    "copyright": "Eagle Air Agencies {{ date }}. Tous droits préservés."
+    "copyright": "Eagle Air Agencies {{ date }}. Tous droits préservés.",
+    "webdesign": "Webdesign par"
   },
   "form": {
     "fullNameLabel": "Nom et prénom",

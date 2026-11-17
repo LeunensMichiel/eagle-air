@@ -45,7 +45,15 @@ const Footer: VFC = () => {
         <div className={styles.footerCopy}>
           <Logo variant="full" />
           <small>
-            {t('links.copyright', { date: new Date().getFullYear() })}
+            {t('links.copyright', { date: new Date().getFullYear() })}{' '}
+            {t('links.webdesign')}{' '}
+            <a
+              href="https://leunes.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leunes Studios
+            </a>
           </small>
         </div>
       </div>

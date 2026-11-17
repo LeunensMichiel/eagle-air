@@ -74,6 +74,12 @@
     color: var(--color-icon-brand);
   }
 
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   @include mixins.breakpoint-up(md) {
     margin-top: initial;
   }
