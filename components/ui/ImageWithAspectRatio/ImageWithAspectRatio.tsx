@@ -1,22 +1,25 @@
 import cn from 'classnames';
 import Image, { ImageProps } from 'next/image';
-import { CSSProperties, VFC } from 'react';
+import { CSSProperties, FC } from 'react';
 
 import styles from './ImageWithAspectRatio.module.scss';
 
-type Props = Omit<ImageProps, 'width' | 'height'> & {
+type Props = Omit<ImageProps, 'width' | 'height' | 'fill'> & {
   aspectRatio: string;
   wrapperClassName?: string;
   alt: string;
+  objectFit?: CSSProperties['objectFit'];
+  objectPosition?: CSSProperties['objectPosition'];
 };
 
-const ImageWithAspectRatio: VFC<Props> = ({
+const ImageWithAspectRatio: FC<Props> = ({
   aspectRatio,
   src,
   objectFit = 'cover',
   objectPosition = '50% 50%',
   wrapperClassName,
   alt,
+  style,
   ...rest
 }) => {
   const [width, height] = aspectRatio.split('/');
@@ -31,11 +34,11 @@ const ImageWithAspectRatio: VFC<Props> = ({
       style={containerStyle}
     >
       <Image
-        layout="fill"
+        fill
+        sizes="100vw"
         src={src}
-        objectFit={objectFit}
-        objectPosition={objectPosition}
         alt={alt}
+        style={{ objectFit, objectPosition, ...style }}
         {...rest}
       />
     </div>

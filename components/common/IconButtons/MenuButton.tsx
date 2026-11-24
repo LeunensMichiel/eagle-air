@@ -1,7 +1,7 @@
 import { Bars, Close } from '@components/icons';
 import { Button } from '@components/ui';
 import { ButtonProps } from '@components/ui/Button/Button';
-import { MouseEventHandler, VFC } from 'react';
+import { FC, MouseEventHandler } from 'react';
 
 type MenuButtonProps = {
   className?: string;
@@ -12,7 +12,7 @@ type MenuButtonProps = {
   'size' | 'loading' | 'disabled' | 'variant' | 'squared'
 >;
 
-const MenuButton: VFC<MenuButtonProps> = ({
+const MenuButton: FC<MenuButtonProps> = ({
   onClick,
   size = 'sm',
   variant = 'minimal',

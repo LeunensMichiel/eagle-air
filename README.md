@@ -2,6 +2,12 @@
 
 ## Getting Started
 
+Requires Node 26 (see `.nvmrc`). The project uses Yarn 4, pinned in `.yarn/releases` — any global `yarn` will hand off to it. Node 25+ no longer ships Corepack, so if you don't have `yarn` yet:
+
+```bash
+npm install -g yarn
+```
+
 Install dependencies:
 
 ```bash

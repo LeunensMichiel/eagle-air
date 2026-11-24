@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms detection file. With Next.js on Netlify's runtime v5 forms
+      are no longer detected in Next-rendered pages, so this static copy
+      registers the form at deploy time and ContactForm posts to this path.
+      Keep the form name and field names in sync with
+      components/common/Form/ContactForm.tsx.
+      https://ntl.fyi/next-runtime-forms-migration
+    -->
+    <form
+      name="contactformulier"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contactformulier" />
+      <input name="bot-field" />
+      <input name="naam" type="text" />
+      <input name="bedrijf" type="text" />
+      <input name="email" type="email" />
+      <input name="telefoon" type="tel" />
+      <input name="land" type="text" />
+      <input name="onderwerp" type="text" />
+      <textarea name="bericht"></textarea>
+    </form>
+  </body>
+</html>

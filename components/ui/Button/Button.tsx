@@ -2,7 +2,6 @@
 import { Spinner } from '@components/ui';
 import cn from 'classnames';
 import {
-  ComponentPropsWithoutRef,
   ComponentPropsWithRef,
   ElementType,
   forwardRef,
@@ -33,8 +32,8 @@ interface ButtonCustomProps<C extends React.ElementType> {
   loading?: boolean;
   disabled?: boolean;
   stretched?: boolean;
-  iconLeft?: ComponentPropsWithoutRef<'svg'> | string;
-  iconRight?: ComponentPropsWithoutRef<'svg'> | string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 }
 
 export type ButtonProps<C extends ElementType> = ButtonCustomProps<C> &
@@ -45,7 +44,7 @@ type PolymorphicButton = <C extends ElementType = 'button'>(
 ) => ReactElement | null;
 type PolymorphicRef<C extends ElementType> = ComponentPropsWithRef<C>['ref'];
 
-const Button: PolymorphicButton = forwardRef(
+const Button = forwardRef(
   <C extends ElementType>(
     {
       as,
@@ -113,6 +112,6 @@ const Button: PolymorphicButton = forwardRef(
       </Component>
     );
   }
-);
+) as PolymorphicButton;
 
 export default Button;

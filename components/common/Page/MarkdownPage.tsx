@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { NextSeo } from 'next-seo';
 import useTranslation from 'next-translate/useTranslation';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import styles from './MarkdownPage.module.scss';
 
@@ -21,7 +21,7 @@ type MarkdownPageProps = {
   locale?: string;
 };
 
-const MarkdownPage: VFC<MarkdownPageProps> = ({
+const MarkdownPage: FC<MarkdownPageProps> = ({
   mdxSource,
   frontmatter,
   locale,

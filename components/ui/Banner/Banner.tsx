@@ -2,7 +2,7 @@ import { CloseButton } from '@components/common';
 import { Button } from '@components/ui';
 import cn from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
-import { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import styles from './Banner.module.scss';
 
@@ -13,7 +13,7 @@ type BannerProps = {
   title: string;
   description?: string;
   open?: boolean;
-  icon?: ComponentPropsWithoutRef<'svg'> | string;
+  icon?: ReactNode;
   customBody?: ReactNode;
   customAction?: ReactNode;
   onClickDismissiveAction?(): void;

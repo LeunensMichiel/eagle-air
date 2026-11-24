@@ -54,7 +54,9 @@
     "subjectPlaceholder": "Sujet",
     "messageLabel": "Message",
     "messagePlaceholder": "Comment pouvons-nous vous aider ?",
-    "button": "Envoyer le message"
+    "button": "Envoyer le message",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous écrire à brucargo@eagleair.be."
   },
   "contact": {
     "title": "Notre siège général.",

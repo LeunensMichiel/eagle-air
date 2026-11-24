@@ -41,16 +41,23 @@ const AVIPage = () => {
               {t('intro.paragraph')}
             </p>
             <div className={styles.avi__intro__buttons}>
-              <Link href="/avi#info" passHref>
-                <Button size="lg" as="a" iconRight={<Heart />}>
-                  {t('intro.button1')}
-                </Button>
-              </Link>
-              <Link href="/avi#video" passHref>
-                <Button size="lg" as="a" variant="lighter" iconRight={<Bolt />}>
-                  {t('intro.button2')}
-                </Button>
-              </Link>
+              <Button
+                as={Link}
+                href="/avi#info"
+                size="lg"
+                iconRight={<Heart />}
+              >
+                {t('intro.button1')}
+              </Button>
+              <Button
+                as={Link}
+                href="/avi#video"
+                size="lg"
+                variant="lighter"
+                iconRight={<Bolt />}
+              >
+                {t('intro.button2')}
+              </Button>
             </div>
           </div>
         </div>
@@ -101,11 +108,16 @@ const AVIPage = () => {
                 {t('article.paragraph')}
               </p>
               <Image
-                layout="responsive"
-                width="540"
-                height="280"
-                objectFit="cover"
-                objectPosition="50% 50%"
+                width={540}
+                height={280}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  aspectRatio: '540 / 280',
+                  objectFit: 'cover',
+                  objectPosition: '50% 50%',
+                }}
                 src="/assets/tarmac_2.jpg"
                 alt="Chicks at the tarmac"
                 className={styles.article__image}

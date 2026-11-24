@@ -1,5 +1,10 @@
 import cn from 'classnames';
-import { ComponentPropsWithRef, FC, forwardRef } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ComponentPropsWithRef,
+  FC,
+  forwardRef,
+} from 'react';
 
 import styles from './Form.module.scss';
 
@@ -9,7 +14,7 @@ type FormProps = {
 
 const Form: FC<ComponentPropsWithRef<'form'> & FormProps> = forwardRef<
   HTMLFormElement,
-  FormProps
+  ComponentPropsWithoutRef<'form'> & FormProps
 >(({ children, className, ...rest }, ref) => (
   <form ref={ref} className={cn(styles.form, className)} {...rest}>
     {children}

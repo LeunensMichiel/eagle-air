@@ -18,7 +18,7 @@ type DropdownProps = {
   listClassName?: string;
 } & Omit<ButtonProps<'button'>, 'onClick | className'>;
 
-const Dropdown: React.FC<DropdownProps> = ({
+const Dropdown: React.FC<React.PropsWithChildren<DropdownProps>> = ({
   children,
   label,
   variant = 'default',

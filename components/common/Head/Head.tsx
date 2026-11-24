@@ -1,11 +1,12 @@
-import i18nConfig from 'i18n.json';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
 import useTranslation from 'next-translate/useTranslation';
-import { VFC } from 'react';
+import { FC } from 'react';
 
-const Head: VFC = () => {
+import i18nConfig from '../../../i18n.json';
+
+const Head: FC = () => {
   const { t, lang } = useTranslation('common');
   const router = useRouter();
   const { locales, defaultLocale } = i18nConfig;

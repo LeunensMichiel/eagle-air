@@ -2,7 +2,13 @@ import { Dropdown } from '@components/ui';
 import cn from 'classnames';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
-import { FC, LiHTMLAttributes, useEffect, useState } from 'react';
+import {
+  FC,
+  LiHTMLAttributes,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from 'react';
 
 import styles from './NavItem.module.scss';
 
@@ -13,7 +19,7 @@ type NavItemProps = {
   hasTransparentBackground?: boolean;
 } & LiHTMLAttributes<HTMLLIElement>;
 
-const NavItem: FC<NavItemProps> = ({
+const NavItem: FC<PropsWithChildren<NavItemProps>> = ({
   children,
   label,
   link,
@@ -32,17 +38,15 @@ const NavItem: FC<NavItemProps> = ({
   return (
     <>
       {!children && link ? (
-        <Link {...link}>
-          <a
-            role="menuitem"
-            className={cn(styles.navItemContainer, styles.link, className, {
-              [styles['link--active']]: router.pathname === link?.href,
-              [styles['link--transparent-background']]:
-                hasTransparentBackground,
-            })}
-          >
-            {label}
-          </a>
+        <Link
+          {...link}
+          role="menuitem"
+          className={cn(styles.navItemContainer, styles.link, className, {
+            [styles['link--active']]: router.pathname === link?.href,
+            [styles['link--transparent-background']]: hasTransparentBackground,
+          })}
+        >
+          {label}
         </Link>
       ) : (
         <Dropdown

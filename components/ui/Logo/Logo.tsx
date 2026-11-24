@@ -12,7 +12,7 @@ const Logo = forwardRef<SVGSVGElement, LogoProps>(
   ({ onClick, className, variant = 'icon', ...props }, ref) => {
     if (variant === 'full') {
       return (
-        <Link href="/">
+        <Link href="/" className={styles.link}>
           <svg
             width="131"
             height="32"
@@ -20,7 +20,6 @@ const Logo = forwardRef<SVGSVGElement, LogoProps>(
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             ref={ref}
-            tabIndex={0}
             className={cn(styles.root, { [`${className}`]: className })}
             onClick={(e) => {
               e.currentTarget.blur();
@@ -128,7 +127,7 @@ const Logo = forwardRef<SVGSVGElement, LogoProps>(
       );
     }
     return (
-      <Link href="/">
+      <Link href="/" className={styles.link}>
         <svg
           width="772"
           height="434"
@@ -136,7 +135,6 @@ const Logo = forwardRef<SVGSVGElement, LogoProps>(
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           ref={ref}
-          tabIndex={0}
           className={cn(styles.root, { [`${className}`]: className })}
           onClick={(e) => {
             e.currentTarget.blur();

@@ -1,19 +1,22 @@
+@use 'sass:list';
+@use 'sass:string';
+
 // Transitions
 @mixin transition($props...) {
   $result: ();
 
-  @for $i from 1 through length($props) {
-    $prop: nth($props, $i);
-    $result: append($result, $prop);
-    $result: append(
+  @for $i from 1 through list.length($props) {
+    $prop: list.nth($props, $i);
+    $result: list.append($result, $prop);
+    $result: list.append(
       $result,
       var(--transition-timing) var(--transition-duration)
     );
 
-    @if $i != length($props) {
-      $result: append(
+    @if $i != list.length($props) {
+      $result: list.append(
         $result,
-        unquote(
+        string.unquote(
           $string: ',',
         )
       );

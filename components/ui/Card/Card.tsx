@@ -37,7 +37,13 @@ const Card: FC<CardProps> = ({
     >
       {imgSrc && (
         <ImageWithAspectRatio
-          alt={`A picture describing the following title: ${title}`}
+          alt={
+            // Titles can be JSX (e.g. <Trans>); the heading next to the image
+            // already names it, so treat the image as decorative then.
+            typeof title === 'string'
+              ? `A picture describing the following title: ${title}`
+              : ''
+          }
           aspectRatio={squared ? '1/1' : '148/81'}
           src={imgSrc}
           quality={100}
@@ -59,17 +65,16 @@ const Card: FC<CardProps> = ({
         </div>
         <p className={styles.card__text}>{text}</p>
         {url && buttonText && (
-          <Link href={url} passHref>
-            <Button
-              className={styles.card__button}
-              size="sm"
-              as="a"
-              iconRight={<Chevron />}
-              variant="light"
-            >
-              {buttonText}
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href={url}
+            className={styles.card__button}
+            size="sm"
+            iconRight={<Chevron />}
+            variant="light"
+          >
+            {buttonText}
+          </Button>
         )}
       </div>
     </div>

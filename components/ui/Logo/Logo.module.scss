@@ -3,3 +3,17 @@
     outline: 2px solid var(--color-border-tertiary);
   }
 }
+
+// Next 13+ <Link> renders an <a> around the svg; keep the logo inheriting the
+// surrounding text color (e.g. white on the transparent homepage navbar)
+// instead of the global link colors.
+.link {
+  display: inline-flex;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+  }
+}

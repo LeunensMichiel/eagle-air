@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'next-themes';
-import { FC, useMemo, useReducer } from 'react';
+import { FC, PropsWithChildren, useMemo, useReducer } from 'react';
 
 import { INITIAL_UI_STATE, ModalViews, UIContext, UIState } from './UIContext';
 
@@ -48,7 +48,7 @@ const uiReducer = (state: UIState, action: Action): UIState => {
   }
 };
 
-const UIProvider: FC = (props) => {
+const UIProvider: FC<PropsWithChildren> = (props) => {
   const [state, dispatch] = useReducer(uiReducer, INITIAL_UI_STATE);
 
   const openModal = () => dispatch({ type: 'OPEN_MODAL' });
@@ -70,7 +70,7 @@ const UIProvider: FC = (props) => {
   return <UIContext.Provider value={value} {...props} />;
 };
 
-export const ManagedUIProvider: FC = ({ children }) => (
+export const ManagedUIProvider: FC<PropsWithChildren> = ({ children }) => (
   <UIProvider>
     <ThemeProvider
       disableTransitionOnChange={true}

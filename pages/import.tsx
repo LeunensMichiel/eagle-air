@@ -62,7 +62,6 @@ const ImportPage = () => {
               viewport={{
                 once: true,
                 amount: 0.8,
-                fallback: true,
               }}
               transition={{ staggerChildren: 0.07 }}
             >
@@ -93,27 +92,31 @@ const ImportPage = () => {
           </h2>
           <div className={styles.team}>
             <Image
-              layout="responsive"
-              width="540"
-              height="280"
-              objectFit="cover"
-              objectPosition="50% 60%"
+              width={540}
+              height={280}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+                aspectRatio: '540 / 280',
+                objectFit: 'cover',
+                objectPosition: '50% 60%',
+              }}
               src="/assets/web-08914.jpg"
               className={styles.import__image}
               alt="Two members of the eagleair team with a thumbs up"
             />
             <div className={styles.team__card}>
               <p>{t('team.card')}</p>
-              <Link href="/contact" passHref>
-                <Button
-                  iconRight={<Chevron />}
-                  variant="light"
-                  size="sm"
-                  as="a"
-                >
-                  {t('team.button')}
-                </Button>
-              </Link>
+              <Button
+                as={Link}
+                href="/contact"
+                iconRight={<Chevron />}
+                variant="light"
+                size="sm"
+              >
+                {t('team.button')}
+              </Button>
             </div>
           </div>
         </div>

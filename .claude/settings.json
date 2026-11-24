@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "ClaudeInChromeDomain(localhost:3123)",
+      "ClaudeInChromeDomain(localhost:3000)",
+      "ClaudeInChromeDomain(localhost:3125)"
+    ]
+  }
+}

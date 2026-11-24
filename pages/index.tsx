@@ -74,32 +74,28 @@ const Home = () => {
             />
           </span>
           <div className={styles.landing__buttons}>
-            <Link href="/contact" passHref>
-              <Button
-                className={styles.landing__button}
-                size="lg"
-                as="a"
-                iconRight={<Chevron />}
-              >
-                {t('landing.button1')}
-              </Button>
-            </Link>
-            <Link href="/#services" passHref>
-              <Button
-                className={styles['landing__button--outlined']}
-                size="lg"
-                as="a"
-                variant="outlined"
-                iconRight={<Chevron />}
-              >
-                {t('landing.button2')}
-              </Button>
-            </Link>
+            <Button
+              as={Link}
+              href="/contact"
+              className={styles.landing__button}
+              size="lg"
+              iconRight={<Chevron />}
+            >
+              {t('landing.button1')}
+            </Button>
+            <Button
+              as={Link}
+              href="/#services"
+              className={styles['landing__button--outlined']}
+              size="lg"
+              variant="outlined"
+              iconRight={<Chevron />}
+            >
+              {t('landing.button2')}
+            </Button>
           </div>
-          <Link href="/#intro" passHref>
-            <a className={styles.landing__chevron}>
-              <ChevronDoubleDown />
-            </a>
+          <Link href="/#intro" className={styles.landing__chevron}>
+            <ChevronDoubleDown />
           </Link>
         </div>
         <TiltedBar />
@@ -191,7 +187,7 @@ const Home = () => {
             className={styles.stats__grid}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8, fallback: true }}
+            viewport={{ once: true, amount: 0.8 }}
             transition={{ staggerChildren: 0.07 }}
           >
             {[...Array(4)].map((_, i) => (
@@ -229,7 +225,7 @@ const Home = () => {
             className={styles.about__items}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2, fallback: true }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {[...Array(4)].map((_, i) => (
               <motion.div

@@ -11,7 +11,7 @@ const pathVariants = {
 };
 
 export const ChevronDoubleDown = (
-  props: JSX.IntrinsicAttributes &
+  props: React.JSX.IntrinsicAttributes &
     SVGMotionProps<SVGSVGElement> &
     React.RefAttributes<SVGSVGElement>
 ) => {

@@ -1,17 +1,12 @@
 import cn from 'classnames';
-import {
-  ComponentPropsWithoutRef,
-  FC,
-  forwardRef,
-  InputHTMLAttributes,
-} from 'react';
+import { FC, forwardRef, InputHTMLAttributes, ReactNode } from 'react';
 import { FieldError } from 'react-hook-form';
 
 import styles from './Input.module.scss';
 
 export type InputProps = {
-  iconLeft?: ComponentPropsWithoutRef<'svg'> | string;
-  iconRight?: ComponentPropsWithoutRef<'svg'> | string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
   withFeedback?: boolean;
   label: string;
   error?: FieldError;

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import { FieldError } from 'react-hook-form';
 
 import styles from './Fieldset.module.scss';
@@ -11,7 +11,7 @@ type FieldSetProps = {
   colSpan?: 1 | 2 | 3 | 4;
 };
 
-const FieldSet: FC<FieldSetProps> = ({
+const FieldSet: FC<PropsWithChildren<FieldSetProps>> = ({
   colSpan = 1,
   withFeedback = true,
   label,

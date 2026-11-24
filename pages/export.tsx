@@ -69,7 +69,6 @@ const ExportPage = () => {
               viewport={{
                 once: true,
                 amount: 0.8,
-                fallback: true,
               }}
               transition={{ staggerChildren: 0.07 }}
             >
@@ -133,11 +132,9 @@ const ExportPage = () => {
         <div className={cn('container', styles.contact)}>
           <h3>{t('contact.title')}</h3>
           <p>{t('contact.paragraph')} </p>
-          <Link href="/contact" passHref>
-            <Button size="sm" iconRight={<Chevron />} as="a">
-              {t('contact.button')}
-            </Button>
-          </Link>
+          <Button as={Link} href="/contact" size="sm" iconRight={<Chevron />}>
+            {t('contact.button')}
+          </Button>
           <div className={styles.partners}>
             <Asb />
             <BrusselsAirport />

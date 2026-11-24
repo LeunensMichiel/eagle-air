@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import LanguagePicker from '../LanguagePicker';
 import NavItem from './NavItem';
@@ -12,7 +12,7 @@ type NavItemsProps = {
   isTransparent?: boolean;
 };
 
-const NavItems: VFC<NavItemsProps> = ({
+const NavItems: FC<NavItemsProps> = ({
   navDrawerOpen = false,
   isTransparent = false,
 }) => {

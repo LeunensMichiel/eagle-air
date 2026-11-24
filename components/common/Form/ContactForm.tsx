@@ -10,9 +10,8 @@ import {
 } from '@components/icons';
 import { Button, Input, Select, TextArea } from '@components/ui';
 import cn from 'classnames';
-import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
 import countries from '../../../data/countries.json';
@@ -30,6 +29,7 @@ type FormValues = {
   onderwerp: string;
   bericht: string;
   telefoon: string;
+  'bot-field'?: string;
 };
 
 const formName = 'contactformulier';
@@ -56,13 +56,13 @@ export const ContactForm = () => {
   const { t, lang } = useTranslation('common');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const router = useRouter();
+  const [hasSubmitError, setHasSubmitError] = useState(false);
 
   const {
     register,
     handleSubmit,
     control,
-    formState: { errors, isSubmitSuccessful, submitCount },
+    formState: { errors, submitCount },
     reset,
   } = useForm<FormValues>();
 
@@ -94,12 +94,15 @@ export const ContactForm = () => {
     .sort((a, b) => a.label.localeCompare(b.label));
 
   const onSubmit = useCallback(
-    (values: FormValues) => {
+    async (values: FormValues) => {
       const { land: countryOption, ...data } = values;
+      setIsSubmitted(false);
+      setHasSubmitError(false);
+      setIsSubmitting(true);
       try {
-        setIsSubmitted(false);
-        setIsSubmitting(true);
-        fetch(`/${router.locale}`, {
+        // Netlify Forms only accepts submissions posted to a static file on
+        // Next.js runtime v5; see public/__forms.html.
+        const response = await fetch('/__forms.html', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
@@ -107,21 +110,20 @@ export const ContactForm = () => {
             land: `${countryOption?.value}-${countryOption?.label}`,
           }),
         });
+        if (!response.ok) {
+          throw new Error(`Form submission failed with ${response.status}`);
+        }
         setIsSubmitted(true);
+        reset();
       } catch (e) {
         console.error(e);
+        setHasSubmitError(true);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [router.locale]
+    [reset]
   );
-
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset();
-    }
-  }, [isSubmitSuccessful, reset]);
 
   return (
     <div className={styles.contact}>
@@ -129,14 +131,11 @@ export const ContactForm = () => {
         className={styles.form}
         name={formName}
         method="POST"
-        data-netlify="true"
         onSubmit={handleSubmit(onSubmit)}
-        netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value={formName} />
         <label style={{ display: 'none' }}>
           Don’t fill this out if you’re human:
-          <input name="bot-field" />
+          <input tabIndex={-1} autoComplete="off" {...register('bot-field')} />
         </label>
         <Input
           label={t('form.fullNameLabel')}
@@ -223,7 +222,8 @@ export const ContactForm = () => {
           {t('form.button')}
         </Button>
         <p className={styles['message-received']}>
-          {isSubmitted && 'Bericht succesvol verzonden!'}
+          {isSubmitted && t('form.success')}
+          {hasSubmitError && t('form.error')}
         </p>
       </Form>
       <div className={styles.contact__info}>

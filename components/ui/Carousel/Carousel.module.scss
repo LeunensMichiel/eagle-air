@@ -6,22 +6,20 @@
   width: 100%;
   overflow: hidden;
 
-  & :global {
-    .embla {
-      overflow: hidden;
+  :global(.embla) {
+    overflow: hidden;
+  }
+  :global(.embla__container) {
+    display: flex;
+  }
+  :global(.embla__slide) {
+    position: relative;
+    flex: 0 0 87.5%;
+    @include mixins.breakpoint-up(md) {
+      flex: 0 0 75%;
     }
-    .embla__container {
-      display: flex;
-    }
-    .embla__slide {
-      position: relative;
-      flex: 0 0 87.5%;
-      @include mixins.breakpoint-up(md) {
-        flex: 0 0 75%;
-      }
-      @include mixins.breakpoint-up(lg) {
-        flex: 0 0 62.5%;
-      }
+    @include mixins.breakpoint-up(lg) {
+      flex: 0 0 62.5%;
     }
   }
   @include mixins.breakpoint-up(lg) {

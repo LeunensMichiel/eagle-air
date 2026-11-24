@@ -1,7 +1,7 @@
 import { Close } from '@components/icons';
 import { Button } from '@components/ui';
 import { ButtonProps } from '@components/ui/Button/Button';
-import { MouseEventHandler, VFC } from 'react';
+import { FC, MouseEventHandler } from 'react';
 
 type CloseButtonProps = {
   className?: string;
@@ -17,7 +17,7 @@ type CloseButtonProps = {
   | 'squared'
 >;
 
-const CloseButton: VFC<CloseButtonProps> = ({
+const CloseButton: FC<CloseButtonProps> = ({
   onClick,
   size = 'md',
   variant = 'minimal',

@@ -7,7 +7,7 @@ import {
 } from 'body-scroll-lock';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, PropsWithChildren, useEffect, useRef, useState } from 'react';
 
 import { MenuButton } from '../IconButtons';
 import styles from './Navbar.module.scss';
@@ -21,11 +21,14 @@ type NavbarProps = {
   isTransparent?: boolean;
 };
 
-const Navbar: FC<NavbarProps> = ({ children, isTransparent = false }) => {
+const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
+  children,
+  isTransparent = false,
+}) => {
   const router = useRouter();
 
   const [navDrawerOpen, setNavDrawerOpen] = useState(false);
-  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const ref = useRef(null) as unknown as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
     if (router.asPath) {

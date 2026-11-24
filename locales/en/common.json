@@ -54,7 +54,9 @@
     "subjectPlaceholder": "Subject",
     "messageLabel": "Message",
     "messagePlaceholder": "How can we be of service?",
-    "button": "Send message"
+    "button": "Send message",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong while sending. Please try again or email us at brucargo@eagleair.be."
   },
   "contact": {
     "title": "Our headquarters.",

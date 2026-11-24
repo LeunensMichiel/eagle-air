@@ -2,12 +2,12 @@ import { Logo } from '@components/ui';
 import cn from 'classnames';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import LanguagePicker from '../LanguagePicker';
 import styles from './Footer.module.scss';
 
-const Footer: VFC = () => {
+const Footer: FC = () => {
   const { t } = useTranslation('common');
   return (
     <footer className={cn(styles.footer, 'container')}>

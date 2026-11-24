@@ -1,6 +1,5 @@
 import { CloseButton } from '@components/common';
-import { useClickOutside } from '@lib/hooks';
-import Portal from '@reach/portal';
+import { useClickOutside, useIsClient } from '@lib/hooks';
 import {
   BodyScrollOptions,
   clearAllBodyScrollLocks,
@@ -9,7 +8,15 @@ import {
 } from 'body-scroll-lock';
 import cn from 'classnames';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { FC, MutableRefObject, useCallback, useEffect, useRef } from 'react';
+import {
+  FC,
+  MutableRefObject,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react';
+import { createPortal } from 'react-dom';
 import FocusLock from 'react-focus-lock';
 
 import styles from './Modal.module.scss';
@@ -26,7 +33,7 @@ const BODY_SCROLL_OPTIONS: BodyScrollOptions = {
   reserveScrollBarGap: true,
 };
 
-const Modal: FC<ModalProps> = ({
+const Modal: FC<PropsWithChildren<ModalProps>> = ({
   children,
   className,
   container = 'page',
@@ -34,10 +41,11 @@ const Modal: FC<ModalProps> = ({
   open,
   title,
 }) => {
-  const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  const ref = useRef(null) as unknown as MutableRefObject<HTMLDivElement>;
   const shouldReduceMotion = useReducedMotion();
   const closedY = shouldReduceMotion ? 0 : 200;
   const duration = 0.3;
+  const isClient = useIsClient();
   useClickOutside(ref, () => onClose());
 
   const handleKey = useCallback(
@@ -66,65 +74,64 @@ const Modal: FC<ModalProps> = ({
     };
   }, [open, handleKey]);
 
-  return (
-    <Portal>
-      <AnimatePresence onExitComplete={clearBodyScroll}>
-        {open && (
+  if (!isClient) return null;
+
+  return createPortal(
+    <AnimatePresence onExitComplete={clearBodyScroll}>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration }}
+          className={cn(styles.overlay)}
+        >
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration }}
-            className={cn(styles.overlay)}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={{
+              open: { opacity: 1, y: 0 },
+              closed: { opacity: 0, y: closedY },
+            }}
+            transition={{
+              duration,
+              type: 'spring',
+            }}
+            aria-modal
+            aria-labelledby={title}
+            tabIndex={-1}
+            ref={ref}
+            role="dialog"
+            className={cn(
+              styles.modal,
+              {
+                container: container === 'container',
+                'container-page': container === 'page',
+                [styles.container__small]: container === 'small',
+              },
+              className
+            )}
           >
-            <motion.div
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={{
-                open: { opacity: 1, y: 0 },
-                closed: { opacity: 0, y: closedY },
-              }}
-              transition={{
-                duration,
-                type: 'spring',
-              }}
-              aria-modal
-              aria-labelledby={title}
-              tabIndex={-1}
-              ref={ref}
-              role="dialog"
-              className={cn(
-                styles.modal,
-                {
-                  container: container === 'container',
-                  'container-page': container === 'page',
-                  [styles.container__small]: container === 'small',
-                },
-                className
-              )}
+            <header
+              className={cn(styles.modalHeader, {
+                [styles.noTitle]: !title,
+              })}
             >
-              <header
-                className={cn(styles.modalHeader, {
+              {title && <span className={cn(styles.modalTitle)}>{title}</span>}
+              <CloseButton
+                className={cn(styles.modalCloseButton, {
                   [styles.noTitle]: !title,
                 })}
-              >
-                {title && (
-                  <span className={cn(styles.modalTitle)}>{title}</span>
-                )}
-                <CloseButton
-                  className={cn(styles.modalCloseButton, {
-                    [styles.noTitle]: !title,
-                  })}
-                  onClick={() => onClose()}
-                />
-              </header>
-              <FocusLock className={cn(styles.modalBody)}>{children}</FocusLock>
-            </motion.div>
+                onClick={() => onClose()}
+              />
+            </header>
+            <FocusLock className={cn(styles.modalBody)}>{children}</FocusLock>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </Portal>
+        </motion.div>
+      )}
+    </AnimatePresence>,
+    document.body
   );
 };
 

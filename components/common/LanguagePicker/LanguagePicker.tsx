@@ -2,7 +2,7 @@ import { Direction } from '@components/icons';
 import { Button } from '@components/ui';
 import { useUI } from '@lib/hooks';
 import useTranslation from 'next-translate/useTranslation';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 export const LangCode: Record<string, string> = {
   nl: 'Nederlands',
@@ -16,7 +16,7 @@ type LanguagePickerProps = {
   className?: string;
 };
 
-const LanguagePicker: VFC<LanguagePickerProps> = ({
+const LanguagePicker: FC<LanguagePickerProps> = ({
   outlined = true,
   size = 'md',
   ...props

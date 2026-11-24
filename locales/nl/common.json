@@ -54,7 +54,9 @@
     "subjectPlaceholder": "Onderwerp",
     "messageLabel": "Bericht",
     "messagePlaceholder": "Waarmee kunnen wij jou helpen?",
-    "button": "Verstuur bericht"
+    "button": "Verstuur bericht",
+    "success": "Bericht succesvol verzonden!",
+    "error": "Er ging iets mis bij het verzenden. Probeer het opnieuw of mail ons via brucargo@eagleair.be."
   },
   "contact": {
     "title": "Ons hoofdkantoor.",
